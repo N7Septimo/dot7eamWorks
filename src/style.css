@@ -1,0 +1,78 @@
+:root {
+  --bg: #0e0e11;
+  --card: #15151a;
+  --accent: linear-gradient(270deg, #5eead4, #818cf8, #f472b6);
+  --font: 'IBM Plex Mono', monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #e5e7eb;
+  font-family: var(--font);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #111;
+}
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.animated-border {
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--accent);
+  background-size: 400% 400%;
+  animation: borderFlow 10s ease infinite;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.resume-card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 680px;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation: typing 2s steps(30), blink .7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
