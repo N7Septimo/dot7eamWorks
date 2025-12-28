@@ -6,3 +6,23 @@
     "directory": "./public"
   }
 }
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "WORKER-NAME",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-04",
+  "observability": {
+    "enabled": true
+  },
+
+  // Add this to your wrangler.jsonc
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "c14b3ca22c184a878878f9674df35b42",
+      
+      // Optional: preview_id used when running `wrangler dev` for local dev
+      "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
+    }
+  ]
+}
