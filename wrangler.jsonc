@@ -1,51 +1,8 @@
 {
-  // Project identity
   "name": "7eam",
   "compatibility_date": "2025-12-16",
-
-  // Worker entry
   "main": "main.js",
-
-  // Static assets (index.html, css, etc.)
-  // This makes index.html actually served by the Worker
   "assets": {
-    "directory": "."
-  },
-
-  // Optional: enable node compatibility only if you actually need it
-  // "node_compat": true,
-
-  // Optional bindings (uncomment only if used)
-  /*
-  "kv_namespaces": [
-    {
-      "binding": "M",
-      "id": "YOUR_KV_NAMESPACE_ID"
-    }
-  ],
-  */
-
-  /*
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "example",
-      "database_id": "UUID"
-    }
-  ],
-  */
-
-  /*
-  "r2_buckets": [
-    {
-      "binding": "BUCKET",
-      "bucket_name": "example"
-    }
-  ],
-  */
-
-  // Build behavior
-  "build": {
-    "command": ""
+    "directory": "./public"
   }
 }
