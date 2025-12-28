@@ -1,0 +1,10 @@
+{
+  "name": "dot7eamworks-worker",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^4.54.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy"
+  }
+}
