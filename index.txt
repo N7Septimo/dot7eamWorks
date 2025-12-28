@@ -1,0 +1,525 @@
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+
+    // Optional JSON endpoint for health checks
+    if (url.pathname === "/health") {
+      return new Response(JSON.stringify({ ok: true, ts: Date.now() }), {
+        headers: { "content-type": "application/json; charset=utf-8" },
+      });
+    }
+
+    const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>7eam — Rudy Bustamante</title>
+  <meta name="description" content="7eam: Infrastructure, Operations, Cloud Systems. Portfolio + project links." />
+  <style>
+    :root{
+      --bg0:#070A10; --bg1:#0B1020; --card:#0E1630cc;
+      --text:#EAF0FF; --muted:#A8B3D1;
+      --accent:#7C5CFF; --accent2:#19D3FF; --accent3:#00FFB2;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(124,92,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 80% 15%, rgba(25,211,255,.14), transparent 55%),
+        radial-gradient(1200px 700px at 50% 90%, rgba(0,255,178,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    /* Subtle animated “nebula” */
+    .bg-anim{
+      position:fixed; inset:-40vh -40vw;
+      background:
+        conic-gradient(from 180deg at 50% 50%,
+          rgba(124,92,255,.10),
+          rgba(25,211,255,.08),
+          rgba(0,255,178,.06),
+          rgba(124,92,255,.10));
+      filter: blur(80px);
+      opacity:.6;
+      animation: drift 18s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes drift{
+      0%{transform: translate3d(-2%, -1%, 0) rotate(0deg)}
+      50%{transform: translate3d(2%, 1%, 0) rotate(180deg)}
+      100%{transform: translate3d(-2%, -1%, 0) rotate(360deg)}
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding: 34px 18px 80px;
+      position:relative;
+    }
+
+    /* Motion border container */
+    .frame{
+      position:relative;
+      border-radius: calc(var(--radius) + 10px);
+      padding: 1px;
+      background: linear-gradient(120deg,
+        rgba(124,92,255,.95),
+        rgba(25,211,255,.85),
+        rgba(0,255,178,.80),
+        rgba(124,92,255,.95));
+      background-size: 280% 280%;
+      animation: borderFlow 7s ease infinite;
+      box-shadow: var(--shadow);
+    }
+    @keyframes borderFlow{
+      0%{background-position: 0% 50%}
+      50%{background-position: 100% 50%}
+      100%{background-position: 0% 50%}
+    }
+
+    .panel{
+      border-radius: calc(var(--radius) + 9px);
+      background: rgba(9, 12, 22, .78);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      justify-content:space-between;
+      padding: 22px 22px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:6px;
+      min-width: 260px;
+    }
+    .kicker{
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .title{
+      font-size:28px;
+      line-height:1.05;
+      margin:0;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      max-width: 62ch;
+    }
+
+    .top-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(14, 22, 48, .55);
+      color: var(--text);
+      text-decoration:none;
+      font-size: 13px;
+      cursor:pointer;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(124,92,255,.55);
+      background: rgba(14, 22, 48, .70);
+    }
+    .pill{
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Dropdown */
+    .dd{
+      position:relative;
+    }
+    .dd-menu{
+      position:absolute;
+      right:0;
+      top: calc(100% + 10px);
+      min-width: 260px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(9, 12, 22, .92);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+      padding: 8px;
+      display:none;
+      z-index: 50;
+    }
+    .dd-menu.open{display:block}
+    .dd-item{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      padding:10px 10px;
+      border-radius: 12px;
+      text-decoration:none;
+      color: var(--text);
+      border:1px solid transparent;
+    }
+    .dd-item:hover{
+      border-color: rgba(25,211,255,.45);
+      background: rgba(14, 22, 48, .55);
+    }
+    .dd-item small{color:var(--muted); font-size:12px}
+
+    main{
+      padding: 18px 22px 22px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @media (max-width: 880px){
+      .hero{grid-template-columns: 1fr; }
+      header{flex-direction:column; align-items:stretch;}
+      .top-actions{justify-content:flex-start;}
+    }
+
+    .type{
+      font-size: 22px;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+    .type .cursor{
+      display:inline-block;
+      width:.6ch;
+      animation: blink 1s steps(1,end) infinite;
+    }
+    @keyframes blink{ 50%{opacity:0} }
+
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top:12px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2,1fr);} }
+    @media (max-width: 640px){ .grid{grid-template-columns: 1fr;} }
+
+    .card{
+      position:relative;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(14, 22, 48, .45);
+      padding: 14px 14px 12px;
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(500px 200px at var(--mx, 30%) var(--my, 10%),
+        rgba(124,92,255,.22), transparent 60%);
+      opacity:.0;
+      transition: opacity .18s ease;
+      pointer-events:none;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(124,92,255,.45);
+    }
+    .card:hover:before{opacity:1}
+
+    .card h3{
+      margin:0 0 6px 0;
+      font-size: 15px;
+      letter-spacing:.01em;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .card .meta{
+      display:flex; gap:8px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .card a{
+      color: var(--text);
+      text-decoration:none;
+      border-bottom: 1px dashed rgba(255,255,255,.25);
+    }
+    .card a:hover{border-bottom-color: rgba(25,211,255,.8);}
+
+    .side{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(14, 22, 48, .35);
+      padding: 14px;
+    }
+    .side h4{margin:0 0 8px 0; font-size:14px;}
+    .side ul{margin:0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.55;}
+    .side li{margin:6px 0;}
+    footer{
+      margin-top: 14px;
+      padding: 16px 22px 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* Tiny “spark” */
+    .spark{
+      width:10px; height:10px;
+      border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, white, rgba(255,255,255,.2));
+      box-shadow:
+        0 0 12px rgba(25,211,255,.65),
+        0 0 22px rgba(124,92,255,.45);
+      display:inline-block;
+      margin-right:8px;
+      vertical-align:middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="frame">
+      <div class="panel">
+
+        <header>
+          <div class="brand">
+            <div class="kicker"><span class="spark"></span>7eam — dot7eamworks</div>
+            <h1 class="title">Rudy Bustamante</h1>
+            <p class="subtitle">
+              Infrastructure • Operations • Cloud Systems • Automation
+              <span class="pill" style="margin-left:8px;">Workers.dev</span>
+            </p>
+          </div>
+
+          <div class="top-actions">
+            <a class="btn" href="#projects">Projects</a>
+            <a class="btn" href="#about">About</a>
+
+            <div class="dd">
+              <button class="btn" id="ddBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                Other sites ▾
+              </button>
+              <div class="dd-menu" id="ddMenu" role="menu" aria-label="Other sites">
+                <a class="dd-item" role="menuitem" href="https://github.com/N7Septimo" target="_blank" rel="noreferrer">
+                  GitHub
+                  <small>Repos + builds</small>
+                </a>
+                <a class="dd-item" role="menuitem" href="https://www.n7geo.tech" target="_blank" rel="noreferrer">
+                  N7Geo.tech
+                  <small>Geo + automation hub</small>
+                </a>
+                <a class="dd-item" role="menuitem" href="https://n7infosec.com" target="_blank" rel="noreferrer">
+                  n7infosec.com
+                  <small>Gateway / security experiments</small>
+                </a>
+              </div>
+            </div>
+
+            <a class="btn" href="mailto:email@domain.com">Email</a>
+          </div>
+        </header>
+
+        <main>
+          <section class="hero" id="about">
+            <div>
+              <p class="type" aria-label="typewriter headline">
+                <span id="typeText"></span><span class="cursor">▌</span>
+              </p>
+              <p class="subtitle">
+                I build practical automation and reliability improvements for real systems:
+                cloud infra, networking, runbooks, and tooling that cuts toil.
+              </p>
+
+              <div class="badges">
+                <span class="pill">AWS • Cloudflare</span>
+                <span class="pill">Ops + DevOps</span>
+                <span class="pill">Security-minded</span>
+                <span class="pill">Docs & runbooks</span>
+              </div>
+            </div>
+
+            <aside class="side">
+              <h4>Focus</h4>
+              <ul>
+                <li>Operational clarity: runbooks, dashboards, workflows</li>
+                <li>Automation: Workers/Lambda/Scriptable pipelines</li>
+                <li>Network tooling: rules, VPN/proxy, visibility</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section id="projects" class="grid" aria-label="projects">
+            <div class="card">
+              <h3>FlowSight</h3>
+              <p>Edge agent pipeline that builds and publishes optimized rules + status via KV.</p>
+              <div class="meta">
+                <span class="pill">Cloudflare Workers</span>
+                <span class="pill">KV</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>N7SRwave</h3>
+              <p>Gateway repo for publishing <code>rules.conf</code> with rollback-safe updates.</p>
+              <div class="meta">
+                <span class="pill">GitHub</span>
+                <span class="pill">Automation</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>N7Lupa</h3>
+              <p>WireGuard deployment pipeline with CI/CD and cloud automation hooks.</p>
+              <div class="meta">
+                <span class="pill">ECS</span>
+                <span class="pill">WireGuard</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>OTS Time Tracker</h3>
+              <p>Time logging automation: capture, parse, post, and archive daily work summaries.</p>
+              <div class="meta">
+                <span class="pill">Python</span>
+                <span class="pill">Slack/Asana</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>N7Timeflow</h3>
+              <p>Passive time intelligence using iOS context + sensor triggers into cloud logs.</p>
+              <div class="meta">
+                <span class="pill">iOS</span>
+                <span class="pill">IoT</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>HELix Ops</h3>
+              <p>Modular ops framework: geo + time + dashboards + automation under one roof.</p>
+              <div class="meta">
+                <span class="pill">Architecture</span>
+                <span class="pill">Ops</span>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          <div>© <span id="year"></span> 7eam • Built on Cloudflare Workers</div>
+          <div>Tip: hit <code>/health</code> for JSON.</div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Typewriter
+    const lines = [
+      "Infrastructure that doesn’t crumble under stress.",
+      "Automation that removes toil, not common sense.",
+      "Cloud systems + ops engineering, stitched together clean."
+    ];
+    const el = document.getElementById("typeText");
+    let li = 0, i = 0, deleting = false;
+
+    function tick(){
+      const s = lines[li];
+      if (!deleting) {
+        i++;
+        el.textContent = s.slice(0, i);
+        if (i >= s.length) { deleting = true; setTimeout(tick, 1000); return; }
+      } else {
+        i--;
+        el.textContent = s.slice(0, i);
+        if (i <= 0) { deleting = false; li = (li + 1) % lines.length; }
+      }
+      setTimeout(tick, deleting ? 28 : 22);
+    }
+    tick();
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Dropdown
+    const btn = document.getElementById("ddBtn");
+    const menu = document.getElementById("ddMenu");
+    function closeMenu(){ menu.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    window.addEventListener("click", closeMenu);
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
+
+    // Card glow tracks mouse position
+    for (const c of document.querySelectorAll(".card")){
+      c.addEventListener("mousemove", (e)=>{
+        const r = c.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        c.style.setProperty("--mx", x + "%");
+        c.style.setProperty("--my", y + "%");
+      });
+    }
+  </script>
+</body>
+</html>`;
+
+    return new Response(html, {
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+      },
+    });
+  },
+};
