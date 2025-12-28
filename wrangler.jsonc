@@ -1,9 +1,0 @@
-{
-  "name": "7eam",
-  "main": "worker.js",
-  "compatibility_date": "2025-12-16",
-  "kv_namespaces": [
-    { "binding": "M", "id": "c14b3ca22c184a878878f9674df35b42" }
-  ]
-}
-
