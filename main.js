@@ -1,10 +1,12 @@
-const fontSelect = document.getElementById('fontSelect');
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
 
-fontSelect.addEventListener('change', e => {
-  const map = {
-    ibm: "'IBM Plex Mono', monospace",
-    jetbrains: "'JetBrains Mono', monospace",
-    courier: "'Courier Prime', monospace"
-  };
-  document.documentElement.style.setProperty('--font', map[e.target.value]);
-});
+    if (url.pathname.startsWith("/RBustamante")) {
+      // auth, headers, logging, etc.
+    }
+
+    // Hand request back to Cloudflare routing
+    return fetch(request);
+  }
+};
