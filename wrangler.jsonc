@@ -1,12 +1,10 @@
 {
   "name": "7eam",
-  "compatibility_date": "2025-12-16",
   "main": "main.js",
+  "compatibility_date": "2025-12-16",
   "assets": {
     "directory": "./public"
-  }
-
-{
+  },
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
@@ -22,5 +20,4 @@
       "head_sampling_rate": 1
     }
   }
-}
 }
