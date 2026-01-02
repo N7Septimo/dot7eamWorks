@@ -6,7 +6,7 @@
     "directory": "./public"
   }
 }
-TOML
+
 {
   "observability": {
     "enabled": false,
