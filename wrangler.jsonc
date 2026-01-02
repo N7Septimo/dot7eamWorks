@@ -5,7 +5,6 @@
   "assets": {
     "directory": "./public"
   }
-}
 
 {
   "observability": {
@@ -23,4 +22,5 @@
       "head_sampling_rate": 1
     }
   }
+}
 }
