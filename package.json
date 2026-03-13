@@ -2,7 +2,7 @@
   "name": "dot7eamworks-worker",
   "private": true,
   "devDependencies": {
-    "wrangler": "^4.54.0"
+    "wrangler": "^4.59.1"
   },
   "scripts": {
     "deploy": "wrangler deploy"
