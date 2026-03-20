@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodolfo Bustamante | IT Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=JetBrains+Mono&family=Courier+Prime&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --font: 'IBM Plex Mono', monospace;
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #0044cc;
+        }
+
+        body {
+            font-family: var(--font);
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--bg);
+        }
+
+        header {
+            border-bottom: 2px solid var(--text);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        select {
+            padding: 5px;
+            font-family: inherit;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; }
+        h2 { color: var(--accent); border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        
+        section { margin-bottom: 30px; }
+        ul { padding-left: 20px; }
+        .job-title { font-weight: bold; }
+        .meta { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+
+        @media print {
+            .controls { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <label for="fontSelect">Terminal Font:</label>
+        <select id="fontSelect">
+            <option value="ibm">IBM Plex</option>
+            <option value="jetbrains">JetBrains</option>
+            <option value="courier">Courier</option>
+        </select>
+    </div>
+
+    <header>
+        <h1>Rodolfo Bustamante</h1>
+        <p>IT Specialist | Systems Admin | U.S. Marine Corps Veteran</p>
+        <div class="meta">Tucson, AZ • elrudybustamante.workers.dev</div>
+    </header>
+
+    <section id="summary">
+        <h2>Professional Profile</h2>
+        <p>Results-oriented IT Professional with extensive experience in systems administration, network infrastructure, and aviation electronics. Proven track record at Amazon and through independent engineering projects (N7/N7Geo).</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <span class="job-title">IT Support</span> — Amazon <br>
+            <span class="meta">Recent Experience</span>
+            <ul>
+                <li>Managed site infrastructure and technical support in a high-scale environment.</li>
+                <li>Ensured maximum uptime for critical fulfillment systems.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <span class="job-title">Aviation Electronics</span> — USMC / AZ National Guard <br>
+            <span class="meta">Military Service</span>
+            <ul>
+                <li>Maintained complex electronic systems for military aircraft.</li>
+                <li>Developed disciplined troubleshooting and preventive maintenance protocols.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <ul>
+            <li><strong>Infrastructure:</strong> AWS, Cloudflare Workers, KV, S3</li>
+            <li><strong>Scripting:</strong> JavaScript, PowerShell, Command Line</li>
+            <li><strong>Systems:</strong> Systems Administration, Network Configuration</li>
+        </ul>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
