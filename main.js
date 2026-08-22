@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.22";
+const RELEASE = "2026.08.22.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -19,14 +19,14 @@ const HTML = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07111f">
-  <meta name="description" content="Rodolfo I. Bustamante — USMC veteran and infrastructure operations specialist experienced in enterprise IT, AWS, Cloudflare, networking, observability, and automation.">
+  <meta name="theme-color" content="#eef1f4">
+  <meta name="description" content="Rodolfo I. Bustamante - USMC and Army National Guard veteran with enterprise infrastructure, autonomous systems, networking, ServiceNow, cloud, and avionics experience.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>Rodolfo I. Bustamante | Infrastructure &amp; Cloud Operations</title>
+  <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
   <link rel="canonical" href="https://resume.dot7eamworks.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure &amp; Cloud Operations">
-  <meta property="og:description" content="Enterprise IT operations, systems, networking, AWS, Cloudflare, observability, and automation.">
+  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure &amp; Network Operations">
+  <meta property="og:description" content="Enterprise infrastructure, autonomous systems, networking, ServiceNow, AWS, Cloudflare, and mission-critical avionics.">
   <meta property="og:url" content="https://resume.dot7eamworks.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -35,7 +35,7 @@ const HTML = `<!doctype html>
       "@type": "Person",
       "name": "Rodolfo I. Bustamante",
       "alternateName": "Rudy Bustamante",
-      "jobTitle": "Infrastructure and Cloud Operations Specialist",
+      "jobTitle": "Infrastructure and Network Operations Specialist",
       "url": "https://resume.dot7eamworks.io/",
       "email": "mailto:rudybustamante01@icloud.com",
       "telephone": "+1-520-841-3456",
@@ -56,40 +56,37 @@ const HTML = `<!doctype html>
   </script>
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #07111f;
-      --surface: #0d1b2a;
-      --surface-2: #102338;
-      --text: #edf4fb;
-      --muted: #a9b9ca;
-      --accent: #59e0b5;
-      --accent-2: #7eafff;
-      --border: rgba(169, 185, 202, 0.2);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
-      --radius: 18px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light;
+      --canvas: #eef1f4;
+      --paper: #ffffff;
+      --ink: #242424;
+      --muted: #5d6268;
+      --blue: #245783;
+      --blue-dark: #173f63;
+      --rule: #9db9d2;
+      --toolbar: #14283d;
+      --toolbar-text: #f6f9fc;
+      --toolbar-muted: #c7d4e0;
+      --paper-shadow: 0 18px 48px rgba(21, 38, 55, 0.16);
+      --sans: Arial, Helvetica, sans-serif;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at 8% 0%, rgba(89, 224, 181, 0.13), transparent 27rem),
-        radial-gradient(circle at 95% 16%, rgba(126, 175, 255, 0.13), transparent 30rem),
-        var(--bg);
-      color: var(--text);
+      background: var(--canvas);
+      color: var(--ink);
       font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.65;
+      font-size: 15px;
+      line-height: 1.38;
       -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; }
     a:focus-visible,
     button:focus-visible {
-      outline: 3px solid var(--accent);
+      outline: 3px solid #f4c95d;
       outline-offset: 3px;
     }
 
@@ -97,373 +94,282 @@ const HTML = `<!doctype html>
       position: fixed;
       left: 1rem;
       top: -5rem;
-      z-index: 10;
-      padding: 0.75rem 1rem;
-      border-radius: 0.6rem;
-      background: var(--accent);
-      color: #04110d;
-      font-weight: 800;
+      z-index: 20;
+      padding: 0.7rem 1rem;
+      border-radius: 0.35rem;
+      background: #fff;
+      color: #10253a;
+      font-weight: 700;
     }
     .skip-link:focus { top: 1rem; }
 
-    .shell {
-      width: min(1120px, calc(100% - 2rem));
-      margin: 0 auto;
+    .site-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+      background: rgba(20, 40, 61, 0.97);
+      color: var(--toolbar-text);
+      box-shadow: 0 6px 22px rgba(21, 38, 55, 0.14);
+      backdrop-filter: blur(12px);
     }
-
-    .topbar {
+    .site-bar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: min(8.5in, calc(100% - 1.5rem));
+      min-height: 3.7rem;
+      margin: 0 auto;
       gap: 1rem;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid var(--border);
     }
-
-    .brand,
-    .eyebrow,
-    .section-kicker,
-    .meta,
-    .tag,
-    .metric-label {
-      font-family: var(--mono);
-      letter-spacing: 0.08em;
+    .site-brand {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.075em;
+      text-decoration: none;
       text-transform: uppercase;
+      white-space: nowrap;
     }
-
-    .brand {
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
-    nav a {
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    nav a:hover { color: var(--text); }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
-      gap: 2rem;
-      align-items: stretch;
-      padding: 4.6rem 0 2.2rem;
-    }
-
-    .hero-main,
-    .hero-card,
-    .panel,
-    .project {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: linear-gradient(145deg, rgba(16, 35, 56, 0.94), rgba(13, 27, 42, 0.94));
-      box-shadow: var(--shadow);
-    }
-
-    .hero-main { padding: clamp(1.6rem, 4vw, 3.2rem); }
-    .eyebrow,
-    .section-kicker {
-      margin: 0 0 0.85rem;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-
-    h1,
-    h2,
-    h3,
-    p { margin-top: 0; }
-
-    h1 {
-      max-width: 12ch;
-      margin-bottom: 0.65rem;
-      font-size: clamp(2.7rem, 7vw, 5.6rem);
-      line-height: 0.96;
-      letter-spacing: -0.055em;
-    }
-
-    .role {
-      margin-bottom: 1.25rem;
-      color: var(--accent-2);
-      font-family: var(--mono);
-      font-size: clamp(1rem, 2vw, 1.22rem);
-      font-weight: 700;
-    }
-
-    .lead {
-      max-width: 68ch;
-      margin-bottom: 1.5rem;
-      color: #cfdae6;
-      font-size: 1.06rem;
-    }
-
-    .availability {
-      display: inline-flex;
+    .site-nav {
+      display: flex;
       align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1.55rem;
-      color: #dffaf1;
-      font-size: 0.92rem;
-      font-weight: 750;
+      gap: 0.9rem;
+      margin-left: auto;
     }
-    .availability::before {
-      width: 0.62rem;
-      height: 0.62rem;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0.3rem rgba(89, 224, 181, 0.14);
-      content: "";
+    .site-nav a {
+      color: var(--toolbar-muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
     }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-    .button {
+    .site-nav a:hover { color: #fff; }
+    .site-actions { display: flex; gap: 0.5rem; }
+    .action {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 2.8rem;
-      padding: 0.65rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      background: rgba(7, 17, 31, 0.5);
-      color: var(--text);
-      font: 750 0.88rem/1 var(--sans);
+      min-height: 2.25rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 0.35rem;
+      background: transparent;
+      color: #fff;
+      font: 700 0.78rem/1 var(--sans);
       text-decoration: none;
       cursor: pointer;
     }
-    .button.primary {
-      border-color: transparent;
-      background: var(--accent);
-      color: #04110d;
+    .action.primary {
+      border-color: #fff;
+      background: #fff;
+      color: #173f63;
     }
-    .button:hover { transform: translateY(-1px); }
+    .action:hover { transform: translateY(-1px); }
 
-    .hero-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 1.6rem;
+    .page-shell {
+      width: 100%;
+      padding: 2rem 0 3.5rem;
     }
-    .hero-card h2 {
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-      letter-spacing: 0.01em;
+    .resume-document {
+      width: min(8.5in, calc(100% - 1.5rem));
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.55in 0.64in 0.45in;
+      background: var(--paper);
+      box-shadow: var(--paper-shadow);
     }
-    .contact-list {
-      display: grid;
-      gap: 1rem;
-      margin: 0;
+
+    .resume-header {
+      margin-bottom: 0.2in;
+      text-align: center;
     }
-    .contact-list div { display: grid; gap: 0.15rem; }
-    .contact-list dt {
-      color: var(--muted);
-      font: 700 0.7rem/1.3 var(--mono);
-      letter-spacing: 0.08em;
+    .resume-header h1 {
+      margin: 0 0 0.03in;
+      color: var(--blue);
+      font-size: 2.02rem;
+      line-height: 1.05;
+      letter-spacing: 0.035em;
       text-transform: uppercase;
     }
-    .contact-list dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
-    .contact-list a { text-decoration-color: rgba(89, 224, 181, 0.5); }
-    .hero-note {
-      margin: 1.5rem 0 0;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.8rem;
-      margin-bottom: 4.6rem;
-    }
-    .metric {
-      min-height: 8.5rem;
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      background: rgba(13, 27, 42, 0.72);
-    }
-    .metric strong {
-      display: block;
-      margin-bottom: 0.3rem;
-      color: var(--accent);
-      font-size: clamp(1.65rem, 4vw, 2.4rem);
-      line-height: 1.1;
-    }
-    .metric-label { color: var(--muted); font-size: 0.69rem; font-weight: 750; }
-
-    .section { padding: 1rem 0 4.8rem; scroll-margin-top: 1rem; }
-    .section-heading {
-      display: grid;
-      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-      gap: 2rem;
-      align-items: end;
-      margin-bottom: 1.7rem;
-    }
-    .section-heading h2 {
-      margin-bottom: 0;
-      font-size: clamp(1.9rem, 4vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: -0.035em;
-    }
-    .section-heading p { margin-bottom: 0; color: var(--muted); }
-
-    .panel { padding: clamp(1.3rem, 3vw, 2rem); }
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-    .skill-group {
-      padding: 1.2rem;
-      border: 1px solid var(--border);
-      border-radius: 0.9rem;
-      background: rgba(7, 17, 31, 0.38);
-    }
-    .skill-group h3 { margin-bottom: 0.55rem; font-size: 1rem; }
-    .skill-group p { margin-bottom: 0; color: var(--muted); font-size: 0.94rem; }
-
-    .timeline { display: grid; gap: 1rem; }
-    .job {
-      display: grid;
-      grid-template-columns: minmax(160px, 0.34fr) minmax(0, 1fr);
-      gap: 1.4rem;
-      padding: clamp(1.3rem, 3vw, 2rem);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: rgba(13, 27, 42, 0.84);
-    }
-    .meta { color: var(--accent); font-size: 0.72rem; font-weight: 800; }
-    .job h3 { margin-bottom: 0.2rem; font-size: 1.2rem; }
-    .company { margin-bottom: 1rem; color: var(--accent-2); font-weight: 750; }
-    .job ul { margin: 0; padding-left: 1.15rem; color: #cfdae6; }
-    .job li + li { margin-top: 0.55rem; }
-    .job li::marker { color: var(--accent); }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-    .project { display: flex; flex-direction: column; padding: 1.4rem; }
-    .project h3 { margin-bottom: 0.7rem; font-size: 1.08rem; }
-    .project p { flex: 1; color: var(--muted); font-size: 0.93rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .tag {
-      padding: 0.3rem 0.48rem;
-      border: 1px solid rgba(89, 224, 181, 0.24);
-      border-radius: 999px;
-      color: #c7f7e7;
-      font-size: 0.62rem;
+    .resume-title {
+      margin: 0 0 0.03in;
+      color: #2a2a2a;
+      font-size: 0.98rem;
       font-weight: 800;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
     }
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-    .education-grid h3 { margin-bottom: 0.35rem; }
-    .education-grid p { margin-bottom: 0; color: var(--muted); }
-
-    footer {
+    .contact-line {
       display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.8rem 0 2.5rem;
-      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.18rem 0.4rem;
+      margin: 0;
+      padding: 0;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.9rem;
+      list-style: none;
     }
-    footer p { margin: 0; }
+    .contact-line li + li::before {
+      margin-right: 0.4rem;
+      color: #90979e;
+      content: "|";
+    }
+    .contact-line a { text-decoration: none; }
+    .contact-line a:hover { text-decoration: underline; }
 
-    @media (max-width: 860px) {
-      .hero,
-      .section-heading,
-      .job { grid-template-columns: 1fr; }
-      .metrics { grid-template-columns: repeat(2, 1fr); }
-      .projects { grid-template-columns: 1fr; }
-      h1 { max-width: 10ch; }
+    .resume-section {
+      margin-top: 0.14in;
+      scroll-margin-top: 5rem;
+    }
+    .resume-section > h2 {
+      margin: 0 0 0.06in;
+      padding-bottom: 0.04in;
+      border-bottom: 1px solid var(--rule);
+      color: var(--blue);
+      font-size: 0.98rem;
+      line-height: 1.15;
+      letter-spacing: 0.012em;
+      text-transform: uppercase;
+    }
+    .resume-section p { margin: 0; }
+    .resume-section p + p { margin-top: 0.04in; }
+
+    .competencies {
+      display: grid;
+      gap: 0.035in;
+    }
+    .competencies strong { color: #202020; }
+
+    .position + .position { margin-top: 0.11in; }
+    .position-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 0.2in;
+      margin-bottom: 0.035in;
+    }
+    .position-heading p { margin: 0; }
+    .position-title { font-weight: 800; }
+    .organization { font-weight: 400; }
+    .dates {
+      color: var(--muted);
+      font-style: italic;
+      white-space: nowrap;
     }
 
-    @media (max-width: 580px) {
-      .shell { width: min(100% - 1.1rem, 1120px); }
-      .topbar { align-items: flex-start; flex-direction: column; }
-      .hero { padding-top: 1.7rem; gap: 0.8rem; }
-      .hero-main,
-      .hero-card,
-      .panel,
-      .job,
-      .project { border-radius: 1rem; }
-      .metrics,
-      .skill-grid,
-      .education-grid { grid-template-columns: 1fr; }
-      .metric { min-height: auto; }
-      .actions .button { flex: 1 1 calc(50% - 0.7rem); }
-      .section { padding-bottom: 3.4rem; }
-      footer { flex-direction: column; }
+    .resume-list {
+      margin: 0;
+      padding-left: 0.22in;
+    }
+    .resume-list li { padding-left: 0.015in; }
+    .resume-list li + li { margin-top: 0.025in; }
+
+    .project-list {
+      display: grid;
+      gap: 0.055in;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .project-list strong { color: var(--blue-dark); }
+    .project-list span { color: var(--muted); }
+
+    .education-line + .education-line { margin-top: 0.035in; }
+    .education-line strong { color: var(--blue-dark); }
+
+    .resume-footer {
+      margin-top: 0.22in;
+      padding-top: 0.08in;
+      border-top: 1px solid #d9e0e6;
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      body { font-size: 14px; }
+      .site-bar { position: static; }
+      .site-bar-inner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0.65rem 0;
+      }
+      .site-nav { display: none; }
+      .site-actions { margin-left: auto; }
+      .page-shell { padding: 0; }
+      .resume-document {
+        width: 100%;
+        min-height: 0;
+        padding: 1.4rem 1.1rem 1.8rem;
+        box-shadow: none;
+      }
+      .resume-header h1 {
+        font-size: clamp(1.75rem, 8vw, 2.05rem);
+        letter-spacing: 0.02em;
+      }
+      .resume-title { font-size: 0.84rem; }
+      .contact-line { font-size: 0.82rem; }
+      .position-heading { grid-template-columns: 1fr; gap: 0.02in; }
+      .dates { white-space: normal; }
+    }
+
+    @media (max-width: 430px) {
+      .site-brand { width: 100%; }
+      .site-actions {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        width: 100%;
+        margin-left: 0;
+      }
+      .action { width: 100%; }
+      .contact-line {
+        align-items: center;
+        flex-direction: column;
+      }
+      .contact-line li + li::before { display: none; }
+      .resume-section { margin-top: 0.18in; }
     }
 
     @media print {
-      :root { color-scheme: light; }
-      @page { margin: 0.45in; size: letter; }
-      body { background: #fff; color: #111827; font-size: 10.5pt; line-height: 1.42; }
-      .shell { width: 100%; }
-      .topbar,
-      .actions,
-      .availability,
-      .skip-link { display: none !important; }
-      .hero { grid-template-columns: 1.6fr 0.7fr; gap: 0.2in; padding: 0 0 0.18in; }
-      .hero-main,
-      .hero-card,
-      .panel,
-      .project,
-      .job,
-      .metric {
-        border: 1px solid #cbd5e1;
+      @page { size: letter; margin: 0.42in 0.54in; }
+      body {
         background: #fff;
-        box-shadow: none;
-        color: #111827;
+        color: #202020;
+        font-size: 9.45pt;
+        line-height: 1.25;
       }
-      .hero-main,
-      .hero-card { padding: 0.18in; }
-      h1 { max-width: none; margin-bottom: 0.05in; color: #0f172a; font-size: 28pt; }
+      .site-bar,
+      .skip-link { display: none !important; }
+      .page-shell { padding: 0; }
+      .resume-document {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .resume-header { margin-bottom: 0.11in; }
+      .resume-header h1 { font-size: 21pt; }
+      .resume-title { font-size: 10.2pt; }
+      .contact-line { font-size: 9.2pt; }
+      .resume-section { margin-top: 0.09in; scroll-margin-top: 0; }
+      .resume-section > h2 {
+        margin-bottom: 0.035in;
+        padding-bottom: 0.025in;
+        font-size: 10.3pt;
+      }
+      .position + .position { margin-top: 0.07in; }
+      .position-heading { margin-bottom: 0.02in; }
+      .resume-list li + li { margin-top: 0.012in; }
+      .project-list { gap: 0.025in; }
+      #projects { break-before: page; }
+      .resume-footer { margin-top: 0.11in; }
+      h1,
       h2,
-      h3 { color: #0f172a; }
-      .lead,
-      .job ul,
-      .skill-group p,
-      .project p,
-      .section-heading p,
-      .education-grid p,
-      .hero-note,
-      footer { color: #334155; }
-      .role,
-      .company { color: #1d4ed8; }
-      .eyebrow,
-      .section-kicker,
-      .meta,
-      .metric strong { color: #047857; }
-      .metrics { grid-template-columns: repeat(4, 1fr); gap: 0.08in; margin-bottom: 0.22in; }
-      .metric { min-height: auto; padding: 0.1in; }
-      .metric strong { font-size: 16pt; }
-      .section { padding: 0 0 0.24in; }
-      .section-heading { grid-template-columns: 0.7fr 1.3fr; gap: 0.2in; margin-bottom: 0.1in; }
-      .section-heading h2 { font-size: 18pt; }
-      .panel,
-      .job,
-      .project { padding: 0.14in; break-inside: avoid; }
-      .skill-grid,
-      .education-grid { grid-template-columns: repeat(2, 1fr); gap: 0.08in; }
-      .projects { grid-template-columns: repeat(3, 1fr); gap: 0.08in; }
-      .project { font-size: 9pt; }
-      .tag { border-color: #94a3b8; color: #334155; }
-      footer { padding: 0.14in 0 0; }
+      h3,
+      .position-heading { break-after: avoid; }
+      li,
+      .education-line { break-inside: avoid; }
       a { text-decoration: none; }
     }
   </style>
@@ -471,217 +377,114 @@ const HTML = `<!doctype html>
 <body>
   <a class="skip-link" href="#main">Skip to résumé</a>
 
-  <div class="shell">
-    <div class="topbar">
-      <a class="brand" href="#main" aria-label="Rodolfo Bustamante résumé home">7CloudWorks / Résumé</a>
-      <nav aria-label="Résumé sections">
+  <header class="site-bar" aria-label="Résumé controls">
+    <div class="site-bar-inner">
+      <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
+      <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
       </nav>
+      <div class="site-actions">
+        <a class="action" href="mailto:rudybustamante01@icloud.com">Email</a>
+        <button class="action primary" id="print-resume" type="button">Download / Print PDF</button>
+      </div>
     </div>
+  </header>
 
-    <main id="main">
-      <header class="hero">
-        <div class="hero-main">
-          <p class="eyebrow">Information Technology / Infrastructure / Network Operations</p>
-          <h1>Rodolfo I. Bustamante</h1>
-          <p class="role">USMC &amp; Army National Guard Veteran · Enterprise IT Operations</p>
-          <p class="lead">Infrastructure operations specialist with hands-on experience supporting enterprise Windows and Linux environments, Cisco networks, AWS, Cloudflare, observability platforms, automation, and mission-critical avionics. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
-          <p class="availability">Open to infrastructure, systems, network, and cloud operations roles</p>
-          <div class="actions" aria-label="Contact and résumé actions">
-            <a class="button primary" href="mailto:rudybustamante01@icloud.com">Email Rudy</a>
-            <a class="button" href="tel:+15208413456">Call</a>
-            <a class="button" href="https://github.com/N7Septimo" rel="noreferrer">GitHub</a>
-            <button class="button" id="print-resume" type="button">Print / Save PDF</button>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Contact details">
-          <div>
-            <h2>Contact</h2>
-            <dl class="contact-list">
-              <div>
-                <dt>Location</dt>
-                <dd>Tucson, Arizona</dd>
-              </div>
-              <div>
-                <dt>Phone</dt>
-                <dd><a href="tel:+15208413456">520-841-3456</a></dd>
-              </div>
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></dd>
-              </div>
-              <div>
-                <dt>GitHub</dt>
-                <dd><a href="https://github.com/N7Septimo" rel="noreferrer">N7Septimo</a></dd>
-              </div>
-            </dl>
-          </div>
-          <p class="hero-note">Bronze Star Medal recipient · Bilingual in English and Spanish · Operational discipline and practical automation built for real environments.</p>
-        </aside>
+  <main class="page-shell" id="main">
+    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
+      <header class="resume-header">
+        <h1>Rodolfo I. Bustamante</h1>
+        <p class="resume-title">Information Technology | Infrastructure &amp; Network Operations</p>
+        <ul class="contact-line" aria-label="Contact information">
+          <li>Southern Arizona</li>
+          <li><a href="tel:+15208413456">520-841-3456</a></li>
+          <li><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></li>
+          <li><a href="https://github.com/N7Septimo" rel="noreferrer">github.com/N7Septimo</a></li>
+        </ul>
       </header>
 
-      <section class="metrics" aria-label="Career impact highlights">
-        <div class="metric"><strong>4</strong><span class="metric-label">Tucson Node sites supported</span></div>
-        <div class="metric"><strong>1.4M+</strong><span class="metric-label">Square feet of operations</span></div>
-        <div class="metric"><strong>200+</strong><span class="metric-label">Stations in cable remediation</span></div>
-        <div class="metric"><strong>6,800+</strong><span class="metric-label">Personnel trained</span></div>
+      <section class="resume-section" id="summary">
+        <h2>Professional Summary</h2>
+        <p>USMC and Army National Guard veteran with enterprise experience supporting Windows and Linux systems, network and server infrastructure, autonomous fulfillment systems, cloud services, and mission-critical avionics. Managed node-level IT operations across a four-site Tucson environment totaling more than 1.4 million square feet. Combines hands-on rack-and-stack and hardware troubleshooting, disciplined incident response, technical project execution, and small-unit leadership. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
       </section>
 
-      <section class="section" id="summary">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">01 / Profile</p>
-            <h2>Built for uptime.</h2>
+      <section class="resume-section" aria-labelledby="competencies-heading">
+        <h2 id="competencies-heading">Core Competencies</h2>
+        <div class="competencies">
+          <p><strong>Network &amp; Systems:</strong> Active Directory, GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, Windows, Linux, server installation and hardware break-fix</p>
+          <p><strong>Infrastructure &amp; Autonomous Systems:</strong> MDF/IDF support, rack-and-stack, server mapping, RAM/DIMM replacement, Cat6/fiber cabling, Amazon Robotics/Kiva operations, hardware lifecycle, backup and recovery</p>
+          <p><strong>Service Management &amp; Analytics:</strong> ServiceNow, SLA/MTTR monitoring, incident severity and escalation, change control, QA/QC, operational dashboards, Power BI and Tableau application support</p>
+          <p><strong>Cloud &amp; Automation:</strong> AWS EC2/Lambda/S3, Cloudflare Zero Trust/Tunnels/Workers, Prometheus, Envoy, Python, Go, JavaScript, Bash, Git and GitHub</p>
+        </div>
+      </section>
+
+      <section class="resume-section" id="experience">
+        <h2>Professional Experience</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p>
+            <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
-          <p>More than four years supporting high-velocity enterprise operations, backed by military leadership and independent cloud engineering. Comfortable moving from physical infrastructure and endpoint support to network telemetry, scripting, and edge services.</p>
-        </div>
-
-        <div class="panel skill-grid" aria-label="Core competencies">
-          <article class="skill-group">
-            <h3>Systems &amp; Networking</h3>
-            <p>Active Directory, GPO, permissions, Windows, Linux, DNS, DHCP, TCP/IP, Cisco switching and wireless, VoIP.</p>
-          </article>
-          <article class="skill-group">
-            <h3>Cloud &amp; Edge</h3>
-            <p>AWS EC2, Lambda, S3, Cloudflare Workers, Zero Trust, Access, Tunnels, and edge deployment workflows.</p>
-          </article>
-          <article class="skill-group">
-            <h3>Observability &amp; Automation</h3>
-            <p>Prometheus, Envoy, Python, Go, JavaScript, Bash, Git, GitHub, API integration, monitoring, and operational dashboards.</p>
-          </article>
-          <article class="skill-group">
-            <h3>Technical Operations</h3>
-            <p>MDF/IDF support, rack-and-stack, incident response, change management, vendor coordination, hardware lifecycle, backup and recovery, Cat6/fiber cabling, and mentoring.</p>
-          </article>
-        </div>
+          <ul class="resume-list">
+            <li>Supported daily technology operations for the four-site Tucson Node - TUS2, TUS5, SAZ3, and DAZ2 - during high-velocity night shifts across a 1.4M+ sq. ft. enterprise environment.</li>
+            <li>Used ServiceNow daily to manage incident and request queues, prioritize by severity and operational impact, monitor SLA and MTTR performance, coordinate escalations, document troubleshooting, and validate service restoration before closure.</li>
+            <li>Provided daily infrastructure support for Amazon Robotics/Kiva autonomous fulfillment operations, diagnosing network, server, endpoint, peripheral, and communications issues affecting automated material movement.</li>
+            <li>Executed change-managed server rack-and-stack work, installing and mapping new servers and diagnosing and replacing failed RAM/DIMM components.</li>
+            <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, MDF/IDF infrastructure, security cameras, and structured Cat6/fiber cabling.</li>
+            <li>Consulted daily with site Operations leaders, internal customers, engineers, vendors, and technicians; performed QA/QC validation and used ServiceNow dashboards to track workload, recurring failures, service performance, and infrastructure trends.</li>
+            <li>Installed and supported Microsoft Power BI and Tableau applications, diagnosing software and installation issues, documenting resolutions, and validating functionality through ServiceNow.</li>
+            <li>Delivered a 150-station keypad grouped-wave reconfiguration and power/data cable remediation for more than 200 AFE stations while protecting operational continuity; mentored new OTS team members on SOPs, escalation paths, ticketing logic, and disciplined troubleshooting.</li>
+          </ul>
+        </article>
       </section>
 
-      <section class="section" id="experience">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">02 / Experience</p>
-            <h2>Enterprise operations.</h2>
+      <section class="resume-section" aria-labelledby="military-heading">
+        <h2 id="military-heading">Military Experience</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Staff Sergeant - 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | Arizona</span></p>
+            <p class="dates">2006 - 2019</p>
           </div>
-          <p>Hands-on ownership across infrastructure, end-user systems, network services, change work, and high-severity troubleshooting.</p>
-        </div>
+          <ul class="resume-list">
+            <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
+            <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
+            <li>Completed active service supporting Operation Iraqi Freedom; awarded the Bronze Star Medal for meritorious service.</li>
+          </ul>
+        </article>
 
-        <div class="timeline">
-          <article class="job">
-            <div>
-              <p class="meta">Jan 2021 — Aug 2025</p>
-              <p class="meta">Tucson, Arizona</p>
-            </div>
-            <div>
-              <h3>IT Support Associate II</h3>
-              <p class="company">Amazon Operations Technology Support</p>
-              <ul>
-                <li>Supported the four-site Tucson Node—TUS2, TUS5, SAZ3, and DAZ2—during high-velocity night operations, providing node-level troubleshooting and escalation for infrastructure, endpoints, and operational technology.</li>
-                <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, and enterprise peripherals.</li>
-                <li>Served as the primary on-site technical lead during night shifts, resolving incidents across OSI Layers 1–7 and coordinating escalations with global networking teams.</li>
-                <li>Supported MDF/IDF infrastructure, endpoints, VoIP devices, audiovisual systems, security cameras, structured Cat6/fiber cabling, hardware lifecycle, backup and recovery, and UPS/network change work across a 1.4M+ sq. ft. environment.</li>
-                <li>Delivered a 150-station keypad grouped-wave reconfiguration and power/data cable remediation for more than 200 AFE stations while maintaining operational continuity.</li>
-                <li>Managed service tickets, vendor repairs, asset deployment, onboarding support, and technical training; developed practical prototypes and automated network-analysis tools to strengthen operational readiness.</li>
-                <li>Mentored new OTS team members on SOPs, escalation paths, ticketing logic, and disciplined troubleshooting.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="job">
-            <div>
-              <p class="meta">2006 — 2019</p>
-              <p class="meta">Arizona</p>
-            </div>
-            <div>
-              <h3>Staff Sergeant — Armament, Electrical &amp; Avionics Systems Repairer</h3>
-              <p class="company">Arizona Army National Guard · MOS 15Y / 11B</p>
-              <ul>
-                <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
-                <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
-                <li>Completed active service supporting Operation Iraqi Freedom and received the Bronze Star Medal for meritorious service.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="job">
-            <div>
-              <p class="meta">1995 — 2003</p>
-              <p class="meta">Camp Pendleton, CA</p>
-            </div>
-            <div>
-              <h3>Sergeant — Infantry NCO &amp; Marksmanship Instructor</h3>
-              <p class="company">United States Marine Corps · MOS 0331 / 8540</p>
-              <ul>
-                <li>Led small-unit teams in demanding operational environments while maintaining accountability for personnel and equipment.</li>
-                <li>Developed and delivered structured weapons-qualification training for more than 6,800 personnel.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">03 / Selected Projects</p>
-            <h2>Engineering beyond the ticket queue.</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Sergeant - Infantry NCO and Marksmanship Instructor</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p>
+            <p class="dates">1995 - 2003</p>
           </div>
-          <p>Independent systems that connect cloud infrastructure, telemetry, automation, and secure network operations.</p>
-        </div>
-
-        <div class="projects">
-          <article class="project">
-            <h3>AI-Assisted Envoy Control Plane</h3>
-            <p>Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback controls. Added a read-only AI supervisor for evidence-based control-plane decisions.</p>
-            <div class="tags"><span class="tag">AWS EC2</span><span class="tag">Envoy</span><span class="tag">xDS</span><span class="tag">Go</span><span class="tag">Prometheus</span></div>
-          </article>
-
-          <article class="project">
-            <h3>Managed Mobile Network</h3>
-            <p>Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and DNS/routing diagnostics. Investigated cellular-to-Wi-Fi handoff behavior using packet-tunnel telemetry.</p>
-            <div class="tags"><span class="tag">Cloudflare</span><span class="tag">Lambda</span><span class="tag">S3</span><span class="tag">Hysteria2</span></div>
-          </article>
-
-          <article class="project">
-            <h3>Operations Automation &amp; Observability</h3>
-            <p>Created mobile-first monitoring views, technician time-tracking tools, infrastructure inventory workflows, and scripts that turn operational signals into concise, actionable status.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Bash</span><span class="tag">Workers</span></div>
-          </article>
-        </div>
+          <ul class="resume-list">
+            <li>Led small-unit teams in demanding operational environments while maintaining accountability for personnel and equipment.</li>
+            <li>Developed and delivered structured weapons-qualification training for more than 6,800 personnel.</li>
+          </ul>
+        </article>
       </section>
 
-      <section class="section" id="education">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">04 / Foundation</p>
-            <h2>Education &amp; service.</h2>
-          </div>
-          <p>Formal information technology study combined with military leadership and continuous hands-on engineering.</p>
-        </div>
-
-        <div class="education-grid">
-          <article class="panel">
-            <p class="meta">Education</p>
-            <h3>Bachelor of Science in Information Technology</h3>
-            <p>Network Architecture and Security · American Military University · 2014</p>
-          </article>
-          <article class="panel">
-            <p class="meta">Service</p>
-            <h3>Bronze Star Medal</h3>
-            <p>Meritorious service · Operation Iraqi Freedom · Honorable military service</p>
-          </article>
-        </div>
+      <section class="resume-section" id="projects">
+        <h2>Selected Technical Projects</h2>
+        <ul class="project-list">
+          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback controls. <span>AWS EC2, Envoy, xDS, Go, Prometheus</span></li>
+          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics. <span>Cloudflare, Lambda, S3, Hysteria2</span></li>
+          <li><strong>Operations Automation &amp; Observability:</strong> Created mobile-first monitoring views, technician time-tracking tools, infrastructure inventory workflows, and scripts that convert operational signals into actionable status. <span>Python, JavaScript, Bash, Workers</span></li>
+        </ul>
       </section>
-    </main>
 
-    <footer>
-      <p>Rodolfo I. Bustamante · Tucson, Arizona</p>
-      <p>Resume release ${RELEASE} · Served at the Cloudflare edge</p>
-    </footer>
-  </div>
+      <section class="resume-section" id="education">
+        <h2>Education &amp; Recognition</h2>
+        <p class="education-line"><strong>Bachelor of Science in Information Technology</strong>, Concentration in Network Architecture and Security | American Military University | 2014</p>
+        <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
+      </section>
+
+      <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
+    </article>
+  </main>
 
   <script>
     document.getElementById("print-resume").addEventListener("click", () => window.print());

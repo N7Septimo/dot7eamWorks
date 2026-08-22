@@ -5,8 +5,9 @@ The source for [resume.dot7eamworks.io](https://resume.dot7eamworks.io/), Rodolf
 ## What this repository contains
 
 - A responsive, accessible, single-page résumé served by a Cloudflare Worker
+- A résumé-first screen layout that mirrors the printable letter-page document
 - Enterprise IT experience, current technical competencies, and selected engineering projects
-- Print styling for recruiter-friendly PDF export
+- Print styling for recruiter-friendly PDF export from the same source content
 - Canonical metadata, structured data, `robots.txt`, and `sitemap.xml`
 - Security headers, controlled routing, a health endpoint, and Node-based request tests
 
