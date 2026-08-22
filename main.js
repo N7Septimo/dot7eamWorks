@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.22.1";
+const RELEASE = "2026.08.22.2";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -435,7 +435,7 @@ const HTML = `<!doctype html>
             <li>Executed change-managed server rack-and-stack work, installing and mapping new servers and diagnosing and replacing failed RAM/DIMM components.</li>
             <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, MDF/IDF infrastructure, security cameras, and structured Cat6/fiber cabling.</li>
             <li>Consulted daily with site Operations leaders, internal customers, engineers, vendors, and technicians; performed QA/QC validation and used ServiceNow dashboards to track workload, recurring failures, service performance, and infrastructure trends.</li>
-            <li>Installed and supported Microsoft Power BI and Tableau applications, diagnosing software and installation issues, documenting resolutions, and validating functionality through ServiceNow.</li>
+            <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
             <li>Delivered a 150-station keypad grouped-wave reconfiguration and power/data cable remediation for more than 200 AFE stations while protecting operational continuity; mentored new OTS team members on SOPs, escalation paths, ticketing logic, and disciplined troubleshooting.</li>
           </ul>
         </article>

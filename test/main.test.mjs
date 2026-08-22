@@ -27,7 +27,7 @@ test("serves the current resume", async () => {
   assert.match(body, /ServiceNow daily/);
   assert.match(body, /SLA and MTTR/);
   assert.match(body, /RAM\/DIMM/);
-  assert.match(body, /Power BI and Tableau/);
+  assert.match(body, /Tableau, Microsoft Power BI, and other operational software/);
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
@@ -49,7 +49,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.22.1",
+    release: "2026.08.22.2",
   });
 });
 
