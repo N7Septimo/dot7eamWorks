@@ -1,10 +1,20 @@
 {
-  "name": "dot7eamworks-worker",
+  "name": "dot7eamworks-resume",
+  "version": "2026.8.22",
   "private": true,
-  "devDependencies": {
-    "wrangler": "^4.59.1"
+  "type": "module",
+  "description": "Rodolfo I. Bustamante's resume and infrastructure portfolio, served by Cloudflare Workers.",
+  "engines": {
+    "node": ">=20"
   },
   "scripts": {
+    "dev": "wrangler dev",
+    "test": "node --test",
+    "check": "node --check main.js && npm test && wrangler deploy --dry-run",
+    "deploy:dry": "wrangler deploy --dry-run",
     "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.125.0"
   }
 }
