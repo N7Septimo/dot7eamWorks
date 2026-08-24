@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.22.2";
+const RELEASE = "2026.08.24.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -383,6 +383,7 @@ const HTML = `<!doctype html>
       <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
+        <a href="#volunteer">Volunteer</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
       </nav>
@@ -467,6 +468,19 @@ const HTML = `<!doctype html>
         </article>
       </section>
 
+      <section class="resume-section" id="volunteer">
+        <h2>Volunteer &amp; Community Service</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Disaster Response Volunteer</span> <span class="organization">| Team Rubicon</span></p>
+            <p class="dates">Active | Deployment Scheduled Aug 2026</p>
+          </div>
+          <ul class="resume-list">
+            <li>Active member of Team Rubicon's veteran-led disaster-response network, preparing for an August 2026 deployment supporting disaster relief, humanitarian aid, and community recovery.</li>
+          </ul>
+        </article>
+      </section>
+
       <section class="resume-section" id="projects">
         <h2>Selected Technical Projects</h2>
         <ul class="project-list">
@@ -501,7 +515,7 @@ const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>${CANONICAL_ORIGIN}/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

@@ -1,6 +1,6 @@
 {
   "name": "dot7eamworks-resume",
-  "version": "2026.8.22",
+  "version": "2026.8.24",
   "private": true,
   "type": "module",
   "description": "Rodolfo I. Bustamante's resume and infrastructure portfolio, served by Cloudflare Workers.",
