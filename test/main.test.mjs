@@ -31,6 +31,8 @@ test("serves the current resume", async () => {
   assert.match(body, /Team Rubicon/);
   assert.match(body, /Active \| Deployment Scheduled Aug 2026/);
   assert.match(body, /August 2026 deployment/);
+  assert.ok(body.indexOf('id="projects"') < body.indexOf('id="volunteer"'));
+  assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
@@ -52,7 +54,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.24.1",
+    release: "2026.08.24.2",
   });
 });
 
