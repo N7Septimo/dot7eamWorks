@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.24.2";
+const RELEASE = "2026.08.26.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -410,7 +410,7 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>USMC and Army National Guard veteran with enterprise experience supporting Windows and Linux systems, network and server infrastructure, autonomous fulfillment systems, cloud services, and mission-critical avionics. Managed node-level IT operations across a four-site Tucson environment totaling more than 1.4 million square feet. Combines hands-on rack-and-stack and hardware troubleshooting, disciplined incident response, technical project execution, and small-unit leadership. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
+        <p>USMC and Army National Guard veteran with enterprise experience supporting Windows and Linux systems, network and server infrastructure, autonomous fulfillment systems, cloud services, and mission-critical avionics. Managed node-level IT operations across a four-site Tucson environment totaling more than 1.4 million square feet. Combines hands-on rack-and-stack and hardware troubleshooting, disciplined incident response, cross-functional project leadership, and small-unit leadership. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
@@ -418,7 +418,7 @@ const HTML = `<!doctype html>
         <div class="competencies">
           <p><strong>Network &amp; Systems:</strong> Active Directory, GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, Windows, Linux, server installation and hardware break-fix</p>
           <p><strong>Infrastructure &amp; Autonomous Systems:</strong> MDF/IDF support, rack-and-stack, server mapping, RAM/DIMM replacement, Cat6/fiber cabling, Amazon Robotics/Kiva operations, hardware lifecycle, backup and recovery</p>
-          <p><strong>Service Management &amp; Analytics:</strong> ServiceNow, SLA/MTTR monitoring, incident severity and escalation, change control, QA/QC, operational dashboards, Power BI and Tableau application support</p>
+          <p><strong>Service Management, Leadership &amp; Analytics:</strong> ServiceNow, SLA/MTTR, incident and change management, cross-functional meeting leadership, technical project delivery, QA/QC, dashboards, Power BI and Tableau</p>
           <p><strong>Cloud &amp; Automation:</strong> AWS EC2/Lambda/S3, Cloudflare Zero Trust/Tunnels/Workers, Prometheus, Envoy, Python, Go, JavaScript, Bash, Git and GitHub</p>
         </div>
       </section>
@@ -436,9 +436,9 @@ const HTML = `<!doctype html>
             <li>Provided daily infrastructure support for Amazon Robotics/Kiva autonomous fulfillment operations, diagnosing network, server, endpoint, peripheral, and communications issues affecting automated material movement.</li>
             <li>Executed change-managed server rack-and-stack work, installing and mapping new servers and diagnosing and replacing failed RAM/DIMM components.</li>
             <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, MDF/IDF infrastructure, security cameras, and structured Cat6/fiber cabling.</li>
-            <li>Consulted daily with site Operations leaders, internal customers, engineers, vendors, and technicians; performed QA/QC validation and used ServiceNow dashboards to track workload, recurring failures, service performance, and infrastructure trends.</li>
+            <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings.</li>
             <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
-            <li>Delivered a 150-station keypad grouped-wave reconfiguration and power/data cable remediation for more than 200 AFE stations while protecting operational continuity; mentored new OTS team members on SOPs, escalation paths, ticketing logic, and disciplined troubleshooting.</li>
+            <li>Led planning and delivery of a 150-station keypad grouped-wave reconfiguration and power/data remediation across more than 200 AFE stations while protecting continuity; mentored new OTS team members on SOPs, escalation paths, ServiceNow ticketing, and disciplined troubleshooting.</li>
           </ul>
         </article>
       </section>
@@ -516,7 +516,7 @@ const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>${CANONICAL_ORIGIN}/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
