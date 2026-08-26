@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.26.1";
+const RELEASE = "2026.08.26.2";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -418,7 +418,7 @@ const HTML = `<!doctype html>
         <div class="competencies">
           <p><strong>Network &amp; Systems:</strong> Active Directory, GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, Windows, Linux, server installation and hardware break-fix</p>
           <p><strong>Infrastructure &amp; Autonomous Systems:</strong> MDF/IDF support, rack-and-stack, server mapping, RAM/DIMM replacement, Cat6/fiber cabling, Amazon Robotics/Kiva operations, hardware lifecycle, backup and recovery</p>
-          <p><strong>Service Management, Leadership &amp; Analytics:</strong> ServiceNow, SLA/MTTR, incident and change management, cross-functional meeting leadership, technical project delivery, QA/QC, dashboards, Power BI and Tableau</p>
+          <p><strong>Service Management, Leadership &amp; Analytics:</strong> ServiceNow, SLA/MTTR, incident and change management, cross-functional meeting leadership, technical project management and delivery, QA/QC, dashboards, Power BI and Tableau</p>
           <p><strong>Cloud &amp; Automation:</strong> AWS EC2/Lambda/S3, Cloudflare Zero Trust/Tunnels/Workers, Prometheus, Envoy, Python, Go, JavaScript, Bash, Git and GitHub</p>
         </div>
       </section>
