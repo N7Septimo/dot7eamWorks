@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.3";
+const RELEASE = "2026.08.27.4";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -438,7 +438,10 @@ const HTML = `<!doctype html>
             <li>Installed Microsoft Windows, Apple macOS, and Ubuntu Linux operating systems while provisioning, configuring, and deploying end-user equipment; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions and troubleshot DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber infrastructure.</li>
             <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
             <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
-            <li>Managed Tucson Node infrastructure projects by planning work, coordinating Operations, global teams, and vendors, executing changes, validating readiness, and documenting results while protecting 24/7 continuity; delivered power/data rerouting across 200+ stations in AFE 1, AFE 2, and Smalls, a grouped-wave update across 150 keypads, and WAN1/WAN2 demarc power remediation with two 1000VA UPS units.</li>
+            <li>Performed project management as a routine part of daily OTS operations across the Tucson Node, planning infrastructure and workflow-improvement work, coordinating Operations, global teams, and vendors, leading execution, validating readiness, and documenting results while protecting 24/7 continuity.</li>
+            <li><strong>Project example - Production infrastructure:</strong> Delivered power and data rerouting across 200+ stations in AFE 1, AFE 2, and Smalls.</li>
+            <li><strong>Project example - Assigned OTS production remediation:</strong> Completed Project Keypad by reprogramming keypads across 150 stations to improve production workflow.</li>
+            <li><strong>Project example - Self-initiated reliability improvement:</strong> Initiated and delivered WAN1/WAN2 demarc power remediation with two 1000VA UPS units to improve network reliability.</li>
           </ul>
         </article>
       </section>

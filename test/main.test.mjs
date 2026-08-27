@@ -41,9 +41,14 @@ test("serves the current resume", async () => {
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
   assert.match(body, /Led recurring technical meetings/);
   assert.match(body, /Service Management, Project Management &amp; Leadership/);
-  assert.match(body, /Managed Tucson Node infrastructure projects/);
+  assert.match(body, /project management as a routine part of daily OTS operations/);
+  assert.match(body, /Project example - Production infrastructure/);
   assert.match(body, /200\+ stations in AFE 1, AFE 2, and Smalls/);
-  assert.match(body, /grouped-wave update across 150 keypads/);
+  assert.match(body, /Project example - Assigned OTS production remediation/);
+  assert.match(body, /Project Keypad by reprogramming keypads across 150 stations/);
+  assert.match(body, /Project example - Self-initiated reliability improvement/);
+  assert.match(body, /Initiated and delivered WAN1\/WAN2 demarc power remediation/);
+  assert.match(body, /two 1000VA UPS units to improve network reliability/);
   assert.match(body, /WAN1\/WAN2 demarc power remediation with two 1000VA UPS units/);
   assert.match(body, /Mobile Hard of Hearing standup area/);
   assert.match(body, /automated node health-check prototypes/);
@@ -68,7 +73,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.3",
+    release: "2026.08.27.4",
   });
 });
 
