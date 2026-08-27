@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.2";
+const RELEASE = "2026.08.27.3";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -416,7 +416,7 @@ const HTML = `<!doctype html>
       <section class="resume-section" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
-          <p><strong>Network &amp; Systems:</strong> Active Directory, GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, Windows, Linux, server installation and hardware break-fix</p>
+          <p><strong>Network &amp; Systems:</strong> End-user provisioning, Microsoft Windows, Apple macOS, Ubuntu Linux, Active Directory/GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless deployment, VoIP, server installation and hardware break-fix</p>
           <p><strong>Infrastructure &amp; Autonomous Systems:</strong> MDF/IDF support, rack-and-stack, server mapping, RAM/DIMM replacement, Cat6/fiber cabling, Amazon Robotics/Kiva operations, hardware lifecycle, backup and recovery</p>
           <p><strong>Service Management, Project Management &amp; Leadership:</strong> ServiceNow, SLA/MTTR, incident and change management, cross-functional meeting leadership, technical project delivery, QA/QC, operational dashboards, Power BI and Tableau</p>
           <p><strong>Cloud &amp; Automation:</strong> AWS EC2/Lambda/S3, Cloudflare Zero Trust/Tunnels/Workers, Prometheus, Envoy, Python, Go, JavaScript, Bash, Git and GitHub</p>
@@ -434,8 +434,8 @@ const HTML = `<!doctype html>
             <li>Used ServiceNow daily to manage incident and request queues, prioritize by severity and operational impact, monitor SLA and MTTR performance, coordinate escalations, document troubleshooting, and validate service restoration before closure.</li>
             <li>Provided daily infrastructure support for Amazon Robotics/Kiva autonomous fulfillment operations, diagnosing network, server, endpoint, peripheral, and communications issues affecting automated material movement.</li>
             <li>Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
-            <li>Executed change-managed server rack-and-stack work, installing and mapping new servers and diagnosing and replacing failed RAM/DIMM components.</li>
-            <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, MDF/IDF infrastructure, security cameras, and structured Cat6/fiber cabling.</li>
+            <li>Completed the required two formally controlled infrastructure changes (MCMs) per week, including server rack-and-stack work, installation of two 5000VA UPS units at IDF7, and UPS network-card remediation across two additional IDFs; mapped new servers and diagnosed and replaced failed RAM/DIMM components.</li>
+            <li>Installed Microsoft Windows, Apple macOS, and Ubuntu Linux operating systems while provisioning, configuring, and deploying end-user equipment; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions and troubleshot DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber infrastructure.</li>
             <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
             <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
             <li>Managed Tucson Node infrastructure projects by planning work, coordinating Operations, global teams, and vendors, executing changes, validating readiness, and documenting results while protecting 24/7 continuity; delivered power/data rerouting across 200+ stations in AFE 1, AFE 2, and Smalls, a grouped-wave update across 150 keypads, and WAN1/WAN2 demarc power remediation with two 1000VA UPS units.</li>
