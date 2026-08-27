@@ -28,7 +28,8 @@ test("serves the current resume", async () => {
   assert.match(body, /resolving production-impacting faults/);
   assert.match(body, /ServiceNow daily/);
   assert.match(body, /SLA and MTTR/);
-  assert.match(body, /RAM\/DIMM/);
+  assert.match(body, /server installation, rack-and-stack, mapping, and hardware lifecycle support/);
+  assert.doesNotMatch(body, /hard[ -]?drive|RAM\/DIMM/i);
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
   assert.match(body, /standard operating expectation/);
   assert.match(body, /IT Service &amp; User Support/);
@@ -77,7 +78,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.10",
+    release: "2026.08.27.11",
   });
 });
 
