@@ -30,8 +30,7 @@ test("serves the current resume", async () => {
   assert.match(body, /SLA and MTTR/);
   assert.match(body, /RAM\/DIMM/);
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
-  assert.match(body, /two 5000VA UPS units at IDF7/);
-  assert.match(body, /UPS network-card remediation across two additional IDFs/);
+  assert.match(body, /standard operating expectation/);
   assert.match(body, /End-user provisioning/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
   assert.match(body, /provisioned, installed, and validated Cisco switching and wireless equipment/);
@@ -43,16 +42,9 @@ test("serves the current resume", async () => {
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
   assert.match(body, /Led recurring technical meetings/);
   assert.match(body, /Service Management, Project Management &amp; Leadership/);
-  assert.match(body, /Project management was a routine OTS responsibility/);
-  assert.match(body, /Delivered a 200\+ station infrastructure reroute/);
-  assert.match(body, /a 150-station production remediation/);
-  assert.match(body, /a self-initiated dual-WAN reliability improvement/);
-  assert.match(body, /200\+ Station Infrastructure Reroute/);
-  assert.match(body, /power and data rerouting across AFE 1, AFE 2, and Smalls/);
-  assert.match(body, /Project Keypad \| 150 Stations/);
-  assert.match(body, /assigned production remediation by reprogramming station keypads/);
-  assert.match(body, /Dual-WAN Reliability Initiative/);
-  assert.match(body, /Initiated and delivered demarc power remediation with two 1000VA UPS units/);
+  assert.match(body, /Delivered large-scale infrastructure and workflow projects/);
+  assert.doesNotMatch(body, /Station Infrastructure Reroute|Project Keypad|Dual-WAN Reliability Initiative/);
+  assert.doesNotMatch(body, /IDF7|UPS network-card remediation across two additional IDFs/);
   assert.match(body, /Mobile Hard of Hearing standup area/);
   assert.match(body, /automated node health-check prototypes/);
   assert.match(body, /Download \/ Print PDF/);
@@ -76,7 +68,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.6",
+    release: "2026.08.27.7",
   });
 });
 
