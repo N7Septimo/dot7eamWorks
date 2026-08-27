@@ -35,7 +35,12 @@ test("serves the current resume", async () => {
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
   assert.match(body, /Led recurring technical meetings/);
   assert.match(body, /Service Management, Project Management &amp; Leadership/);
-  assert.match(body, /Managed technical projects across multiple Tucson Node initiatives/);
+  assert.match(body, /Managed Tucson Node infrastructure projects/);
+  assert.match(body, /200\+ stations in AFE 1, AFE 2, and Smalls/);
+  assert.match(body, /grouped-wave update across 150 keypads/);
+  assert.match(body, /WAN1\/WAN2 demarc power remediation with two 1000VA UPS units/);
+  assert.match(body, /Mobile Hard of Hearing standup area/);
+  assert.match(body, /automated node health-check prototypes/);
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
@@ -57,7 +62,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.1",
+    release: "2026.08.27.2",
   });
 });
 

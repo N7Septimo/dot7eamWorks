@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.1";
+const RELEASE = "2026.08.27.2";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -431,14 +431,14 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Supported daily technology operations for the four-site Tucson Node - TUS2, TUS5, SAZ3, and DAZ2 - during high-velocity night shifts across a 1.4M+ sq. ft. enterprise environment.</li>
             <li>Used ServiceNow daily to manage incident and request queues, prioritize by severity and operational impact, monitor SLA and MTTR performance, coordinate escalations, document troubleshooting, and validate service restoration before closure.</li>
             <li>Provided daily infrastructure support for Amazon Robotics/Kiva autonomous fulfillment operations, diagnosing network, server, endpoint, peripheral, and communications issues affecting automated material movement.</li>
+            <li>Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
             <li>Executed change-managed server rack-and-stack work, installing and mapping new servers and diagnosing and replacing failed RAM/DIMM components.</li>
             <li>Administered and troubleshot Active Directory policies and permissions, Windows and Linux systems, DNS/DHCP, TCP/IP, Cisco switching and wireless, VoIP, MDF/IDF infrastructure, security cameras, and structured Cat6/fiber cabling.</li>
             <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
             <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
-            <li>Managed technical projects across multiple Tucson Node initiatives, from scope and scheduling through stakeholder and vendor coordination, execution, QA/QC validation, documentation, and operational handoff; examples included a 150-station keypad grouped-wave reconfiguration and power/data remediation across 200+ AFE stations.</li>
+            <li>Managed Tucson Node infrastructure projects by planning work, coordinating Operations, global teams, and vendors, executing changes, validating readiness, and documenting results while protecting 24/7 continuity; delivered power/data rerouting across 200+ stations in AFE 1, AFE 2, and Smalls, a grouped-wave update across 150 keypads, and WAN1/WAN2 demarc power remediation with two 1000VA UPS units.</li>
           </ul>
         </article>
       </section>
