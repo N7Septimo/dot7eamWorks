@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.8";
+const RELEASE = "2026.08.27.9";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -431,13 +431,13 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Used ServiceNow daily to manage incident and request queues, prioritize by severity and operational impact, monitor SLA and MTTR performance, coordinate escalations, document troubleshooting, and validate service restoration before closure.</li>
-            <li>Maintained the Tucson Node's network-connected technology end to end—from network and server infrastructure to endpoints, peripherals, cameras, VoIP, and Amazon Robotics/Kiva systems—resolving production-impacting faults.</li>
-            <li>Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
-            <li>Completed the required two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, following change controls from planning and approval through implementation, validation, and documentation.</li>
-            <li>Routinely provisioned, configured, and deployed end-user equipment; installed and supported Microsoft Windows, Apple macOS, Ubuntu Linux, and operational software; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions; and troubleshot application, DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber issues.</li>
-            <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
-            <li>Delivered large-scale infrastructure and workflow projects across the Tucson Node, coordinating Operations, global teams, and vendors from planning through execution and readiness validation without disrupting 24/7 operations.</li>
+            <li>Managed day-to-day IT support across the Tucson Node, using ServiceNow daily to carry incidents and requests from prioritization and diagnosis through escalation, restoration, validation, and closure while tracking SLA and MTTR performance.</li>
+            <li>Maintained the node's network-connected technology end to end in a 24/7 Amazon Robotics/Kiva environment—from network and server infrastructure to endpoints, peripherals, cameras, and VoIP—resolving production-impacting faults.</li>
+            <li>Provisioned, configured, deployed, and supported end-user equipment and operational software across Microsoft Windows, Apple macOS, and Ubuntu Linux; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory; and diagnosed application, DNS/DHCP, TCP/IP, MDF/IDF, security-camera, and Cat6/fiber issues.</li>
+            <li>Executed the required two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
+            <li>Managed large-scale infrastructure and workflow projects and led recurring technical meetings, coordinating Operations leaders, global teams, engineers, vendors, and technicians through priorities, execution, handoffs, QA/QC, readiness validation, and closeout.</li>
+            <li>Improved operational readiness by designing and deploying a Mobile Hard of Hearing standup area and developing automated node health-check prototypes.</li>
+            <li>Extended support beyond the home node by mentoring new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting and traveling to new site builds to support the full range of IT work required on site.</li>
           </ul>
         </article>
       </section>

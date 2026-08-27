@@ -32,10 +32,10 @@ test("serves the current resume", async () => {
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
   assert.match(body, /standard operating expectation/);
   assert.match(body, /End-user provisioning/);
-  assert.match(body, /Routinely provisioned, configured, and deployed end-user equipment/);
+  assert.match(body, /Provisioned, configured, deployed, and supported end-user equipment and operational software/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
   assert.match(body, /provisioned, installed, and validated Cisco switching and wireless equipment/);
-  assert.match(body, /installed and supported Microsoft Windows, Apple macOS, Ubuntu Linux, and operational software/);
+  assert.match(body, /operational software across Microsoft Windows, Apple macOS, and Ubuntu Linux/);
   assert.match(body, /Power BI and Tableau/);
   assert.doesNotMatch(body, /Installed and supported Tableau/);
   assert.match(body, /Team Rubicon/);
@@ -43,9 +43,11 @@ test("serves the current resume", async () => {
   assert.match(body, /August 2026 deployment/);
   assert.ok(body.indexOf('id="projects"') < body.indexOf('id="volunteer"'));
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
-  assert.match(body, /Led recurring technical meetings/);
+  assert.match(body, /led recurring technical meetings/);
   assert.match(body, /Service Management, Project Management &amp; Leadership/);
-  assert.match(body, /Delivered large-scale infrastructure and workflow projects/);
+  assert.match(body, /Managed large-scale infrastructure and workflow projects/);
+  assert.match(body, /mentoring new OTS team members/);
+  assert.match(body, /traveling to new site builds to support the full range of IT work required on site/);
   assert.doesNotMatch(body, /Station Infrastructure Reroute|Project Keypad|Dual-WAN Reliability Initiative/);
   assert.doesNotMatch(body, /IDF7|UPS network-card remediation across two additional IDFs/);
   assert.match(body, /Mobile Hard of Hearing standup area/);
@@ -71,7 +73,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.8",
+    release: "2026.08.27.9",
   });
 });
 
