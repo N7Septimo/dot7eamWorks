@@ -24,6 +24,8 @@ test("serves the current resume", async () => {
   assert.match(body, /Network Architecture and Security/);
   assert.match(body, /AI-Assisted Envoy Control Plane/);
   assert.match(body, /Amazon Robotics\/Kiva/);
+  assert.match(body, /network-connected technology end to end/);
+  assert.match(body, /resolving production-impacting faults/);
   assert.match(body, /ServiceNow daily/);
   assert.match(body, /SLA and MTTR/);
   assert.match(body, /RAM\/DIMM/);
@@ -74,7 +76,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.5",
+    release: "2026.08.27.6",
   });
 });
 

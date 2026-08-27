@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.5";
+const RELEASE = "2026.08.27.6";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -432,7 +432,7 @@ const HTML = `<!doctype html>
           </div>
           <ul class="resume-list">
             <li>Used ServiceNow daily to manage incident and request queues, prioritize by severity and operational impact, monitor SLA and MTTR performance, coordinate escalations, document troubleshooting, and validate service restoration before closure.</li>
-            <li>Provided daily infrastructure support for Amazon Robotics/Kiva autonomous fulfillment operations, diagnosing network, server, endpoint, peripheral, and communications issues affecting automated material movement.</li>
+            <li>Maintained the Tucson Node's network-connected technology end to end—from network and server infrastructure to endpoints, peripherals, cameras, VoIP, and Amazon Robotics/Kiva systems—resolving production-impacting faults.</li>
             <li>Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
             <li>Completed the required two formally controlled infrastructure changes (MCMs) per week, including server rack-and-stack work, installation of two 5000VA UPS units at IDF7, and UPS network-card remediation across two additional IDFs; mapped new servers and diagnosed and replaced failed RAM/DIMM components.</li>
             <li>Installed Microsoft Windows, Apple macOS, and Ubuntu Linux operating systems while provisioning, configuring, and deploying end-user equipment; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions and troubleshot DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber infrastructure.</li>
