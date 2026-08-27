@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.9";
+const RELEASE = "2026.08.27.10";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -416,10 +416,10 @@ const HTML = `<!doctype html>
       <section class="resume-section" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
-          <p><strong>Network &amp; Systems:</strong> End-user provisioning, Microsoft Windows, Apple macOS, Ubuntu Linux, Active Directory/GPO, DNS/DHCP, TCP/IP, Cisco switching and wireless deployment, VoIP, server installation and hardware break-fix</p>
-          <p><strong>Infrastructure &amp; Autonomous Systems:</strong> MDF/IDF support, rack-and-stack, server mapping, RAM/DIMM replacement, Cat6/fiber cabling, Amazon Robotics/Kiva operations, hardware lifecycle, backup and recovery</p>
-          <p><strong>Service Management, Project Management &amp; Leadership:</strong> ServiceNow, SLA/MTTR, incident and change management, cross-functional meeting leadership, technical project delivery, QA/QC, operational dashboards, Power BI and Tableau</p>
-          <p><strong>Cloud &amp; Automation:</strong> AWS EC2/Lambda/S3, Cloudflare Zero Trust/Tunnels/Workers, Prometheus, Envoy, Python, Go, JavaScript, Bash, Git and GitHub</p>
+          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA and MTTR tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft Windows, Apple macOS, Ubuntu Linux, and Active Directory/GPO</p>
+          <p><strong>Network &amp; Infrastructure Operations:</strong> Cisco switching and wireless, DNS/DHCP, TCP/IP, VoIP, MDF/IDF operations, Cat6 and fiber, server rack-and-stack and mapping, RAM/DIMM replacement, hardware lifecycle, backup and recovery, security cameras, and Amazon Robotics/Kiva</p>
+          <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional and vendor coordination, new-site build support, mentoring, and readiness validation</p>
+          <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; Git and GitHub; Power BI and Tableau dashboards</p>
         </div>
       </section>
 

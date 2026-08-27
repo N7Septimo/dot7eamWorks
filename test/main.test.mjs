@@ -31,7 +31,9 @@ test("serves the current resume", async () => {
   assert.match(body, /RAM\/DIMM/);
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
   assert.match(body, /standard operating expectation/);
-  assert.match(body, /End-user provisioning/);
+  assert.match(body, /IT Service &amp; User Support/);
+  assert.match(body, /end-user device and software deployment/);
+  assert.match(body, /Network &amp; Infrastructure Operations/);
   assert.match(body, /Provisioned, configured, deployed, and supported end-user equipment and operational software/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
   assert.match(body, /provisioned, installed, and validated Cisco switching and wireless equipment/);
@@ -44,7 +46,9 @@ test("serves the current resume", async () => {
   assert.ok(body.indexOf('id="projects"') < body.indexOf('id="volunteer"'));
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
   assert.match(body, /led recurring technical meetings/);
-  assert.match(body, /Service Management, Project Management &amp; Leadership/);
+  assert.match(body, /Project &amp; Technical Leadership/);
+  assert.match(body, /new-site build support/);
+  assert.match(body, /Cloud, Automation &amp; Observability/);
   assert.match(body, /Managed large-scale infrastructure and workflow projects/);
   assert.match(body, /mentoring new OTS team members/);
   assert.match(body, /traveling to new site builds to support the full range of IT work required on site/);
@@ -73,7 +77,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.9",
+    release: "2026.08.27.10",
   });
 });
 
