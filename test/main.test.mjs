@@ -58,6 +58,7 @@ test("serves the current resume", async () => {
   assert.match(body, /automated node health-check prototypes/);
   assert.match(body, /Additional OTS initiatives/);
   assert.match(body, /Independent Technical Projects/);
+  assert.doesNotMatch(body, /Operations Automation &amp; Observability|mobile-first monitoring views|technician time-tracking tools|infrastructure inventory workflows|actionable status/);
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
@@ -79,7 +80,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.12",
+    release: "2026.08.27.13",
   });
 });
 

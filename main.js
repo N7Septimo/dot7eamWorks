@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.12";
+const RELEASE = "2026.08.27.13";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -473,7 +473,6 @@ const HTML = `<!doctype html>
         <ul class="project-list">
           <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback controls. <span>AWS EC2, Envoy, xDS, Go, Prometheus</span></li>
           <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics. <span>Cloudflare, Lambda, S3, Hysteria2</span></li>
-          <li><strong>Operations Automation &amp; Observability:</strong> Created mobile-first monitoring views, technician time-tracking tools, infrastructure inventory workflows, and scripts that convert operational signals into actionable status. <span>Python, JavaScript, Bash, Workers</span></li>
         </ul>
       </section>
 
