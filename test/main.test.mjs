@@ -32,9 +32,12 @@ test("serves the current resume", async () => {
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
   assert.match(body, /standard operating expectation/);
   assert.match(body, /End-user provisioning/);
+  assert.match(body, /Routinely provisioned, configured, and deployed end-user equipment/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
   assert.match(body, /provisioned, installed, and validated Cisco switching and wireless equipment/);
-  assert.match(body, /Tableau, Microsoft Power BI, and other operational software/);
+  assert.match(body, /installed and supported Microsoft Windows, Apple macOS, Ubuntu Linux, and operational software/);
+  assert.match(body, /Power BI and Tableau/);
+  assert.doesNotMatch(body, /Installed and supported Tableau/);
   assert.match(body, /Team Rubicon/);
   assert.match(body, /Active \| Deployment Scheduled Aug 2026/);
   assert.match(body, /August 2026 deployment/);
@@ -68,7 +71,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.7",
+    release: "2026.08.27.8",
   });
 });
 

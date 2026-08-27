@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.7";
+const RELEASE = "2026.08.27.8";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -435,9 +435,8 @@ const HTML = `<!doctype html>
             <li>Maintained the Tucson Node's network-connected technology end to end—from network and server infrastructure to endpoints, peripherals, cameras, VoIP, and Amazon Robotics/Kiva systems—resolving production-impacting faults.</li>
             <li>Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
             <li>Completed the required two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, following change controls from planning and approval through implementation, validation, and documentation.</li>
-            <li>Installed Microsoft Windows, Apple macOS, and Ubuntu Linux operating systems while provisioning, configuring, and deploying end-user equipment; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions and troubleshot DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber infrastructure.</li>
+            <li>Routinely provisioned, configured, and deployed end-user equipment; installed and supported Microsoft Windows, Apple macOS, Ubuntu Linux, and operational software; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions; and troubleshot application, DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber issues.</li>
             <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
-            <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
             <li>Delivered large-scale infrastructure and workflow projects across the Tucson Node, coordinating Operations, global teams, and vendors from planning through execution and readiness validation without disrupting 24/7 operations.</li>
           </ul>
         </article>
