@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.4";
+const RELEASE = "2026.08.27.5";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -410,7 +410,7 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>USMC and Army National Guard veteran with enterprise experience supporting Windows and Linux systems, network and server infrastructure, autonomous fulfillment systems, cloud services, and mission-critical avionics. Managed node-level IT operations across a four-site Tucson environment totaling more than 1.4 million square feet. Combines hands-on rack-and-stack and hardware troubleshooting, disciplined incident response, cross-functional project leadership, and small-unit leadership. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
+        <p>USMC and Army National Guard veteran supporting enterprise IT across a four-site, 1.4M+ sq. ft. Tucson node. Hands-on experience with network and server infrastructure, Amazon Robotics/Kiva, ServiceNow, controlled changes, and project delivery. Delivered a 200+ station infrastructure reroute, a 150-station production remediation, and a self-initiated dual-WAN reliability improvement. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
@@ -438,10 +438,10 @@ const HTML = `<!doctype html>
             <li>Installed Microsoft Windows, Apple macOS, and Ubuntu Linux operating systems while provisioning, configuring, and deploying end-user equipment; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory policies and permissions and troubleshot DNS/DHCP, TCP/IP, VoIP, MDF/IDF, security-camera, and Cat6/fiber infrastructure.</li>
             <li>Led recurring technical meetings with Operations leaders, engineers, vendors, and technicians to align incident and project priorities, communicate status, coordinate handoffs, and review ServiceNow dashboards and QA/QC findings; mentored new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting.</li>
             <li>Installed and supported Tableau, Microsoft Power BI, and other operational software used by Operations to measure performance metrics; diagnosed installation and application issues, documented resolutions, and validated functionality through ServiceNow.</li>
-            <li>Performed project management as a routine part of daily OTS operations across the Tucson Node, planning infrastructure and workflow-improvement work, coordinating Operations, global teams, and vendors, leading execution, validating readiness, and documenting results while protecting 24/7 continuity.</li>
-            <li><strong>Project example - Production infrastructure:</strong> Delivered power and data rerouting across 200+ stations in AFE 1, AFE 2, and Smalls.</li>
-            <li><strong>Project example - Assigned OTS production remediation:</strong> Completed Project Keypad by reprogramming keypads across 150 stations to improve production workflow.</li>
-            <li><strong>Project example - Self-initiated reliability improvement:</strong> Initiated and delivered WAN1/WAN2 demarc power remediation with two 1000VA UPS units to improve network reliability.</li>
+            <li>Project management was a routine OTS responsibility across the Tucson Node: planned infrastructure and workflow improvements, coordinated Operations, global teams, and vendors, led execution, validated readiness, and documented results without disrupting 24/7 operations.</li>
+            <li><strong>200+ Station Infrastructure Reroute:</strong> Delivered power and data rerouting across AFE 1, AFE 2, and Smalls.</li>
+            <li><strong>Project Keypad | 150 Stations:</strong> Completed assigned production remediation by reprogramming station keypads to improve workflow.</li>
+            <li><strong>Dual-WAN Reliability Initiative:</strong> Initiated and delivered demarc power remediation with two 1000VA UPS units.</li>
           </ul>
         </article>
       </section>
