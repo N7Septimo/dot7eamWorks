@@ -416,7 +416,7 @@ const HTML = `<!doctype html>
       <section class="resume-section" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
-          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA and MTTR tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft Windows, Apple macOS, Ubuntu Linux, and Active Directory/GPO</p>
+          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft Windows, Apple macOS, Ubuntu Linux, and Active Directory/GPO</p>
           <p><strong>Network &amp; Infrastructure Operations:</strong> Cisco switching and wireless, DNS/DHCP, TCP/IP, VoIP, MDF/IDF operations, Cat6 and fiber, server installation, rack-and-stack, mapping, and hardware lifecycle support, backup and recovery, security cameras, and Amazon Robotics/Kiva</p>
           <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional and vendor coordination, new-site build support, mentoring, and readiness validation</p>
           <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; Git and GitHub; Power BI and Tableau dashboards</p>
@@ -433,7 +433,7 @@ const HTML = `<!doctype html>
           <ul class="resume-list">
             <li>Managed and maintained the node's network-connected technology end-to-end in a 24/7 Amazon Robotics/Kiva environment, from network and server infrastructure to endpoints, peripherals, cameras, and VoIP, resolving production-impacting faults.</li>
             <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
-            <li>Utilized ServiceNow daily to manage incidents and requests through prioritization, diagnosis, escalation, restoration, and closure, consistently tracking and meeting SLA and MTTR performance targets.</li>
+            <li>Utilized ServiceNow daily to manage incidents and requests through prioritization, diagnosis, escalation, restoration, and closure while consistently meeting SLA requirements.</li>
             <li>Provisioned, configured, and supported end-user equipment across Windows, macOS, and Linux, and administered Active Directory, DNS/DHCP, TCP/IP, MDF/IDF, and Cat6/fiber infrastructure.</li>
             <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and closeout.</li>
             <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>

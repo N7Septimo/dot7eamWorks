@@ -27,7 +27,9 @@ test("serves the current resume", async () => {
   assert.match(body, /network-connected technology end-to-end/);
   assert.match(body, /resolving production-impacting faults/);
   assert.match(body, /ServiceNow daily/);
-  assert.match(body, /SLA and MTTR/);
+  assert.match(body, /SLA tracking/);
+  assert.match(body, /meeting SLA requirements/);
+  assert.doesNotMatch(body, /MTTR/);
   assert.match(body, /server installation, rack-and-stack, mapping, and hardware lifecycle support/);
   assert.doesNotMatch(body, /hard[ -]?drive|RAM\/DIMM/i);
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
