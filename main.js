@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.11";
+const RELEASE = "2026.08.27.12";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -431,13 +431,13 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Managed day-to-day IT support across the Tucson Node, using ServiceNow daily to carry incidents and requests from prioritization and diagnosis through escalation, restoration, validation, and closure while tracking SLA and MTTR performance.</li>
-            <li>Maintained the node's network-connected technology end to end in a 24/7 Amazon Robotics/Kiva environment—from network and server infrastructure to endpoints, peripherals, cameras, and VoIP—resolving production-impacting faults.</li>
-            <li>Provisioned, configured, deployed, and supported end-user equipment and operational software across Microsoft Windows, Apple macOS, and Ubuntu Linux; provisioned, installed, and validated Cisco switching and wireless equipment; administered Active Directory; and diagnosed application, DNS/DHCP, TCP/IP, MDF/IDF, security-camera, and Cat6/fiber issues.</li>
-            <li>Executed the required two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
-            <li>Managed large-scale infrastructure and workflow projects and led recurring technical meetings, coordinating Operations leaders, global teams, engineers, vendors, and technicians through priorities, execution, handoffs, QA/QC, readiness validation, and closeout.</li>
-            <li>Improved operational readiness by designing and deploying a Mobile Hard of Hearing standup area and developing automated node health-check prototypes.</li>
-            <li>Extended support beyond the home node by mentoring new OTS team members on SOPs, escalation paths, ticketing, and disciplined troubleshooting and traveling to new site builds to support the full range of IT work required on site.</li>
+            <li>Managed and maintained the node's network-connected technology end-to-end in a 24/7 Amazon Robotics/Kiva environment, from network and server infrastructure to endpoints, peripherals, cameras, and VoIP, resolving production-impacting faults.</li>
+            <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
+            <li>Utilized ServiceNow daily to manage incidents and requests through prioritization, diagnosis, escalation, restoration, and closure, consistently tracking and meeting SLA and MTTR performance targets.</li>
+            <li>Provisioned, configured, and supported end-user equipment across Windows, macOS, and Linux, and administered Active Directory, DNS/DHCP, TCP/IP, MDF/IDF, and Cat6/fiber infrastructure.</li>
+            <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and closeout.</li>
+            <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>
+            <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
           </ul>
         </article>
       </section>
@@ -469,7 +469,7 @@ const HTML = `<!doctype html>
       </section>
 
       <section class="resume-section" id="projects">
-        <h2>Selected Technical Projects</h2>
+        <h2>Independent Technical Projects</h2>
         <ul class="project-list">
           <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback controls. <span>AWS EC2, Envoy, xDS, Go, Prometheus</span></li>
           <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics. <span>Cloudflare, Lambda, S3, Hysteria2</span></li>

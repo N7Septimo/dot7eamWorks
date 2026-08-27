@@ -24,7 +24,7 @@ test("serves the current resume", async () => {
   assert.match(body, /Network Architecture and Security/);
   assert.match(body, /AI-Assisted Envoy Control Plane/);
   assert.match(body, /Amazon Robotics\/Kiva/);
-  assert.match(body, /network-connected technology end to end/);
+  assert.match(body, /network-connected technology end-to-end/);
   assert.match(body, /resolving production-impacting faults/);
   assert.match(body, /ServiceNow daily/);
   assert.match(body, /SLA and MTTR/);
@@ -35,10 +35,9 @@ test("serves the current resume", async () => {
   assert.match(body, /IT Service &amp; User Support/);
   assert.match(body, /end-user device and software deployment/);
   assert.match(body, /Network &amp; Infrastructure Operations/);
-  assert.match(body, /Provisioned, configured, deployed, and supported end-user equipment and operational software/);
+  assert.match(body, /Provisioned, configured, and supported end-user equipment across Windows, macOS, and Linux/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
-  assert.match(body, /provisioned, installed, and validated Cisco switching and wireless equipment/);
-  assert.match(body, /operational software across Microsoft Windows, Apple macOS, and Ubuntu Linux/);
+  assert.match(body, /Cisco switching and wireless/);
   assert.match(body, /Power BI and Tableau/);
   assert.doesNotMatch(body, /Installed and supported Tableau/);
   assert.match(body, /Team Rubicon/);
@@ -46,17 +45,19 @@ test("serves the current resume", async () => {
   assert.match(body, /August 2026 deployment/);
   assert.ok(body.indexOf('id="projects"') < body.indexOf('id="volunteer"'));
   assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
-  assert.match(body, /led recurring technical meetings/);
+  assert.match(body, /chaired technical meetings/);
   assert.match(body, /Project &amp; Technical Leadership/);
   assert.match(body, /new-site build support/);
   assert.match(body, /Cloud, Automation &amp; Observability/);
-  assert.match(body, /Managed large-scale infrastructure and workflow projects/);
-  assert.match(body, /mentoring new OTS team members/);
-  assert.match(body, /traveling to new site builds to support the full range of IT work required on site/);
+  assert.match(body, /Led large-scale infrastructure and workflow projects/);
+  assert.match(body, /Mentored new OTS team members/);
+  assert.match(body, /traveled to new site builds to provide comprehensive on-site IT support/);
   assert.doesNotMatch(body, /Station Infrastructure Reroute|Project Keypad|Dual-WAN Reliability Initiative/);
   assert.doesNotMatch(body, /IDF7|UPS network-card remediation across two additional IDFs/);
   assert.match(body, /Mobile Hard of Hearing standup area/);
   assert.match(body, /automated node health-check prototypes/);
+  assert.match(body, /Additional OTS initiatives/);
+  assert.match(body, /Independent Technical Projects/);
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
@@ -78,7 +79,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.11",
+    release: "2026.08.27.12",
   });
 });
 
