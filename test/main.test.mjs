@@ -24,20 +24,23 @@ test("serves the current resume", async () => {
   assert.match(body, /Network Architecture and Security/);
   assert.match(body, /AI-Assisted Envoy Control Plane/);
   assert.match(body, /Amazon Robotics\/Kiva/);
-  assert.match(body, /network-connected technology end-to-end/);
+  assert.match(body, /Infrastructure &amp; End-User Support/);
+  assert.match(body, /developing practical technical solutions/);
   assert.match(body, /resolving production-impacting faults/);
-  assert.match(body, /ServiceNow daily/);
+  assert.match(body, /high-volume ServiceNow incident and request queue/);
   assert.match(body, /SLA tracking/);
-  assert.match(body, /meeting SLA requirements/);
+  assert.match(body, /meeting individual SLA requirements/);
   assert.doesNotMatch(body, /MTTR/);
-  assert.match(body, /server installation, rack-and-stack, mapping, and hardware lifecycle support/);
+  assert.doesNotMatch(body, /server installation|rack-and-stack/);
+  assert.match(body, /Network &amp; Infrastructure Support/);
+  assert.match(body, /supervised network-hardware replacement/);
   assert.doesNotMatch(body, /hard[ -]?drive|RAM\/DIMM/i);
   assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
   assert.match(body, /standard operating expectation/);
   assert.match(body, /IT Service &amp; User Support/);
   assert.match(body, /end-user device and software deployment/);
-  assert.match(body, /Network &amp; Infrastructure Operations/);
-  assert.match(body, /Provisioned, configured, and supported end-user equipment across Windows, macOS, and Linux/);
+  assert.match(body, /Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations/);
+  assert.match(body, /network-hardware replacements completed under engineering supervision/);
   assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
   assert.match(body, /Cisco switching and wireless/);
   assert.match(body, /Power BI and Tableau/);
@@ -82,7 +85,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.08.27.13",
+    release: "2026.09.03.1",
   });
 });
 
