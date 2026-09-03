@@ -3,7 +3,7 @@ const RELEASE = "2026.09.03.4";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
-    "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+    "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; fr[...]",
   "Cross-Origin-Opener-Policy": "same-origin",
   "Cross-Origin-Resource-Policy": "same-origin",
   "Permissions-Policy":
@@ -20,7 +20,7 @@ const HTML = `<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef1f4">
-  <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, controlled changes, and automation experience.">
+  <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, [...]">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
   <link rel="canonical" href="https://resume.dot7eamworks.io/">
@@ -377,12 +377,12 @@ const HTML = `<!doctype html>
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to résumé</a>
+  <a class="skip-link" href="#main">Skip to r\u00e9sum\u00e9</a>
 
-  <header class="site-bar" aria-label="Résumé controls">
+  <header class="site-bar" aria-label="R\u00e9sum\u00e9 controls">
     <div class="site-bar-inner">
       <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
-      <nav class="site-nav" aria-label="Résumé sections">
+      <nav class="site-nav" aria-label="R\u00e9sum\u00e9 sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#volunteer">Volunteer</a>
@@ -397,7 +397,7 @@ const HTML = `<!doctype html>
   </header>
 
   <main class="page-shell" id="main">
-    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
+    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional r\u00e9sum\u00e9">
       <header class="resume-header">
         <h1>Rodolfo I. Bustamante</h1>
         <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
@@ -411,16 +411,16 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>USMC and Army National Guard veteran with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node. Developed practical technical solutions while managing ServiceNow incidents and requests, provisioning endpoint and facility equipment, resolving production-impacting faults, and supporting network-connected technology in a 24/7 Amazon Robotics/Kiva environment. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
+        <p>USMC and Army National Guard veteran with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node. Developed practi[...]
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
-          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft Windows, Apple macOS, Ubuntu Linux, and Active Directory/GPO</p>
-          <p><strong>Network &amp; Infrastructure Support:</strong> Hands-on Cisco switching and wireless troubleshooting, DNS/DHCP, TCP/IP, VoIP, MDF/IDF support, Cat6 and fiber, network mapping, supervised network-hardware replacement, hardware lifecycle support, backup and recovery, security cameras, and Amazon Robotics/Kiva</p>
-          <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional and vendor coordination, new-site build support, mentoring, and readiness validation</p>
-          <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; Git and GitHub; Power BI and Tableau dashboards</p>
+          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Mic[...]
+          <p><strong>Network &amp; Infrastructure Support:</strong> Hands-on Cisco switching and wireless troubleshooting, DNS/DHCP, TCP/IP, VoIP, MDF/IDF support, Cat6 and fiber, network mapping[...]
+          <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functio[...]
+          <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; [...]
         </div>
       </section>
 
@@ -432,13 +432,13 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Delivered infrastructure and end-user support in a 24/7 Amazon Robotics/Kiva environment, developing practical technical solutions for recurring operational issues while supporting endpoints, peripherals, cameras, VoIP, and network-connected facility technology.</li>
-            <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
+            <li>Delivered infrastructure and end-user support in a 24/7 Amazon Robotics/Kiva environment, developing practical technical solutions for recurring operational issues while supportin[...]
+            <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation[...]
             <li>Managed a high-volume ServiceNow incident and request queue through prioritization, diagnosis, escalation, restoration, and closure while meeting individual SLA requirements.</li>
-            <li>Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations, and related equipment; performed hands-on Cisco, Active Directory, DNS/DHCP, TCP/IP, MDF/IDF, and Cat6/fiber troubleshooting, with occasional network-hardware replacements completed under engineering supervision.</li>
-            <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and closeout.</li>
+            <li>Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations, and related equipment; performed hands-on Cisco, Active D[...]
+            <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC[...]
             <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>
-            <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
+            <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operationa[...]
           </ul>
         </article>
       </section>
@@ -447,7 +447,7 @@ const HTML = `<!doctype html>
         <h2 id="military-heading">Military Experience</h2>
         <article class="position">
           <div class="position-heading">
-            <p><span class="position-title">Staff Sergeant - 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | Arizona</span></p>
+            <p><span class="position-title">Staff Sergeant - 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | A[...]
             <p class="dates">2006 - 2019</p>
           </div>
           <ul class="resume-list">
@@ -459,14 +459,14 @@ const HTML = `<!doctype html>
 
         <article class="position">
           <div class="position-heading">
-            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon | United States Marine Corps | Camp Pendleton, CA</span></p>
+            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Ant[...]
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons, vehicles, and assigned equipment.</li>
+            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served wea[...]
             <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
             <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
-            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range as a rifle instructor and coach, delivering structured weapons-qualification training to more than 6,800 personnel while enforcing range-safety and qualification standards.</li>
+            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range rifle and pistol range personell where I had the opportunity to instruct Marines on the M16-A2, 9MM Pistol and M203 on day or nightime events, delivering structured weapons-qualification training to more than 6,800 [...]
           </ul>
         </article>
       </section>
@@ -474,8 +474,8 @@ const HTML = `<!doctype html>
       <section class="resume-section" id="projects">
         <h2>Independent Technical Projects</h2>
         <ul class="project-list">
-          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback controls. <span>AWS EC2, Envoy, xDS, Go, Prometheus</span></li>
-          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics. <span>Cloudflare, Lambda, S3, Hysteria2</span></li>
+          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback [...]
+          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff di[...]
         </ul>
       </section>
 
@@ -487,7 +487,7 @@ const HTML = `<!doctype html>
             <p class="dates">Active | Deployment Scheduled Aug 2026</p>
           </div>
           <ul class="resume-list">
-            <li>Active member of Team Rubicon's veteran-led disaster-response network, preparing for an August 2026 deployment supporting disaster relief, humanitarian aid, and community recovery.</li>
+            <li>Active member of Team Rubicon's veteran-led disaster-response network, preparing for an August 2026 deployment supporting disaster relief, humanitarian aid, and community recovery[...]
           </ul>
         </article>
       </section>
@@ -498,7 +498,7 @@ const HTML = `<!doctype html>
         <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
       </section>
 
-      <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
+      <footer class="resume-footer">Rodolfo I. Bustamante | R\u00e9sum\u00e9 | Release ${RELEASE}</footer>
     </article>
   </main>
 
