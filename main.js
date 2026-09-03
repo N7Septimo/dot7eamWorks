@@ -466,7 +466,8 @@ const HTML = `<!doctype html>
             <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served wea[...]
             <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
             <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
-            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range rifle and pistol range personell where I had the opportunity to instruct Marines on the M16-A2, 9MM Pistol and M203 on day or nightime events, delivering structured weapons-qualification training to more than 6,800 [...]
+            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range, supporting range operations.</li>
+            <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during day and nighttime events, delivering structured weapons-qualification training to over 6,800 personnel.</li>
           </ul>
         </article>
       </section>
@@ -507,90 +508,3 @@ const HTML = `<!doctype html>
   </script>
 </body>
 </html>`;
-
-const ROBOTS = `User-agent: *
-Allow: /
-Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml
-`;
-
-const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${CANONICAL_ORIGIN}/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>`;
-
-function makeResponse(body, { status = 200, contentType, cacheControl, headers: additions } = {}) {
-  const headers = new Headers(SECURITY_HEADERS);
-  headers.set("Content-Type", contentType);
-  headers.set("Cache-Control", cacheControl);
-  headers.set("Vary", "Accept-Encoding");
-
-  if (additions) {
-    for (const [name, value] of Object.entries(additions)) {
-      headers.set(name, value);
-    }
-  }
-
-  return new Response(body, { status, headers });
-}
-
-function publicResponse(body, contentType, status = 200, additions) {
-  return makeResponse(body, {
-    status,
-    contentType,
-    cacheControl: "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400",
-    headers: additions,
-  });
-}
-
-function noStoreResponse(body, contentType, status = 200, additions) {
-  return makeResponse(body, {
-    status,
-    contentType,
-    cacheControl: "no-store",
-    headers: additions,
-  });
-}
-
-export default {
-  async fetch(request) {
-    const url = new URL(request.url);
-
-    if (url.hostname.endsWith(".workers.dev")) {
-      return noStoreResponse(null, "text/plain; charset=UTF-8", 308, {
-        Location: `${CANONICAL_ORIGIN}${url.pathname}${url.search}`,
-      });
-    }
-
-    if (request.method !== "GET" && request.method !== "HEAD") {
-      return noStoreResponse("Method Not Allowed\n", "text/plain; charset=UTF-8", 405, {
-        Allow: "GET, HEAD",
-      });
-    }
-
-    const isHead = request.method === "HEAD";
-
-    if (url.pathname === "/" || url.pathname === "/index.html") {
-      return publicResponse(isHead ? null : HTML, "text/html; charset=UTF-8");
-    }
-
-    if (url.pathname === "/healthz") {
-      const payload = JSON.stringify({ status: "ok", service: "resume", release: RELEASE });
-      return noStoreResponse(isHead ? null : payload, "application/json; charset=UTF-8");
-    }
-
-    if (url.pathname === "/robots.txt") {
-      return publicResponse(isHead ? null : ROBOTS, "text/plain; charset=UTF-8");
-    }
-
-    if (url.pathname === "/sitemap.xml") {
-      return publicResponse(isHead ? null : SITEMAP, "application/xml; charset=UTF-8");
-    }
-
-    return noStoreResponse(isHead ? null : "Not Found\n", "text/plain; charset=UTF-8", 404);
-  },
-};
