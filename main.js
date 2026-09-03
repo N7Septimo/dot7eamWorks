@@ -362,7 +362,8 @@ const HTML = `<!doctype html>
       .position-heading { margin-bottom: 0.02in; }
       .resume-list li + li { margin-top: 0.012in; }
       .project-list { gap: 0.025in; }
-      #projects { break-before: page; }
+      #military { break-before: page; }
+      #military .position,
       #volunteer { break-inside: avoid; }
       .resume-footer { margin-top: 0.11in; }
       h1,
