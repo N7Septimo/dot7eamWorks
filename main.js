@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.03.1";
+const RELEASE = "2026.09.03.2";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -458,12 +458,13 @@ const HTML = `<!doctype html>
 
         <article class="position">
           <div class="position-heading">
-            <p><span class="position-title">Sergeant - Infantry NCO and Marksmanship Instructor</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p>
+            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| Weapons Company, CAAT Platoon, 3rd Battalion, 1st Marines | United States Marine Corps | Camp Pendleton, CA</span></p>
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Led small-unit teams in demanding operational environments while maintaining accountability for personnel and equipment.</li>
-            <li>Developed and delivered structured weapons-qualification training for more than 6,800 personnel.</li>
+            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons, vehicles, and assigned equipment.</li>
+            <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
+            <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
           </ul>
         </article>
       </section>
