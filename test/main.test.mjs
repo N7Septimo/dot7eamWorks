@@ -20,7 +20,12 @@ test("serves the current resume", async () => {
   assert.match(body, /2006 - 2019/);
   assert.match(body, /1995 - 2003/);
   assert.match(body, /Bronze Star Medal/);
-  assert.match(body, /more than 6,800/);
+  assert.match(body, /Sergeant \\(E-5\\) - 0331 Machine Gunner/);
+  assert.match(body, /Weapons Company, CAAT Platoon, 3rd Battalion, 1st Marines/);
+  assert.match(body, /Combined Anti-Armor Team \\(CAAT\\) Platoon/);
+  assert.match(body, /crew-served weapons, vehicles, and assigned equipment/);
+  assert.match(body, /machine-gun teams during mounted and dismounted training/);
+  assert.doesNotMatch(body, /Marksmanship Instructor|weapons-qualification training|more than 6,800/);
   assert.match(body, /Network Architecture and Security/);
   assert.match(body, /AI-Assisted Envoy Control Plane/);
   assert.match(body, /Amazon Robotics\/Kiva/);
@@ -85,7 +90,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.03.1",
+    release: "2026.09.03.2",
   });
 });
 
