@@ -64,6 +64,8 @@ test("serves the current resume", async () => {
   assert.match(body, /Download \/ Print PDF/);
   assert.match(body, /resume-document/);
   assert.match(body, /resume\.dot7eamworks\.io/);
+  assert.match(body, /#military \\{ break-before: page; \\}/);
+  assert.doesNotMatch(body, /#projects \\{ break-before: page; \\}/);
 });
 
 test("supports HEAD without a body", async () => {
