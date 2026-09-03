@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.08.27.13";
+const RELEASE = "2026.09.03.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -20,13 +20,13 @@ const HTML = `<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef1f4">
-  <meta name="description" content="Rodolfo I. Bustamante - USMC and Army National Guard veteran with enterprise infrastructure, autonomous systems, networking, ServiceNow, cloud, and avionics experience.">
+  <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, controlled changes, and automation experience.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
   <link rel="canonical" href="https://resume.dot7eamworks.io/">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure &amp; Network Operations">
-  <meta property="og:description" content="Enterprise infrastructure, autonomous systems, networking, ServiceNow, AWS, Cloudflare, and mission-critical avionics.">
+  <meta property="og:description" content="Enterprise infrastructure and end-user support across ServiceNow, endpoint provisioning, network troubleshooting, controlled changes, AWS, and Cloudflare.">
   <meta property="og:url" content="https://resume.dot7eamworks.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -35,7 +35,7 @@ const HTML = `<!doctype html>
       "@type": "Person",
       "name": "Rodolfo I. Bustamante",
       "alternateName": "Rudy Bustamante",
-      "jobTitle": "Infrastructure and Network Operations Specialist",
+      "jobTitle": "Infrastructure and End-User Support Specialist",
       "url": "https://resume.dot7eamworks.io/",
       "email": "mailto:rudybustamante01@icloud.com",
       "telephone": "+1-520-841-3456",
@@ -399,7 +399,7 @@ const HTML = `<!doctype html>
     <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
       <header class="resume-header">
         <h1>Rodolfo I. Bustamante</h1>
-        <p class="resume-title">Information Technology | Infrastructure &amp; Network Operations</p>
+        <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
         <ul class="contact-line" aria-label="Contact information">
           <li>Southern Arizona</li>
           <li><a href="tel:+15208413456">520-841-3456</a></li>
@@ -410,14 +410,14 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>USMC and Army National Guard veteran supporting enterprise IT across a four-site, 1.4M+ sq. ft. Tucson node. Hands-on experience with network and server infrastructure, Amazon Robotics/Kiva, ServiceNow, controlled changes, and project delivery. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
+        <p>USMC and Army National Guard veteran with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node. Developed practical technical solutions while managing ServiceNow incidents and requests, provisioning endpoint and facility equipment, resolving production-impacting faults, and supporting network-connected technology in a 24/7 Amazon Robotics/Kiva environment. Bronze Star Medal recipient; bilingual in English and Spanish.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
           <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft Windows, Apple macOS, Ubuntu Linux, and Active Directory/GPO</p>
-          <p><strong>Network &amp; Infrastructure Operations:</strong> Cisco switching and wireless, DNS/DHCP, TCP/IP, VoIP, MDF/IDF operations, Cat6 and fiber, server installation, rack-and-stack, mapping, and hardware lifecycle support, backup and recovery, security cameras, and Amazon Robotics/Kiva</p>
+          <p><strong>Network &amp; Infrastructure Support:</strong> Hands-on Cisco switching and wireless troubleshooting, DNS/DHCP, TCP/IP, VoIP, MDF/IDF support, Cat6 and fiber, network mapping, supervised network-hardware replacement, hardware lifecycle support, backup and recovery, security cameras, and Amazon Robotics/Kiva</p>
           <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional and vendor coordination, new-site build support, mentoring, and readiness validation</p>
           <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; Git and GitHub; Power BI and Tableau dashboards</p>
         </div>
@@ -431,10 +431,10 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 - Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Managed and maintained the node's network-connected technology end-to-end in a 24/7 Amazon Robotics/Kiva environment, from network and server infrastructure to endpoints, peripherals, cameras, and VoIP, resolving production-impacting faults.</li>
+            <li>Delivered infrastructure and end-user support in a 24/7 Amazon Robotics/Kiva environment, developing practical technical solutions for recurring operational issues while supporting endpoints, peripherals, cameras, VoIP, and network-connected facility technology.</li>
             <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation, validation, and documentation without disrupting production.</li>
-            <li>Utilized ServiceNow daily to manage incidents and requests through prioritization, diagnosis, escalation, restoration, and closure while consistently meeting SLA requirements.</li>
-            <li>Provisioned, configured, and supported end-user equipment across Windows, macOS, and Linux, and administered Active Directory, DNS/DHCP, TCP/IP, MDF/IDF, and Cat6/fiber infrastructure.</li>
+            <li>Managed a high-volume ServiceNow incident and request queue through prioritization, diagnosis, escalation, restoration, and closure while meeting individual SLA requirements.</li>
+            <li>Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations, and related equipment; performed hands-on Cisco, Active Directory, DNS/DHCP, TCP/IP, MDF/IDF, and Cat6/fiber troubleshooting, with occasional network-hardware replacements completed under engineering supervision.</li>
             <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and closeout.</li>
             <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>
             <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational readiness.</li>
@@ -514,7 +514,7 @@ const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>${CANONICAL_ORIGIN}/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
