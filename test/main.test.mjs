@@ -21,11 +21,14 @@ test("serves the current resume", async () => {
   assert.match(body, /1995 - 2003/);
   assert.match(body, /Bronze Star Medal/);
   assert.match(body, /Sergeant \\(E-5\\) - 0331 Machine Gunner/);
-  assert.match(body, /Weapons Company, CAAT Platoon, 3rd Battalion, 1st Marines/);
+  assert.match(body, /3rd Battalion, 1st Marines \\("Thundering Third"\\), Weapons Company, Combined Anti-Armor Team \\(CAAT\\) Platoon/);
   assert.match(body, /Combined Anti-Armor Team \\(CAAT\\) Platoon/);
   assert.match(body, /crew-served weapons, vehicles, and assigned equipment/);
   assert.match(body, /machine-gun teams during mounted and dismounted training/);
-  assert.doesNotMatch(body, /Marksmanship Instructor|weapons-qualification training|more than 6,800/);
+  assert.match(body, /nine-month temporary assignment at Camp Margarita Rifle Range/);
+  assert.match(body, /rifle instructor and coach/);
+  assert.match(body, /weapons-qualification training to more than 6,800 personnel/);
+  assert.doesNotMatch(body, /Infantry NCO and Marksmanship Instructor/);
   assert.match(body, /Network Architecture and Security/);
   assert.match(body, /AI-Assisted Envoy Control Plane/);
   assert.match(body, /Amazon Robotics\/Kiva/);
@@ -90,7 +93,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.03.2",
+    release: "2026.09.03.4",
   });
 });
 
