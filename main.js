@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.03.3";
+const RELEASE = "2026.09.03.4";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -458,7 +458,7 @@ const HTML = `<!doctype html>
 
         <article class="position">
           <div class="position-heading">
-            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines, Weapons Company, Combined Anti-Armor Team (CAAT) Platoon | United States Marine Corps | Camp Pendleton, CA</span></p>
+            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon | United States Marine Corps | Camp Pendleton, CA</span></p>
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
