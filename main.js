@@ -236,7 +236,8 @@ const HTML = `<!doctype html>
 
     .competencies {
       display: grid;
-      gap: 0.035in;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.08in 0.2in;
     }
     .competencies strong { color: #202020; }
 
@@ -309,6 +310,7 @@ const HTML = `<!doctype html>
       }
       .resume-title { font-size: 0.84rem; }
       .contact-line { font-size: 0.82rem; }
+      .competencies { grid-template-columns: 1fr; }
       .position-heading { grid-template-columns: 1fr; gap: 0.02in; }
       .dates { white-space: normal; }
     }
@@ -331,12 +333,12 @@ const HTML = `<!doctype html>
     }
 
     @media print {
-      @page { size: letter; margin: 0.42in 0.54in; }
+      @page { size: letter; margin: 0.3in 0.4in; }
       body {
         background: #fff;
         color: #202020;
-        font-size: 9.45pt;
-        line-height: 1.25;
+        font-size: 9pt;
+        line-height: 1.15;
       }
       .site-bar,
       .skip-link { display: none !important; }
@@ -352,15 +354,15 @@ const HTML = `<!doctype html>
       .resume-header h1 { font-size: 21pt; }
       .resume-title { font-size: 10.2pt; }
       .contact-line { font-size: 9.2pt; }
-      .resume-section { margin-top: 0.09in; scroll-margin-top: 0; }
+      .resume-section { margin-top: 0.05in; scroll-margin-top: 0; }
       .resume-section > h2 {
         margin-bottom: 0.035in;
         padding-bottom: 0.025in;
         font-size: 10.3pt;
       }
-      .position + .position { margin-top: 0.07in; }
+      .position + .position { margin-top: 0.04in; }
       .position-heading { margin-bottom: 0.02in; }
-      .resume-list li + li { margin-top: 0.012in; }
+      .resume-list li + li { margin-top: 0.01in; }
       .project-list { gap: 0.025in; }
       #military { break-before: page; }
       #military .position,
@@ -377,12 +379,12 @@ const HTML = `<!doctype html>
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to r\u00e9sum\u00e9</a>
+  <a class="skip-link" href="#main">Skip to résumé</a>
 
-  <header class="site-bar" aria-label="R\u00e9sum\u00e9 controls">
+  <header class="site-bar" aria-label="Résumé controls">
     <div class="site-bar-inner">
       <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
-      <nav class="site-nav" aria-label="R\u00e9sum\u00e9 sections">
+      <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#volunteer">Volunteer</a>
@@ -397,7 +399,7 @@ const HTML = `<!doctype html>
   </header>
 
   <main class="page-shell" id="main">
-    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional r\u00e9sum\u00e9">
+    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
       <header class="resume-header">
         <h1>Rodolfo I. Bustamante</h1>
         <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
@@ -463,10 +465,8 @@ const HTML = `<!doctype html>
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served wea[pons and equipment].</li>
-            <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
-            <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
-            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range, supporting range operations.</li>
+            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons and equipment.</li>
+            <li>Directed the employment of machine-gun teams and supervised readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
             <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during day and nighttime events, delivering structured weapons-qualification training to over 6,800 personnel.</li>
           </ul>
         </article>
@@ -499,7 +499,7 @@ const HTML = `<!doctype html>
         <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
       </section>
 
-      <footer class="resume-footer">Rodolfo I. Bustamante | R\u00e9sum\u00e9 | Release ${RELEASE}</footer>
+      <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
     </article>
   </main>
 
