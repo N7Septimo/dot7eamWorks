@@ -1,4 +1,60 @@
-<style>
+const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
+const RELEASE = "2026.09.03.5";
+
+const SECURITY_HEADERS = Object.freeze({
+  "Content-Security-Policy":
+    "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';",
+  "Cross-Origin-Opener-Policy": "same-origin",
+  "Cross-Origin-Resource-Policy": "same-origin",
+  "Permissions-Policy":
+    "accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+});
+
+const HTML = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef1f4">
+  <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, controlled changes, AWS, Cloudflare, and automation for monitoring, deployment, and observability.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
+  <link rel="canonical" href="https://resume.dot7eamworks.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure &amp; Network Operations">
+  <meta property="og:description" content="Enterprise infrastructure and end-user support across ServiceNow, endpoint provisioning, network troubleshooting, controlled changes, AWS, Cloudflare, and automation for monitoring, deployment, and observability.">
+  <meta property="og:url" content="https://resume.dot7eamworks.io/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rodolfo I. Bustamante",
+      "alternateName": "Rudy Bustamante",
+      "jobTitle": "Infrastructure and End-User Support Specialist",
+      "url": "https://resume.dot7eamworks.io/",
+      "email": "mailto:rudybustamante01@icloud.com",
+      "telephone": "+1-520-841-3456",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tucson",
+        "addressRegion": "AZ",
+        "addressCountry": "US"
+      },
+      "sameAs": ["https://github.com/N7Septimo"],
+      "award": "Bronze Star Medal",
+      "knowsLanguage": ["English", "Spanish"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "American Military University"
+      }
+    }
+  </script>
+  <style>
     :root {
       color-scheme: light;
       --canvas: #eef1f4;
@@ -131,3 +187,146 @@
       a { text-decoration: none; color: #111; }
     }
   </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to résumé</a>
+
+  <header class="site-bar" aria-label="Résumé controls">
+    <div class="site-bar-inner">
+      <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
+      <nav class="site-nav" aria-label="Résumé sections">
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="site-actions">
+        <a class="action" href="mailto:rudybustamante01@icloud.com">Email</a>
+        <button class="action primary" id="print-resume" type="button">Download / Print PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell" id="main">
+    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
+      <header class="resume-header">
+        <h1>Rodolfo I. Bustamante</h1>
+        <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
+        <ul class="contact-line" aria-label="Contact information">
+          <li>Southern Arizona</li>
+          <li><a href="tel:+15208413456">520-841-3456</a></li>
+          <li><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></li>
+          <li><a href="https://github.com/N7Septimo" rel="noreferrer">github.com/N7Septimo</a></li>
+        </ul>
+      </header>
+
+      <section class="resume-section" id="summary">
+        <h2>Professional Summary</h2>
+        <p>USMC and Army National Guard veteran with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node. Developed practical technical documentation, standard operating procedures, and automation to streamline on-site maintenance and end-user support.</p>
+      </section>
+
+      <section class="resume-section" aria-labelledby="competencies-heading">
+        <h2 id="competencies-heading">Core Competencies</h2>
+        <div class="competencies">
+          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft 365 administration, and end-user training.</p>
+          <p><strong>Network &amp; Infrastructure Support:</strong> Hands-on Cisco switching and wireless troubleshooting, DNS/DHCP, TCP/IP, VoIP, MDF/IDF support, Cat6 and fiber cabling, network mapping, VLAN segmentation, and network monitoring.</p>
+          <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional coordination, stakeholder communication, and documentation.</p>
+          <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; infrastructure as code and automation for monitoring, deployment, and observability.</p>
+        </div>
+      </section>
+
+      <section class="resume-section" id="experience">
+        <h2>Professional Experience</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p>
+            <p class="dates">Jan 2021 - Aug 2025</p>
+          </div>
+          <ul class="resume-list">
+            <li>Delivered infrastructure and end-user support in a 24/7 Amazon Robotics/Kiva environment, developing practical technical solutions for recurring operational issues while minimizing downtime and ensuring continuous site operations.</li>
+            <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation and post-change verification, and documenting outcomes and rollback procedures.</li>
+            <li>Managed a high-volume ServiceNow incident and request queue through prioritization, diagnosis, escalation, restoration, and closure while meeting individual SLA requirements.</li>
+            <li>Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations, and related equipment; performed hands-on Cisco, Active Directory, imaging, and endpoint hardening tasks.</li>
+            <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and post-deployment reviews to ensure operational readiness.</li>
+            <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>
+            <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational visibility, reduce incident response time, and increase site resiliency.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="military-heading" id="military">
+        <h2 id="military-heading">Military Experience</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Staff Sergeant - 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | AZ</span></p>
+            <p class="dates">2006 - 2019</p>
+          </div>
+          <ul class="resume-list">
+            <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
+            <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
+            <li>Completed active service supporting Operation Iraqi Freedom; awarded the Bronze Star Medal for meritorious service.</li>
+          </ul>
+        </article>
+
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, CAAT Platoon</span></p>
+            <p class="dates">1995 - 2003</p>
+          </div>
+          <ul class="resume-list">
+            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons and equipment.</li>
+            <li>Directed the employment of machine-gun teams and supervised readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
+            <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during day and nighttime events, delivering structured weapons-qualification training to over 6,800 personnel.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" id="projects">
+        <h2>Independent Technical Projects</h2>
+        <ul class="project-list">
+          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback automation for safe deployments.</li>
+          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics.</li>
+        </ul>
+      </section>
+
+      <section class="resume-section" id="volunteer">
+        <h2>Volunteer &amp; Community Service</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Disaster Response Volunteer</span> <span class="organization">| Team Rubicon</span></p>
+            <p class="dates">Active | Deployment Scheduled Aug 2026</p>
+          </div>
+          <ul class="resume-list">
+            <li>Active member of Team Rubicon's veteran-led disaster-response network, preparing for an August 2026 deployment supporting disaster relief, humanitarian aid, and community recovery operations.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" id="education">
+        <h2>Education &amp; Recognition</h2>
+        <p class="education-line"><strong>Bachelor of Science in Information Technology</strong>, Concentration in Network Architecture and Security | American Military University | 2014</p>
+        <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
+      </section>
+
+      <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
+    </article>
+  </main>
+
+  <script>
+    document.getElementById("print-resume").addEventListener("click", () => window.print());
+  </script>
+</body>
+</html>`;
+
+export default {
+  async fetch(request, env, ctx) {
+    return new Response(HTML, {
+      status: 200,
+      headers: {
+        "Content-Type": "text/html;charset=UTF-8",
+        ...SECURITY_HEADERS,
+      },
+    });
+  },
+};
