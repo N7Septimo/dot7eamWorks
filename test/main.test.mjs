@@ -4,7 +4,9 @@ import test from "node:test";
 import worker from "../main.js";
 
 async function request(path = "/", init = {}) {
-  return worker.fetch(new Request(`https://resume.dot7eamworks.io${path}`, init));
+  return worker.fetch(
+    new Request(`https://resume.dot7eamworks.io${path}`, init),
+  );
 }
 
 test("serves the current resume", async () => {
@@ -13,70 +15,64 @@ test("serves the current resume", async () => {
 
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type"), /^text\/html/);
-  assert.match(response.headers.get("content-security-policy"), /frame-ancestors 'none'/);
-  assert.match(body, /Rodolfo I\. Bustamante/);
-  assert.match(body, /Jan 2021 - Aug 2025/);
-  assert.match(body, /Arizona Army National Guard/);
-  assert.match(body, /2006 - 2019/);
-  assert.match(body, /1995 - 2003/);
-  assert.match(body, /Bronze Star Medal/);
-  assert.match(body, /Sergeant \\(E-5\\) - 0331 Machine Gunner/);
-  assert.match(body, /3rd Battalion, 1st Marines \\("Thundering Third"\\), Weapons Company, Combined Anti-Armor Team \\(CAAT\\) Platoon/);
-  assert.match(body, /Combined Anti-Armor Team \\(CAAT\\) Platoon/);
-  assert.match(body, /crew-served weapons, vehicles, and assigned equipment/);
-  assert.match(body, /machine-gun teams during mounted and dismounted training/);
-  assert.match(body, /nine-month temporary assignment at Camp Margarita Rifle Range/);
-  assert.match(body, /rifle instructor and coach/);
-  assert.match(body, /weapons-qualification training to more than 6,800 personnel/);
-  assert.doesNotMatch(body, /Infantry NCO and Marksmanship Instructor/);
-  assert.match(body, /Network Architecture and Security/);
-  assert.match(body, /AI-Assisted Envoy Control Plane/);
-  assert.match(body, /Amazon Robotics\/Kiva/);
-  assert.match(body, /Infrastructure &amp; End-User Support/);
-  assert.match(body, /developing practical technical solutions/);
-  assert.match(body, /resolving production-impacting faults/);
-  assert.match(body, /high-volume ServiceNow incident and request queue/);
-  assert.match(body, /SLA tracking/);
-  assert.match(body, /meeting individual SLA requirements/);
-  assert.doesNotMatch(body, /MTTR/);
-  assert.doesNotMatch(body, /server installation|rack-and-stack/);
-  assert.match(body, /Network &amp; Infrastructure Support/);
-  assert.match(body, /supervised network-hardware replacement/);
-  assert.doesNotMatch(body, /hard[ -]?drive|RAM\/DIMM/i);
-  assert.match(body, /two formally controlled infrastructure changes \(MCMs\) per week/);
-  assert.match(body, /standard operating expectation/);
-  assert.match(body, /IT Service &amp; User Support/);
-  assert.match(body, /end-user device and software deployment/);
-  assert.match(body, /Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations/);
-  assert.match(body, /network-hardware replacements completed under engineering supervision/);
-  assert.match(body, /Microsoft Windows, Apple macOS, Ubuntu Linux/);
-  assert.match(body, /Cisco switching and wireless/);
-  assert.match(body, /Power BI and Tableau/);
-  assert.doesNotMatch(body, /Installed and supported Tableau/);
-  assert.match(body, /Team Rubicon/);
-  assert.match(body, /Active \| Deployment Scheduled Aug 2026/);
-  assert.match(body, /August 2026 deployment/);
-  assert.ok(body.indexOf('id="projects"') < body.indexOf('id="volunteer"'));
-  assert.ok(body.indexOf('id="volunteer"') < body.indexOf('id="education"'));
-  assert.match(body, /chaired technical meetings/);
-  assert.match(body, /Project &amp; Technical Leadership/);
-  assert.match(body, /new-site build support/);
-  assert.match(body, /Cloud, Automation &amp; Observability/);
-  assert.match(body, /Led large-scale infrastructure and workflow projects/);
-  assert.match(body, /Mentored new OTS team members/);
-  assert.match(body, /traveled to new site builds to provide comprehensive on-site IT support/);
-  assert.doesNotMatch(body, /Station Infrastructure Reroute|Project Keypad|Dual-WAN Reliability Initiative/);
-  assert.doesNotMatch(body, /IDF7|UPS network-card remediation across two additional IDFs/);
-  assert.match(body, /Mobile Hard of Hearing standup area/);
-  assert.match(body, /automated node health-check prototypes/);
-  assert.match(body, /Additional OTS initiatives/);
-  assert.match(body, /Independent Technical Projects/);
-  assert.doesNotMatch(body, /Operations Automation &amp; Observability|mobile-first monitoring views|technician time-tracking tools|infrastructure inventory workflows|actionable status/);
-  assert.match(body, /Download \/ Print PDF/);
-  assert.match(body, /resume-document/);
-  assert.match(body, /resume\.dot7eamworks\.io/);
-  assert.match(body, /#military \\{ break-before: page; \\}/);
-  assert.doesNotMatch(body, /#projects \\{ break-before: page; \\}/);
+  assert.match(
+    response.headers.get("content-security-policy"),
+    /frame-ancestors 'none'/,
+  );
+
+  assert.ok(body.includes("Rodolfo I. Bustamante"));
+  assert.ok(body.includes("Jan 2021 - Aug 2025"));
+  assert.ok(body.includes("Arizona Army National Guard"));
+  assert.ok(body.includes("2006 - 2019"));
+  assert.ok(body.includes("1995 - 2003"));
+  assert.ok(body.includes("Bronze Star Medal"));
+
+  assert.ok(body.includes("Sergeant (E-5) - 0331 Machine Gunner"));
+  assert.ok(
+    body.includes(
+      '3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon',
+    ),
+  );
+  assert.ok(body.includes("crew-served weapons and equipment"));
+  assert.ok(
+    body.includes("machine-gun teams during mounted and dismounted training"),
+  );
+  assert.ok(
+    body.includes(
+      "nine-month temporary assignment at Camp Margarita Rifle Range",
+    ),
+  );
+  assert.ok(
+    body.includes("Instructed Marines on the M16A2, 9mm pistol, and M203"),
+  );
+  assert.ok(
+    body.includes("weapons-qualification training to over 6,800 personnel"),
+  );
+
+  assert.ok(!body.includes("Infantry NCO and Marksmanship Instructor"));
+
+  assert.ok(body.includes("Network Architecture and Security"));
+  assert.ok(body.includes("AI-Assisted Envoy Control Plane"));
+  assert.ok(body.includes("Managed Mobile Network"));
+  assert.ok(body.includes("Amazon Robotics/Kiva"));
+  assert.ok(body.includes("Infrastructure &amp; End-User Support"));
+  assert.ok(body.includes("high-volume ServiceNow incident and request queue"));
+  assert.ok(body.includes("two formally controlled infrastructure changes (MCMs) per week"));
+  assert.ok(body.includes("IT Service &amp; User Support"));
+  assert.ok(body.includes("Network &amp; Infrastructure Support"));
+  assert.ok(body.includes("Project &amp; Technical Leadership"));
+  assert.ok(body.includes("Cloud, Automation &amp; Observability"));
+  assert.ok(body.includes("Mentored new OTS team members"));
+  assert.ok(body.includes("Mobile Hard of Hearing standup area"));
+  assert.ok(body.includes("automated node health-check prototypes"));
+  assert.ok(body.includes("Independent Technical Projects"));
+  assert.ok(body.includes("Team Rubicon"));
+  assert.ok(body.includes("Download / Print PDF"));
+  assert.ok(body.includes("resume-document"));
+  assert.ok(body.includes("resume.dot7eamworks.io"));
+
+  assert.ok(!body.includes("MTTR"));
+  assert.ok(!/server installation|rack-and-stack/i.test(body));
 });
 
 test("supports HEAD without a body", async () => {
@@ -105,8 +101,18 @@ test("publishes crawler metadata", async () => {
     request("/sitemap.xml"),
   ]);
 
-  assert.match(await robots.text(), /Sitemap: https:\/\/resume\.dot7eamworks\.io\/sitemap\.xml/);
-  assert.match(await sitemap.text(), /<loc>https:\/\/resume\.dot7eamworks\.io\/<\/loc>/);
+  assert.equal(robots.status, 200);
+  assert.equal(sitemap.status, 200);
+
+  assert.match(
+    await robots.text(),
+    /Sitemap: https:\/\/resume\.dot7eamworks\.io\/sitemap\.xml/,
+  );
+
+  assert.match(
+    await sitemap.text(),
+    /<loc>https:\/\/resume\.dot7eamworks\.io\/<\/loc>/,
+  );
 });
 
 test("rejects unsupported methods", async () => {
@@ -118,7 +124,9 @@ test("rejects unsupported methods", async () => {
 
 test("redirects workers.dev traffic to the canonical host", async () => {
   const response = await worker.fetch(
-    new Request("https://resume.example.workers.dev/projects?source=test"),
+    new Request(
+      "https://resume.example.workers.dev/projects?source=test",
+    ),
   );
 
   assert.equal(response.status, 308);

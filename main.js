@@ -509,17 +509,92 @@ const HTML = `<!doctype html>
 </body>
 </html>`;
 
-export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
 
-    if (url.pathname === "/robots.txt") {
-      return new Response("User-agent: *\nAllow: /\n", {
-        headers: { "Content-Type": "text/plain" },
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const method = request.method.toUpperCase();
+
+    // Force workers.dev traffic onto the canonical resume hostname.
+    if (url.hostname.endsWith(".workers.dev")) {
+      const canonical = new URL(CANONICAL_ORIGIN);
+      canonical.pathname = url.pathname;
+      canonical.search = url.search;
+
+      return Response.redirect(canonical.toString(), 308);
+    }
+
+    // This Worker is read-only.
+    if (method !== "GET" && method !== "HEAD") {
+      return new Response("Method Not Allowed\n", {
+        status: 405,
+        headers: {
+          "Allow": "GET, HEAD",
+          "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
       });
     }
 
-    return new Response(HTML, {
+    if (url.pathname === "/healthz") {
+      const body = JSON.stringify({
+        status: "ok",
+        service: "resume",
+        release: RELEASE,
+      });
+
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+          "Cache-Control": "no-store",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname === "/robots.txt") {
+      const body =
+        `User-agent: *\n` +
+        `Allow: /\n` +
+        `Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`;
+
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname === "/sitemap.xml") {
+      const body =
+        `<?xml version="1.0" encoding="UTF-8"?>\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `  <url><loc>${CANONICAL_ORIGIN}/</loc></url>\n` +
+        `</urlset>\n`;
+
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/xml;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname !== "/") {
+      return new Response(method === "HEAD" ? null : "Not Found\n", {
+        status: 404,
+        headers: {
+          "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    return new Response(method === "HEAD" ? null : HTML, {
       status: 200,
       headers: {
         "Content-Type": "text/html;charset=UTF-8",
