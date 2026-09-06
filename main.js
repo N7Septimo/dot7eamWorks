@@ -377,12 +377,12 @@ const HTML = `<!doctype html>
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to r\u00e9sum\u00e9</a>
+  <a class="skip-link" href="#main">Skip to résumé</a>
 
-  <header class="site-bar" aria-label="R\u00e9sum\u00e9 controls">
+  <header class="site-bar" aria-label="Résumé controls">
     <div class="site-bar-inner">
       <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
-      <nav class="site-nav" aria-label="R\u00e9sum\u00e9 sections">
+      <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#volunteer">Volunteer</a>
@@ -397,7 +397,7 @@ const HTML = `<!doctype html>
   </header>
 
   <main class="page-shell" id="main">
-    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional r\u00e9sum\u00e9">
+    <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
       <header class="resume-header">
         <h1>Rodolfo I. Bustamante</h1>
         <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
@@ -463,7 +463,7 @@ const HTML = `<!doctype html>
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served wea[pons and equipment].</li>
+            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons and equipment.</li>
             <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
             <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
             <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range, supporting range operations.</li>
@@ -499,7 +499,7 @@ const HTML = `<!doctype html>
         <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
       </section>
 
-      <footer class="resume-footer">Rodolfo I. Bustamante | R\u00e9sum\u00e9 | Release ${RELEASE}</footer>
+      <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
     </article>
   </main>
 
@@ -508,3 +508,23 @@ const HTML = `<!doctype html>
   </script>
 </body>
 </html>`;
+
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+
+    if (url.pathname === "/robots.txt") {
+      return new Response("User-agent: *\nAllow: /\n", {
+        headers: { "Content-Type": "text/plain" },
+      });
+    }
+
+    return new Response(HTML, {
+      status: 200,
+      headers: {
+        "Content-Type": "text/html;charset=UTF-8",
+        ...SECURITY_HEADERS,
+      },
+    });
+  },
+};
