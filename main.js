@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.2";
+const RELEASE = "2026.09.09.3";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -411,7 +411,7 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes 18 months of Army assignments in the Middle East supporting personnel escorts and convoy operations, plus Marine Corps WESTPAC deployments. Developed practical technical documentation, standard operating procedures, and automation to streamline on-site maintenance and end-user support.</p>
+        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node. Developed practical technical documentation, standard operating procedures, and automation to streamline on-site maintenance and end-user support.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
@@ -453,7 +453,7 @@ const HTML = `<!doctype html>
           <ul class="resume-list">
             <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
             <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
-            <li>Completed 18 months of Army assignments in the Middle East, supporting personnel escorts and convoy operations while maintaining communication, accountability, safety, and mission continuity.</li>
+            <li>Completed 18 months deployed in Iraq, supporting personnel escort and convoy operations.</li>
             <li>Supported Operation Iraqi Freedom and was awarded the Bronze Star Medal for meritorious service.</li>
           </ul>
         </article>
@@ -464,7 +464,7 @@ const HTML = `<!doctype html>
             <p class="dates">1995 - 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Completed WESTPAC deployments with Weapons Company, 3rd Battalion, 1st Marines, supporting mobile security, personnel movement, combined-arms operations, and mission readiness as part of a CAAT platoon.</li>
+            <li>Completed WESTPAC deployments with Weapons Company, 3rd Battalion, 1st Marines, as part of a CAAT platoon.</li>
             <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons and equipment.</li>
             <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
             <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
