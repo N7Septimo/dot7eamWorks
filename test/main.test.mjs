@@ -29,7 +29,7 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("30 months of overseas operational experience"));
   assert.ok(body.includes("18 months of Army assignments in the Middle East"));
   assert.ok(body.includes("personnel escorts and convoy operations"));
-  assert.ok(body.includes("12 months across WESTPAC deployments"));
+  assert.ok(body.includes("Completed WESTPAC deployments"));
   assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
 
   assert.ok(body.includes("Sergeant (E-5) - 0331 Machine Gunner"));
@@ -96,7 +96,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.1",
+    release: "2026.09.09.2",
   });
 });
 
