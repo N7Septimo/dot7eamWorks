@@ -31,6 +31,7 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("conducting personnel escort and convoy operations"));
   assert.ok(body.includes("Completed WESTPAC deployments"));
   assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
+  assert.ok(!body.includes("plus 12 months across Marine Corps WESTPAC deployments"));
 
   assert.ok(body.includes("Sergeant (E-5) - 0331 Machine Gunner"));
   assert.ok(
@@ -72,6 +73,9 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("automated node health-check prototypes"));
   assert.ok(body.includes("Independent Technical Projects"));
   assert.ok(body.includes("Team Rubicon"));
+  assert.ok(body.includes('id="military"'));
+  assert.ok(body.includes('href="#military"'));
+  assert.ok(!body.includes("Deployment Scheduled Aug 2026"));
   assert.ok(body.includes("Download / Print PDF"));
   assert.ok(body.includes("resume-document"));
   assert.ok(body.includes("resume.dot7eamworks.io"));
@@ -96,7 +100,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.4",
+    release: "2026.09.09.5",
   });
 });
 

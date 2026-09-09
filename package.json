@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Rodolfo I. Bustamante's resume and infrastructure portfolio, served by Cloudflare Workers.",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "wrangler dev",
