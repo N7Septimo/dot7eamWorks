@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.4";
+const RELEASE = "2026.09.09.5";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -385,8 +385,9 @@ const HTML = `<!doctype html>
       <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
-        <a href="#volunteer">Volunteer</a>
+        <a href="#military">Military</a>
         <a href="#projects">Projects</a>
+        <a href="#volunteer">Volunteer</a>
         <a href="#education">Education</a>
       </nav>
       <div class="site-actions">
@@ -443,7 +444,7 @@ const HTML = `<!doctype html>
         </article>
       </section>
 
-      <section class="resume-section" aria-labelledby="military-heading">
+      <section class="resume-section" id="military" aria-labelledby="military-heading">
         <h2 id="military-heading">Military Experience</h2>
         <article class="position">
           <div class="position-heading">
@@ -487,10 +488,10 @@ const HTML = `<!doctype html>
         <article class="position">
           <div class="position-heading">
             <p><span class="position-title">Disaster Response Volunteer</span> <span class="organization">| Team Rubicon</span></p>
-            <p class="dates">Active | Deployment Scheduled Aug 2026</p>
+            <p class="dates">Active</p>
           </div>
           <ul class="resume-list">
-            <li>Active member of Team Rubicon's veteran-led disaster-response network, preparing for an August 2026 deployment supporting disaster relief, humanitarian aid, and community recovery operations.</li>
+            <li>Active member of Team Rubicon's veteran-led disaster-response network, supporting disaster preparedness, humanitarian response readiness, and community recovery efforts.</li>
           </ul>
         </article>
       </section>
