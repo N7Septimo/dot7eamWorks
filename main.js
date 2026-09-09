@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.5";
+const RELEASE = "2026.09.09.6";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -454,7 +454,7 @@ const HTML = `<!doctype html>
           <ul class="resume-list">
             <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
             <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
-            <li>Completed 18 months of Army assignments in the Middle East, conducting personnel escort and convoy operations while maintaining communication, accountability, safety, and mission continuity.</li>
+            <li>Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East.</li>
             <li>Supported Operation Iraqi Freedom and was awarded the Bronze Star Medal for meritorious service.</li>
           </ul>
         </article>

@@ -27,8 +27,8 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("1995 - 2003"));
   assert.ok(body.includes("Bronze Star Medal"));
   assert.ok(body.includes("30 months of overseas operational experience"));
-  assert.ok(body.includes("18 months of Army assignments in the Middle East"));
-  assert.ok(body.includes("conducting personnel escort and convoy operations"));
+  assert.ok(body.includes("Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East."));
+  assert.ok(!body.includes("Completed 18 months of Army assignments in the Middle East"));
   assert.ok(body.includes("Completed WESTPAC deployments"));
   assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
   assert.ok(!body.includes("plus 12 months across Marine Corps WESTPAC deployments"));
@@ -100,7 +100,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.5",
+    release: "2026.09.09.6",
   });
 });
 
