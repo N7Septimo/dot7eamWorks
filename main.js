@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.6";
+const RELEASE = "2026.09.09.7";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -412,7 +412,7 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes 18 months of Army assignments in the Middle East conducting personnel escort and convoy operations, plus Marine Corps WESTPAC deployments.</p>
+        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes an 18-month Army deployment in the Middle East supporting personnel movement and convoy security, plus Marine Corps WESTPAC deployments.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
@@ -427,50 +427,45 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="experience">
         <h2>Professional Experience</h2>
-        <article class="position">
+        <article class="position primary-role">
           <div class="position-heading">
             <p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p>
-            <p class="dates">Jan 2021 - Aug 2025</p>
+            <p class="dates">Jan 2021 – Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Delivered infrastructure and end-user support in a 24/7 Amazon Robotics/Kiva environment, developing practical technical solutions for recurring operational issues while minimizing downtime and ensuring continuous site operations.</li>
-            <li>Executed two formally controlled infrastructure changes (MCMs) per week as a standard operating expectation, carrying each change from planning and approval through implementation and post-change verification, and documenting outcomes and rollback procedures.</li>
-            <li>Managed a high-volume ServiceNow incident and request queue through prioritization, diagnosis, escalation, restoration, and closure while meeting individual SLA requirements.</li>
-            <li>Provisioned, configured, and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, workstations, and related equipment; performed hands-on Cisco, Active Directory, imaging, and endpoint hardening tasks.</li>
-            <li>Led large-scale infrastructure and workflow projects and chaired technical meetings, coordinating Operations leaders, global teams, engineers, and vendors through execution, QA/QC, and post-deployment reviews to ensure operational readiness.</li>
-            <li>Mentored new OTS team members on SOPs, escalation paths, and disciplined troubleshooting, and traveled to new site builds to provide comprehensive on-site IT support.</li>
-            <li><strong>Additional OTS initiatives:</strong> Designed and deployed a Mobile Hard of Hearing standup area and developed automated node health-check prototypes to improve operational visibility, reduce incident response time, and increase site resiliency.</li>
+            <li>Supported a 24/7 Amazon Robotics/Kiva environment while managing a high-volume ServiceNow incident and request queue, prioritizing restoration, SLA compliance, and continuous operations.</li>
+            <li>Executed two formally controlled infrastructure changes (MCMs) per week, carrying each from planning and approval through implementation, verification, documentation, and rollback readiness.</li>
+            <li>Provisioned and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, and workstations while performing Cisco, Active Directory, imaging, and endpoint hardening tasks.</li>
+            <li>Led infrastructure and workflow projects, mentored new OTS team members, supported new site builds, and delivered a Mobile Hard of Hearing standup area plus automated node health-check prototypes.</li>
           </ul>
         </article>
       </section>
 
       <section class="resume-section" id="military" aria-labelledby="military-heading">
         <h2 id="military-heading">Military Experience</h2>
-        <article class="position">
+        <article class="position primary-role">
           <div class="position-heading">
-            <p><span class="position-title">Staff Sergeant - 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | AZ</span></p>
-            <p class="dates">2006 - 2019</p>
+            <p><span class="position-title">Staff Sergeant – 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | AZ</span></p>
+            <p class="dates">2006 – 2019</p>
           </div>
           <ul class="resume-list">
-            <li>Diagnosed, repaired, and maintained AH-64D armament, electrical, fire-control, and avionics systems using technical publications and controlled maintenance procedures.</li>
-            <li>Applied electrical theory and systematic fault isolation to complex integrated systems while maintaining equipment accountability and mission readiness.</li>
-            <li>Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East.</li>
-            <li>Supported Operation Iraqi Freedom and was awarded the Bronze Star Medal for meritorious service.</li>
+            <li>Diagnosed and repaired AH-64D armament, electrical, fire-control, and avionics systems using technical publications, controlled maintenance procedures, and systematic fault isolation.</li>
+            <li>Applied electrical theory and disciplined troubleshooting across complex integrated systems while maintaining equipment accountability, safety, and mission readiness.</li>
+            <li>Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East in support of Operation Iraqi Freedom.</li>
+            <li>Mentored and led junior soldiers through tactical and technical standards, reinforcing equipment accountability, disciplined execution, and mission continuity throughout deployed operations.</li>
           </ul>
         </article>
 
-        <article class="position">
+        <article class="position primary-role">
           <div class="position-heading">
-            <p><span class="position-title">Sergeant (E-5) - 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon</span></p>
-            <p class="dates">1995 - 2003</p>
+            <p><span class="position-title">Sergeant (E-5) – 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon</span></p>
+            <p class="dates">1995 – 2003</p>
           </div>
           <ul class="resume-list">
-            <li>Completed WESTPAC deployments with Weapons Company, 3rd Battalion, 1st Marines, supporting mobile security, personnel movement, combined-arms operations, and mission readiness as part of a CAAT platoon.</li>
-            <li>Led Marines as a Sergeant (E-5) within a Weapons Company Combined Anti-Armor Team (CAAT) Platoon, enforcing standards and maintaining accountability for personnel, crew-served weapons and equipment.</li>
-            <li>Directed the employment of machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, and integration with platoon leadership.</li>
-            <li>Planned and supervised training, inspections, preventive maintenance, and readiness activities to keep Marines and assigned weapon systems prepared for mission requirements.</li>
-            <li>Completed a nine-month temporary assignment at Camp Margarita Rifle Range, supporting range operations.</li>
-            <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during day and nighttime events, delivering structured weapons-qualification training to over 6,800 personnel.</li>
+            <li>Completed WESTPAC deployments with Weapons Company, 3rd Battalion, 1st Marines, supporting mobile security, personnel movement, combined-arms operations, and mission readiness.</li>
+            <li>Led Marines in a Combined Anti-Armor Team platoon, maintaining accountability for personnel, crew-served weapons and equipment while enforcing training and readiness standards.</li>
+            <li>Directed machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, inspections, preventive maintenance, and integration with platoon leadership.</li>
+            <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during a nine-month temporary assignment at Camp Margarita Rifle Range, delivering weapons-qualification training to over 6,800 personnel.</li>
           </ul>
         </article>
       </section>
@@ -490,9 +485,7 @@ const HTML = `<!doctype html>
             <p><span class="position-title">Disaster Response Volunteer</span> <span class="organization">| Team Rubicon</span></p>
             <p class="dates">Active</p>
           </div>
-          <ul class="resume-list">
-            <li>Active member of Team Rubicon's veteran-led disaster-response network, supporting disaster preparedness, humanitarian response readiness, and community recovery efforts.</li>
-          </ul>
+          <p class="role-summary">Supports Team Rubicon's veteran-led disaster-response network through disaster preparedness, humanitarian response readiness, and community recovery efforts.</p>
         </article>
       </section>
 
