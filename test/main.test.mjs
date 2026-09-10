@@ -28,7 +28,7 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("Bronze Star Medal"));
   assert.ok(body.includes("30 months of overseas operational experience"));
   assert.ok(body.includes("an 18-month Army deployment in the Middle East supporting personnel movement and convoy security"));
-  assert.ok(body.includes("Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East."));
+  assert.ok(body.includes("Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East in support of Operation Iraqi Freedom."));
   assert.ok(!body.includes("Completed 18 months of Army assignments in the Middle East"));
   assert.ok(body.includes("Completed WESTPAC deployments"));
   assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
