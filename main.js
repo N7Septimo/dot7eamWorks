@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.7";
+const RELEASE = "2026.09.09.8";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -433,10 +433,10 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 – Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Supported a 24/7 Amazon Robotics/Kiva environment while managing a high-volume ServiceNow incident and request queue, prioritizing restoration, SLA compliance, and continuous operations.</li>
-            <li>Executed two formally controlled infrastructure changes (MCMs) per week, carrying each from planning and approval through implementation, verification, documentation, and rollback readiness.</li>
-            <li>Provisioned and supported Windows, macOS, and Linux endpoints, thin clients, barcode scanners, and workstations while performing Cisco, Active Directory, imaging, and endpoint hardening tasks.</li>
-            <li>Led infrastructure and workflow projects, mentored new OTS team members, supported new site builds, and delivered a Mobile Hard of Hearing standup area plus automated node health-check prototypes.</li>
+            <li>Allocated, maintained, and troubleshot IT equipment across Amazon Operations while handling support requests and following established support procedures across the network.</li>
+            <li>Supported customers across multiple buildings and remote locations, trained new hires, adopted new technologies, and provided local and regional IT support as needed.</li>
+            <li>Managed local technical projects from planning through implementation, defining requirements, coordinating execution, managing controlled changes, and validating completed work to ensure operational readiness.</li>
+            <li>Provided hands-on IT support for new facility builds in Boston and New Orleans, assisting with infrastructure deployment, installation, testing, troubleshooting, and site-readiness activities.</li>
           </ul>
         </article>
       </section>
