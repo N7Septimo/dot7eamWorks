@@ -21,19 +21,20 @@ test("serves the current resume", async () => {
   );
 
   assert.ok(body.includes("Rodolfo I. Bustamante"));
-  assert.ok(body.includes("Jan 2021 - Aug 2025"));
+  assert.ok(body.includes("Jan 2021 – Aug 2025"));
   assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("2006 - 2019"));
-  assert.ok(body.includes("1995 - 2003"));
+  assert.ok(body.includes("2006 – 2019"));
+  assert.ok(body.includes("1995 – 2003"));
   assert.ok(body.includes("Bronze Star Medal"));
   assert.ok(body.includes("30 months of overseas operational experience"));
+  assert.ok(body.includes("an 18-month Army deployment in the Middle East supporting personnel movement and convoy security"));
   assert.ok(body.includes("Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East."));
   assert.ok(!body.includes("Completed 18 months of Army assignments in the Middle East"));
   assert.ok(body.includes("Completed WESTPAC deployments"));
   assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
   assert.ok(!body.includes("plus 12 months across Marine Corps WESTPAC deployments"));
 
-  assert.ok(body.includes("Sergeant (E-5) - 0331 Machine Gunner"));
+  assert.ok(body.includes("Sergeant (E-5) – 0331 Machine Gunner"));
   assert.ok(
     body.includes(
       '3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon',
@@ -84,6 +85,41 @@ test("serves the current resume", async () => {
   assert.ok(!/server installation|rack-and-stack/i.test(body));
 });
 
+
+test("keeps primary resume roles structurally uniform", async () => {
+  const response = await request();
+  const body = await response.text();
+  const roles = [...body.matchAll(/<article class="position primary-role">([\s\S]*?)<\/article>/g)];
+
+  assert.equal(roles.length, 3);
+
+  for (const [, role] of roles) {
+    const bullets = [...role.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((match) =>
+      match[1].replace(/<[^>]+>/g, "").trim(),
+    );
+
+    assert.equal(bullets.length, 4);
+
+    for (const bullet of bullets) {
+      assert.ok(bullet.endsWith("."));
+      const wordCount = bullet.match(/\b[\w/-]+\b/g)?.length ?? 0;
+      assert.ok(
+        wordCount >= 18 && wordCount <= 28,
+        `Expected 18-28 words, got ${wordCount}: ${bullet}`,
+      );
+    }
+  }
+
+  const projectBlock = body.match(/<ul class="project-list">([\s\S]*?)<\/ul>/)?.[1] ?? "";
+  assert.equal((projectBlock.match(/<li>/g) ?? []).length, 2);
+  assert.equal((body.match(/<p><strong>[^<]+:<\/strong>/g) ?? []).length, 4);
+  assert.equal((body.match(/class="education-line"/g) ?? []).length, 2);
+  assert.equal((body.match(/class="role-summary"/g) ?? []).length, 1);
+  assert.ok(!body.includes("Jan 2021 - Aug 2025"));
+  assert.ok(!body.includes("2006 - 2019"));
+  assert.ok(!body.includes("1995 - 2003"));
+});
+
 test("supports HEAD without a body", async () => {
   const response = await request("/", { method: "HEAD" });
 
@@ -100,7 +136,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.6",
+    release: "2026.09.09.7",
   });
 });
 
