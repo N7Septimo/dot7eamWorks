@@ -61,17 +61,20 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("Network Architecture and Security"));
   assert.ok(body.includes("AI-Assisted Envoy Control Plane"));
   assert.ok(body.includes("Managed Mobile Network"));
-  assert.ok(body.includes("Amazon Robotics/Kiva"));
   assert.ok(body.includes("Infrastructure &amp; End-User Support"));
-  assert.ok(body.includes("high-volume ServiceNow incident and request queue"));
-  assert.ok(body.includes("two formally controlled infrastructure changes (MCMs) per week"));
+  assert.ok(body.includes("Allocated, maintained, and troubleshot IT equipment across Amazon Operations"));
+  assert.ok(body.includes("following established support procedures across the network"));
+  assert.ok(body.includes("Supported customers across multiple buildings and remote locations"));
+  assert.ok(body.includes("trained new hires"));
+  assert.ok(body.includes("provided local and regional IT support as needed"));
+  assert.ok(body.includes("Managed local technical projects from planning through implementation"));
+  assert.ok(body.includes("managing controlled changes"));
+  assert.ok(body.includes("Provided hands-on IT support for new facility builds in Boston and New Orleans"));
+  assert.ok(body.includes("site-readiness activities"));
   assert.ok(body.includes("IT Service &amp; User Support"));
   assert.ok(body.includes("Network &amp; Infrastructure Support"));
   assert.ok(body.includes("Project &amp; Technical Leadership"));
   assert.ok(body.includes("Cloud, Automation &amp; Observability"));
-  assert.ok(body.includes("mentored new OTS team members"));
-  assert.ok(body.includes("Mobile Hard of Hearing standup area"));
-  assert.ok(body.includes("automated node health-check prototypes"));
   assert.ok(body.includes("Independent Technical Projects"));
   assert.ok(body.includes("Team Rubicon"));
   assert.ok(body.includes('id="military"'));
@@ -136,7 +139,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.7",
+    release: "2026.09.09.8",
   });
 });
 
