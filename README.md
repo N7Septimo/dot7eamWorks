@@ -5,7 +5,8 @@ The source for [resume.dot7eamworks.io](https://resume.dot7eamworks.io/), Rodolf
 ## What this repository contains
 
 - A responsive, accessible, single-page résumé served by a Cloudflare Worker
-- A résumé-first screen layout that mirrors the printable letter-page document
+- A portfolio screen layout that puts selected work first, with component overviews, expandable project cards, and section navigation
+- An interactive request-path explorer and an on-demand inspector for real same-origin Worker responses
 - Enterprise IT experience, current technical competencies, and selected engineering projects
 - Print styling for recruiter-friendly PDF export from the same source content
 - Canonical metadata, structured data, `robots.txt`, and `sitemap.xml`
@@ -16,6 +17,7 @@ The source for [resume.dot7eamworks.io](https://resume.dot7eamworks.io/), Rodolf
 | Path | Purpose |
 | --- | --- |
 | `main.js` | Worker routes, headers, résumé markup, and styling |
+| `showcase.js` | Screen-only portfolio styles, interactive panels, and the request inspector |
 | `wrangler.jsonc` | Cloudflare Worker configuration and observability |
 | `test/main.test.mjs` | Request, routing, metadata, and security tests |
 
@@ -35,6 +37,8 @@ npm run check
 ```
 
 The check runs JavaScript syntax validation, the request test suite, and a Wrangler dry-run bundle.
+
+The inspector only requests three fixed, read-only routes: `/healthz`, `/robots.txt`, and an intentionally missing route that demonstrates the Worker's controlled 404 response. It runs on demand, times out after eight seconds, and reports round-trip time measured in the visitor's browser. It does not monitor the proxy or request third-party services. The content security policy permits same-origin connections for these checks. The printable résumé excludes the showcase panels and uses the original résumé content.
 
 ## Deployment
 
