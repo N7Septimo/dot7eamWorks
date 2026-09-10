@@ -412,7 +412,7 @@ const HTML = `<!doctype html>
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
-        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes 18 months of Army assignments in the Middle East conducting personnel escort and convoy operations, plus Marine Corps WESTPAC deployments. Developed practical technical documentation, standard operating procedures, and automation to streamline on-site maintenance and end-user support.</p>
+        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes 18 months of Army assignments in the Middle East conducting personnel escort and convoy operations, plus Marine Corps WESTPAC deployments.</p>
       </section>
 
       <section class="resume-section" aria-labelledby="competencies-heading">
