@@ -69,7 +69,7 @@ test("serves the current resume", async () => {
   assert.ok(body.includes("Network &amp; Infrastructure Support"));
   assert.ok(body.includes("Project &amp; Technical Leadership"));
   assert.ok(body.includes("Cloud, Automation &amp; Observability"));
-  assert.ok(body.includes("Mentored new OTS team members"));
+  assert.ok(body.includes("mentored new OTS team members"));
   assert.ok(body.includes("Mobile Hard of Hearing standup area"));
   assert.ok(body.includes("automated node health-check prototypes"));
   assert.ok(body.includes("Independent Technical Projects"));
