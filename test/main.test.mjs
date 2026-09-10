@@ -139,7 +139,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.8",
+    release: "2026.09.10.1",
   });
 });
 

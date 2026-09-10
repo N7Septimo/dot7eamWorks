@@ -1,9 +1,11 @@
+import { SHOWCASE_STYLES, SITE_EXPLORER, REQUEST_LAB, SHOWCASE_SCRIPT } from "./showcase.js";
+
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.8";
+const RELEASE = "2026.09.10.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
-    "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';",
+    "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';",
   "Cross-Origin-Opener-Policy": "same-origin",
   "Cross-Origin-Resource-Policy": "same-origin",
   "Permissions-Policy":
@@ -19,7 +21,7 @@ const HTML = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eef1f4">
+  <meta name="theme-color" content="#10263e">
   <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, controlled changes, AWS, Cloudflare, and automation for monitoring, deployment, and observability.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
@@ -374,6 +376,7 @@ const HTML = `<!doctype html>
       .education-line { break-inside: avoid; }
       a { text-decoration: none; }
     }
+    ${SHOWCASE_STYLES}
   </style>
 </head>
 <body>
@@ -383,10 +386,11 @@ const HTML = `<!doctype html>
     <div class="site-bar-inner">
       <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
       <nav class="site-nav" aria-label="Résumé sections">
+        <a href="#projects">Projects</a>
+        <a href="#inside-site">Inside this site</a>
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#military">Military</a>
-        <a href="#projects">Projects</a>
         <a href="#volunteer">Volunteer</a>
         <a href="#education">Education</a>
       </nav>
@@ -395,12 +399,15 @@ const HTML = `<!doctype html>
         <button class="action primary" id="print-resume" type="button">Download / Print PDF</button>
       </div>
     </div>
+    <div class="reading-progress screen-only" aria-hidden="true"></div>
   </header>
 
   <main class="page-shell" id="main">
     <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
+      <div class="intro-grid">
       <header class="resume-header">
-        <h1>Rodolfo I. Bustamante</h1>
+        <p class="eyebrow screen-only">INFRASTRUCTURE / CLOUD / OPERATIONS</p>
+        <h1><span>Rodolfo I.</span> Bustamante</h1>
         <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
         <ul class="contact-line" aria-label="Contact information">
           <li>Southern Arizona</li>
@@ -408,14 +415,52 @@ const HTML = `<!doctype html>
           <li><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></li>
           <li><a href="https://github.com/N7Septimo" rel="noreferrer">github.com/N7Septimo</a></li>
         </ul>
+        <div class="hero-actions screen-only">
+          <a class="button primary" href="#projects">Explore my projects</a>
+          <a class="button" href="#inside-site">How this site works</a>
+        </div>
       </header>
+      ${SITE_EXPLORER}
+      </div>
+
+      <section class="resume-section" id="projects">
+        <h2><span class="print-only">Independent Technical Projects</span><span class="screen-only">Selected work</span></h2>
+        <ul class="project-list">
+          <li><div class="project-cover screen-only">
+              <div class="project-label">01 / SYSTEMS &amp; OBSERVABILITY</div>
+              <div class="component-grid" aria-label="Project components">
+                <div class="component"><small>HOSTING</small>AWS</div>
+                <div class="component"><small>CONFIGURATION</small>Envoy xDS</div>
+                <div class="component"><small>TELEMETRY</small>Prometheus</div>
+                <div class="component"><small>BRIDGE</small>Cloudflare</div>
+              </div>
+              <p class="project-cover-caption">Infrastructure lab / component overview</p>
+            </div><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback automation for safe deployments.
+            <details class="project-details screen-only"><summary>Explore the project</summary><p>AWS hosting, Envoy configuration, Prometheus telemetry, and a Cloudflare Worker bridge come together in this infrastructure lab.</p><p><b>Focus:</b> Configuration delivery, health analysis, and rollback automation.</p><a href="mailto:rudybustamante01@icloud.com?subject=Envoy%20project%20discussion">Discuss this project ↗</a></details>
+          </li>
+          <li><div class="project-cover mobile-network screen-only">
+              <div class="project-label">02 / NETWORKING &amp; AUTOMATION</div>
+              <div class="component-grid" aria-label="Project components">
+                <div class="component"><small>CLIENT</small>iOS</div>
+                <div class="component"><small>TRANSPORT</small>Hysteria2</div>
+                <div class="component"><small>POLICY</small>Hosted rules</div>
+                <div class="component"><small>DIAGNOSTICS</small>Network handoff</div>
+              </div>
+              <p class="project-cover-caption">Managed mobile network / component overview</p>
+            </div><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics.
+            <details class="project-details screen-only"><summary>Explore the project</summary><p>Hosted policy delivery and automated rule updates support an iOS proxy environment, with diagnostics for transitions between cellular and Wi-Fi.</p><p><b>Focus:</b> Policy automation, Hysteria2 transport, and network handoff diagnostics.</p><a href="mailto:rudybustamante01@icloud.com?subject=Mobile%20network%20project%20discussion">Discuss this project ↗</a></details>
+          </li>
+        </ul>
+      </section>
+
+      ${REQUEST_LAB}
 
       <section class="resume-section" id="summary">
         <h2>Professional Summary</h2>
         <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes an 18-month Army deployment in the Middle East supporting personnel movement and convoy security, plus Marine Corps WESTPAC deployments.</p>
       </section>
 
-      <section class="resume-section" aria-labelledby="competencies-heading">
+      <section class="resume-section" id="skills" aria-labelledby="competencies-heading">
         <h2 id="competencies-heading">Core Competencies</h2>
         <div class="competencies">
           <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft 365 administration, and end-user training.</p>
@@ -470,14 +515,6 @@ const HTML = `<!doctype html>
         </article>
       </section>
 
-      <section class="resume-section" id="projects">
-        <h2>Independent Technical Projects</h2>
-        <ul class="project-list">
-          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback automation for safe deployments.</li>
-          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics.</li>
-        </ul>
-      </section>
-
       <section class="resume-section" id="volunteer">
         <h2>Volunteer &amp; Community Service</h2>
         <article class="position">
@@ -501,6 +538,7 @@ const HTML = `<!doctype html>
 
   <script>
     document.getElementById("print-resume").addEventListener("click", () => window.print());
+    ${SHOWCASE_SCRIPT}
   </script>
 </body>
 </html>`;
