@@ -1,3 +1,5 @@
+import { buildCandidateProfile } from "./candidate-profile.js";
+
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
 const RELEASE = "2026.09.09.8";
 
@@ -527,6 +529,19 @@ export default {
         headers: {
           "Allow": "GET, HEAD",
           "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname === "/.well-known/n7knock-candidate.json") {
+      const body = JSON.stringify(buildCandidateProfile(RELEASE));
+
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+          "Cache-Control": "no-store",
           ...SECURITY_HEADERS,
         },
       });

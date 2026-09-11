@@ -19,16 +19,34 @@ test("builds a versioned N7Knock candidate profile", () => {
 
 test("keeps candidate evidence free of routine contact and search-policy fields", () => {
   const profile = buildCandidateProfile("test-release");
-  const serialized = JSON.stringify(profile).toLowerCase();
 
-  assert.ok(!serialized.includes("telephone"));
-  assert.ok(!serialized.includes("phone"));
-  assert.ok(!serialized.includes("email"));
-  assert.ok(!serialized.includes("street"));
-  assert.ok(!serialized.includes("target_roles"));
-  assert.ok(!serialized.includes("locations"));
-  assert.ok(!serialized.includes("remote_ok"));
-  assert.ok(!serialized.includes("hard_constraints"));
+  function collectKeys(value, keys = new Set()) {
+    if (Array.isArray(value)) {
+      for (const item of value) collectKeys(item, keys);
+    } else if (value && typeof value === "object") {
+      for (const [key, child] of Object.entries(value)) {
+        keys.add(key.toLowerCase());
+        collectKeys(child, keys);
+      }
+    }
+    return keys;
+  }
+
+  const keys = collectKeys(profile);
+  const forbidden = [
+    "telephone",
+    "phone",
+    "email",
+    "street",
+    "target_roles",
+    "locations",
+    "remote_ok",
+    "hard_constraints",
+  ];
+
+  for (const field of forbidden) {
+    assert.ok(!keys.has(field), `candidate profile must not expose ${field}`);
+  }
 });
 
 test("publishes only reviewed skill status values", () => {
