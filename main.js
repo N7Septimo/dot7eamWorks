@@ -1,3 +1,5 @@
+import { buildCandidateProfile } from "./candidate-profile.js";
+
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
 const RELEASE = "2026.09.09.8";
 
@@ -362,8 +364,6 @@ const HTML = `<!doctype html>
       .position-heading { margin-bottom: 0.02in; }
       .resume-list li + li { margin-top: 0.012in; }
       .project-list { gap: 0.025in; }
-      #military { break-before: page; }
-      #military .position,
       #volunteer { break-inside: avoid; }
       .resume-footer { margin-top: 0.11in; }
       h1,
@@ -527,6 +527,19 @@ export default {
         headers: {
           "Allow": "GET, HEAD",
           "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname === "/.well-known/n7knock-candidate.json") {
+      const body = JSON.stringify(buildCandidateProfile(RELEASE));
+
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+          "Cache-Control": "no-store",
           ...SECURITY_HEADERS,
         },
       });
