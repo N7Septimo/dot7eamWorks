@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.15.3";
+const RELEASE = "2026.09.15.4";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -415,7 +415,7 @@ const HTML = `<!doctype html>
           <ul class="resume-list">
             <li>Provided primary on-site IT support for TUS2 and neighboring Amazon facilities, triaging and prioritizing cross-site incidents based on severity and operational impact.</li>
             <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
-            <li>Reintroduced the Demarcation Power Remediation Project to improve network redundancy and replace aging infrastructure, subsequently adopted into Amazon’s project portfolio for legacy facilities.</li>
+            <li>Reintroduced the Demarcation Power Remediation Project to improve power redundancy and replace aging infrastructure, subsequently adopted into Amazon’s project portfolio.</li>
             <li>Traveled to new Amazon site builds to support IT infrastructure deployment, installation, validation, troubleshooting, and operational readiness during facility launches and transition to operations.</li>
           </ul>
         </article>
