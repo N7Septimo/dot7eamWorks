@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.15.2";
+const RELEASE = "2026.09.15.3";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -413,10 +413,10 @@ const HTML = `<!doctype html>
             <p class="dates">Jan 2021 – Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Executed Managed Controlled Changes in MDF/IDF environments, including Cisco switchport configuration, Cat6/fiber patching, and Layer 1/2 fault isolation.</li>
-            <li>Diagnosed and restored network connectivity for Amazon Robotics production floors, wireless access points, smart electrical panels, and other operational technology.</li>
-            <li>Maintained a break/fix workload of 20+ ServiceNow incidents per four-shift block while supporting operational SLA performance for enterprise hardware.</li>
-            <li>Supported infrastructure buildouts and site-readiness testing at new Amazon facilities in Boston and New Orleans through cable verification, hardware installation, and pre-launch QA/QC.</li>
+            <li>Provided primary on-site IT support for TUS2 and neighboring Amazon facilities, triaging and prioritizing cross-site incidents based on severity and operational impact.</li>
+            <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
+            <li>Reintroduced the Demarcation Power Remediation Project to improve network redundancy and replace aging infrastructure, subsequently adopted into Amazon’s project portfolio for legacy facilities.</li>
+            <li>Traveled to new Amazon site builds to support IT infrastructure deployment, installation, validation, troubleshooting, and operational readiness during facility launches and transition to operations.</li>
           </ul>
         </article>
       </section>
@@ -518,37 +518,8 @@ export default {
       });
     }
 
-    if (url.pathname === "/robots.txt") {
-      const body =
-        `User-agent: *\n` +
-        `Allow: /\n` +
-        `Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`;
-      return new Response(method === "HEAD" ? null : body, {
-        status: 200,
-        headers: {
-          "Content-Type": "text/plain;charset=UTF-8",
-          ...SECURITY_HEADERS,
-        },
-      });
-    }
-
-    if (url.pathname === "/sitemap.xml") {
-      const body =
-        `<?xml version="1.0" encoding="UTF-8"?>\n` +
-        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-        `  <url><loc>${CANONICAL_ORIGIN}/</loc></url>\n` +
-        `</urlset>\n`;
-      return new Response(method === "HEAD" ? null : body, {
-        status: 200,
-        headers: {
-          "Content-Type": "application/xml;charset=UTF-8",
-          ...SECURITY_HEADERS,
-        },
-      });
-    }
-
-    if (url.pathname !== "/") {
-      return new Response(method === "HEAD" ? null : "Not Found\n", {
+    if (url.pathname !== "/" && url.pathname !== "/index.html") {
+      return new Response("Not Found\n", {
         status: 404,
         headers: {
           "Content-Type": "text/plain;charset=UTF-8",
@@ -561,6 +532,7 @@ export default {
       status: 200,
       headers: {
         "Content-Type": "text/html;charset=UTF-8",
+        "Cache-Control": "public, max-age=300",
         ...SECURITY_HEADERS,
       },
     });
