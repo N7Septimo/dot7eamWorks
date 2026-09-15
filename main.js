@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.09.8";
+const RELEASE = "2026.09.15.1";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -20,13 +20,13 @@ const HTML = `<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef1f4">
-  <meta name="description" content="Rodolfo I. Bustamante - enterprise infrastructure and end-user support professional with ServiceNow operations, endpoint provisioning, network troubleshooting, controlled changes, AWS, Cloudflare, and automation for monitoring, deployment, and observability.">
+  <meta name="description" content="Rodolfo I. Bustamante - infrastructure operations professional with Amazon OTS experience across Cisco switching, MDF/IDF work, Layer 1/2 troubleshooting, operational technology, AWS, Envoy, Prometheus, and network automation.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>Rodolfo I. Bustamante | Infrastructure &amp; Network Operations</title>
+  <title>Rodolfo I. Bustamante | Infrastructure Operations</title>
   <link rel="canonical" href="https://resume.dot7eamworks.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure &amp; Network Operations">
-  <meta property="og:description" content="Enterprise infrastructure and end-user support across ServiceNow, endpoint provisioning, network troubleshooting, controlled changes, AWS, Cloudflare, and automation for monitoring, deployment, and observability.">
+  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure Operations">
+  <meta property="og:description" content="Amazon infrastructure operations, Layer 1/2 networking, operational technology, cloud-hosted control planes, observability, and automation.">
   <meta property="og:url" content="https://resume.dot7eamworks.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -35,13 +35,12 @@ const HTML = `<!doctype html>
       "@type": "Person",
       "name": "Rodolfo I. Bustamante",
       "alternateName": "Rudy Bustamante",
-      "jobTitle": "Infrastructure and End-User Support Specialist",
+      "jobTitle": "Infrastructure Operations",
       "url": "https://resume.dot7eamworks.io/",
       "email": "mailto:rudybustamante01@icloud.com",
       "telephone": "+1-520-841-3456",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Tucson",
         "addressRegion": "AZ",
         "addressCountry": "US"
       },
@@ -177,7 +176,6 @@ const HTML = `<!doctype html>
       background: var(--paper);
       box-shadow: var(--paper-shadow);
     }
-
     .resume-header {
       margin-bottom: 0.2in;
       text-align: center;
@@ -232,14 +230,11 @@ const HTML = `<!doctype html>
       text-transform: uppercase;
     }
     .resume-section p { margin: 0; }
-    .resume-section p + p { margin-top: 0.04in; }
-
-    .competencies {
+    .skills {
       display: grid;
       gap: 0.035in;
     }
-    .competencies strong { color: #202020; }
-
+    .skills strong { color: #202020; }
     .position + .position { margin-top: 0.11in; }
     .position-heading {
       display: grid;
@@ -256,27 +251,17 @@ const HTML = `<!doctype html>
       font-style: italic;
       white-space: nowrap;
     }
-
     .resume-list {
       margin: 0;
       padding-left: 0.22in;
     }
     .resume-list li { padding-left: 0.015in; }
     .resume-list li + li { margin-top: 0.025in; }
-
-    .project-list {
-      display: grid;
-      gap: 0.055in;
+    .education-list {
       margin: 0;
-      padding: 0;
-      list-style: none;
+      padding-left: 0.22in;
     }
-    .project-list strong { color: var(--blue-dark); }
-    .project-list span { color: var(--muted); }
-
-    .education-line + .education-line { margin-top: 0.035in; }
-    .education-line strong { color: var(--blue-dark); }
-
+    .education-list li + li { margin-top: 0.025in; }
     .resume-footer {
       margin-top: 0.22in;
       padding-top: 0.08in;
@@ -335,8 +320,8 @@ const HTML = `<!doctype html>
       body {
         background: #fff;
         color: #202020;
-        font-size: 9.45pt;
-        line-height: 1.25;
+        font-size: 9.25pt;
+        line-height: 1.22;
       }
       .site-bar,
       .skip-link { display: none !important; }
@@ -348,28 +333,25 @@ const HTML = `<!doctype html>
         padding: 0;
         box-shadow: none;
       }
-      .resume-header { margin-bottom: 0.11in; }
+      .resume-header { margin-bottom: 0.1in; }
       .resume-header h1 { font-size: 21pt; }
       .resume-title { font-size: 10.2pt; }
-      .contact-line { font-size: 9.2pt; }
-      .resume-section { margin-top: 0.09in; scroll-margin-top: 0; }
+      .contact-line { font-size: 9pt; }
+      .resume-section { margin-top: 0.075in; scroll-margin-top: 0; }
       .resume-section > h2 {
-        margin-bottom: 0.035in;
-        padding-bottom: 0.025in;
-        font-size: 10.3pt;
+        margin-bottom: 0.03in;
+        padding-bottom: 0.02in;
+        font-size: 10.1pt;
       }
-      .position + .position { margin-top: 0.07in; }
-      .position-heading { margin-bottom: 0.02in; }
-      .resume-list li + li { margin-top: 0.012in; }
-      .project-list { gap: 0.025in; }
-      #volunteer { break-inside: avoid; }
-      .resume-footer { margin-top: 0.11in; }
+      .position + .position { margin-top: 0.06in; }
+      .position-heading { margin-bottom: 0.018in; }
+      .resume-list li + li,
+      .education-list li + li { margin-top: 0.01in; }
+      .resume-footer { margin-top: 0.09in; }
       h1,
       h2,
-      h3,
       .position-heading { break-after: avoid; }
-      li,
-      .education-line { break-inside: avoid; }
+      li { break-inside: avoid; }
       a { text-decoration: none; }
     }
   </style>
@@ -382,10 +364,10 @@ const HTML = `<!doctype html>
       <a class="site-brand" href="#main">Rodolfo I. Bustamante</a>
       <nav class="site-nav" aria-label="Résumé sections">
         <a href="#summary">Summary</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#military">Military</a>
         <a href="#projects">Projects</a>
-        <a href="#volunteer">Volunteer</a>
+        <a href="#military">Military</a>
         <a href="#education">Education</a>
       </nav>
       <div class="site-actions">
@@ -399,7 +381,7 @@ const HTML = `<!doctype html>
     <article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
       <header class="resume-header">
         <h1>Rodolfo I. Bustamante</h1>
-        <p class="resume-title">Information Technology | Infrastructure &amp; End-User Support</p>
+        <p class="resume-title">Infrastructure Operations</p>
         <ul class="contact-line" aria-label="Contact information">
           <li>Southern Arizona</li>
           <li><a href="tel:+15208413456">520-841-3456</a></li>
@@ -409,88 +391,82 @@ const HTML = `<!doctype html>
       </header>
 
       <section class="resume-section" id="summary">
-        <h2>Professional Summary</h2>
-        <p>U.S. military veteran and IT infrastructure professional with four years of experience delivering infrastructure and end-user support across Amazon's four-site, 1.4M+ sq. ft. Tucson node, complemented by 30 months of overseas operational experience. This includes an 18-month Army deployment in the Middle East supporting personnel movement and convoy security, plus Marine Corps WESTPAC deployments.</p>
+        <h2>Summary</h2>
+        <p>IT infrastructure professional with 4+ years of mission-critical hardware and network support across Amazon's multi-site logistics node, complemented by military avionics and tactical leadership. Experienced executing controlled MDF/IDF changes, deploying Layer 1/2 infrastructure, and stabilizing operational technology in high-stakes environments.</p>
       </section>
 
-      <section class="resume-section" aria-labelledby="competencies-heading">
-        <h2 id="competencies-heading">Core Competencies</h2>
-        <div class="competencies">
-          <p><strong>IT Service &amp; User Support:</strong> ServiceNow incident and request management, SLA tracking, escalation coordination, QA/QC, end-user device and software deployment, Microsoft 365 administration, and end-user training.</p>
-          <p><strong>Network &amp; Infrastructure Support:</strong> Hands-on Cisco switching and wireless troubleshooting, DNS/DHCP, TCP/IP, VoIP, MDF/IDF support, Cat6 and fiber cabling, network mapping, VLAN segmentation, and network monitoring.</p>
-          <p><strong>Project &amp; Technical Leadership:</strong> Controlled change management (MCM), large-scale infrastructure and workflow projects, technical meeting leadership, cross-functional coordination, stakeholder communication, and documentation.</p>
-          <p><strong>Cloud, Automation &amp; Observability:</strong> AWS EC2, Lambda, and S3; Cloudflare Zero Trust, Tunnels, and Workers; Envoy and Prometheus; Python, Go, JavaScript, and Bash; infrastructure as code and automation for monitoring, deployment, and observability.</p>
+      <section class="resume-section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <p><strong>Networking:</strong> Cisco switching, VLANs, TCP/IP, DNS/DHCP, Layer 1/2 troubleshooting.</p>
+          <p><strong>Infrastructure:</strong> MDF/IDF management, Cat6, fiber cabling, edge device provisioning.</p>
+          <p><strong>Operations:</strong> Managed Controlled Changes (MCM), ServiceNow, QA/QC, operational technology.</p>
+          <p><strong>Automation &amp; Cloud:</strong> Python, Go, Bash, AWS (EC2, S3), Prometheus.</p>
         </div>
       </section>
 
       <section class="resume-section" id="experience">
-        <h2>Professional Experience</h2>
-        <article class="position primary-role">
+        <h2>Experience</h2>
+        <article class="position">
           <div class="position-heading">
             <p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p>
             <p class="dates">Jan 2021 – Aug 2025</p>
           </div>
           <ul class="resume-list">
-            <li>Allocated, maintained, and troubleshot IT equipment across Amazon Operations while handling support requests and following established support procedures across the network.</li>
-            <li>Supported customers across multiple buildings and remote locations, trained new hires, adopted new technologies, and provided local and regional IT support as needed.</li>
-            <li>Managed local technical projects from planning through implementation, defining requirements, coordinating execution, managing controlled changes, and validating completed work to ensure operational readiness.</li>
-            <li>Provided hands-on IT support for new facility builds in Boston and New Orleans, assisting with infrastructure deployment, installation, testing, troubleshooting, and site-readiness activities.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="resume-section" id="military" aria-labelledby="military-heading">
-        <h2 id="military-heading">Military Experience</h2>
-        <article class="position primary-role">
-          <div class="position-heading">
-            <p><span class="position-title">Staff Sergeant – 15Y Armament/Electrical/Avionics Systems Repairer; 11B Infantryman</span> <span class="organization">| Arizona Army National Guard | AZ</span></p>
-            <p class="dates">2006 – 2019</p>
-          </div>
-          <ul class="resume-list">
-            <li>Diagnosed and repaired AH-64D armament, electrical, fire-control, and avionics systems using technical publications, controlled maintenance procedures, and systematic fault isolation.</li>
-            <li>Applied electrical theory and disciplined troubleshooting across complex integrated systems while maintaining equipment accountability, safety, and mission readiness.</li>
-            <li>Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East in support of Operation Iraqi Freedom.</li>
-            <li>Mentored and led junior soldiers through tactical and technical standards, reinforcing equipment accountability, disciplined execution, and mission continuity throughout deployed operations.</li>
-          </ul>
-        </article>
-
-        <article class="position primary-role">
-          <div class="position-heading">
-            <p><span class="position-title">Sergeant (E-5) – 0331 Machine Gunner</span> <span class="organization">| 3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon</span></p>
-            <p class="dates">1995 – 2003</p>
-          </div>
-          <ul class="resume-list">
-            <li>Completed WESTPAC deployments with Weapons Company, 3rd Battalion, 1st Marines, supporting mobile security, personnel movement, combined-arms operations, and mission readiness.</li>
-            <li>Led Marines in a Combined Anti-Armor Team platoon, maintaining accountability for personnel, crew-served weapons and equipment while enforcing training and readiness standards.</li>
-            <li>Directed machine-gun teams during mounted and dismounted training, coordinating movement, security, fields of fire, inspections, preventive maintenance, and integration with platoon leadership.</li>
-            <li>Instructed Marines on the M16A2, 9mm pistol, and M203 during a nine-month temporary assignment at Camp Margarita Rifle Range, delivering weapons-qualification training to over 6,800 personnel.</li>
+            <li>Executed Managed Controlled Changes in MDF/IDF environments, including Cisco switchport configuration, Cat6/fiber patching, and Layer 1/2 fault isolation.</li>
+            <li>Diagnosed and restored network connectivity for Amazon Robotics production floors, wireless access points, smart electrical panels, and other operational technology.</li>
+            <li>Maintained a break/fix workload of 20+ ServiceNow incidents per four-shift block while supporting operational SLA performance for enterprise hardware.</li>
+            <li>Supported infrastructure buildouts and site-readiness testing at new Amazon facilities in Boston and New Orleans through cable verification, hardware installation, and pre-launch QA/QC.</li>
           </ul>
         </article>
       </section>
 
       <section class="resume-section" id="projects">
-        <h2>Independent Technical Projects</h2>
-        <ul class="project-list">
-          <li><strong>AI-Assisted Envoy Control Plane:</strong> Built an AWS-hosted Envoy ADS/xDS lab with Prometheus telemetry, a Cloudflare Worker bridge, guarded health analysis, and rollback automation for safe deployments.</li>
-          <li><strong>Managed Mobile Network:</strong> Designed an iOS proxy environment with hosted policy delivery, automated rule updates, Hysteria2 transport, and cellular-to-Wi-Fi handoff diagnostics.</li>
-        </ul>
-      </section>
-
-      <section class="resume-section" id="volunteer">
-        <h2>Volunteer &amp; Community Service</h2>
+        <h2>Projects</h2>
         <article class="position">
           <div class="position-heading">
-            <p><span class="position-title">Disaster Response Volunteer</span> <span class="organization">| Team Rubicon</span></p>
-            <p class="dates">Active</p>
+            <p><span class="position-title">Independent Cloud &amp; Network Lab</span></p>
+            <p class="dates">Aug 2025 – Present</p>
           </div>
-          <p class="role-summary">Supports Team Rubicon's veteran-led disaster-response network through disaster preparedness, humanitarian response readiness, and community recovery efforts.</p>
+          <ul class="resume-list">
+            <li>Built an AWS-hosted Envoy ADS/xDS control plane with Prometheus telemetry, a Cloudflare Worker bridge, automated health evaluation, and rollback routines for deployment testing.</li>
+            <li>Built and maintain an iOS proxy-routing environment using Hysteria2, hosted policy delivery, automated rule updates, and telemetry for cellular-to-Wi-Fi transition analysis.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" id="military">
+        <h2>Military</h2>
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Staff Sergeant (E-6) – 15Y Avionics Repairer / 11B Infantryman</span> <span class="organization">| Arizona Army National Guard</span></p>
+            <p class="dates">2006 – 2019</p>
+          </div>
+          <ul class="resume-list">
+            <li>Diagnosed and repaired AH-64D Apache avionics, fire-control, and armament systems using technical publications, electrical troubleshooting, and fault-isolation procedures.</li>
+            <li>Conducted route-clearance and personnel-security operations during an 18-month deployment supporting Operation Iraqi Freedom while maintaining accountability for mission-critical equipment.</li>
+          </ul>
+        </article>
+
+        <article class="position">
+          <div class="position-heading">
+            <p><span class="position-title">Sergeant (E-5) – 0331 Machine Gunner, CAAT Platoon</span> <span class="organization">| U.S. Marine Corps – 3rd Battalion, 1st Marines</span></p>
+            <p class="dates">1995 – 2003</p>
+          </div>
+          <ul class="resume-list">
+            <li>Led Marines in a Combined Anti-Armor Team section during WESTPAC deployments and maintained readiness of vehicles and communications equipment.</li>
+            <li>Instructed more than 6,800 military personnel in marksmanship, weapons handling, and range-safety procedures during a nine-month assignment at Camp Margarita Rifle Range.</li>
+          </ul>
         </article>
       </section>
 
       <section class="resume-section" id="education">
-        <h2>Education &amp; Recognition</h2>
-        <p class="education-line"><strong>Bachelor of Science in Information Technology</strong>, Concentration in Network Architecture and Security | American Military University | 2014</p>
-        <p class="education-line"><strong>Bronze Star Medal</strong> | Operation Iraqi Freedom | Honorable military service</p>
+        <h2>Education &amp; Awards</h2>
+        <ul class="education-list">
+          <li>Bachelor of Science in Information Technology (Network Architecture) – American Military University</li>
+          <li>Bronze Star Medal – Operation Iraqi Freedom</li>
+          <li>Team Rubicon – Active Volunteer / Disaster Response</li>
+        </ul>
       </section>
 
       <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer>
@@ -503,22 +479,18 @@ const HTML = `<!doctype html>
 </body>
 </html>`;
 
-
 export default {
   async fetch(request) {
     const url = new URL(request.url);
     const method = request.method.toUpperCase();
 
-    // Force workers.dev traffic onto the canonical resume hostname.
     if (url.hostname.endsWith(".workers.dev")) {
       const canonical = new URL(CANONICAL_ORIGIN);
       canonical.pathname = url.pathname;
       canonical.search = url.search;
-
       return Response.redirect(canonical.toString(), 308);
     }
 
-    // This Worker is read-only.
     if (method !== "GET" && method !== "HEAD") {
       return new Response("Method Not Allowed\n", {
         status: 405,
@@ -536,7 +508,6 @@ export default {
         service: "resume",
         release: RELEASE,
       });
-
       return new Response(method === "HEAD" ? null : body, {
         status: 200,
         headers: {
@@ -552,7 +523,6 @@ export default {
         `User-agent: *\n` +
         `Allow: /\n` +
         `Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`;
-
       return new Response(method === "HEAD" ? null : body, {
         status: 200,
         headers: {
@@ -568,7 +538,6 @@ export default {
         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
         `  <url><loc>${CANONICAL_ORIGIN}/</loc></url>\n` +
         `</urlset>\n`;
-
       return new Response(method === "HEAD" ? null : body, {
         status: 200,
         headers: {
