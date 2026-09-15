@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.15.6";
+const RELEASE = "2026.09.15.7";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -80,7 +80,7 @@ const HTML = `<!doctype html>
 <main class="page-shell" id="main"><article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
 <header class="resume-header"><h1>Rodolfo I. Bustamante</h1><p class="resume-title">Infrastructure Operations</p><ul class="contact-line" aria-label="Contact information"><li>Southern Arizona</li><li><a href="tel:+15208413456">520-841-3456</a></li><li><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></li><li><a href="https://github.com/N7Septimo" rel="noreferrer">github.com/N7Septimo</a></li></ul></header>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years of mission-critical hardware and network support across Amazon's multi-site logistics node, complemented by military avionics and tactical leadership.</p></section>
-<section class="resume-section" id="skills"><h2>Skills</h2><div class="skills"><p><strong>Networking:</strong> Cisco switching, VLANs, TCP/IP, DNS/DHCP, Layer 1/2 troubleshooting.</p><p><strong>Infrastructure:</strong> MDF/IDF management, Cat6, fiber cabling, edge device provisioning.</p><p><strong>Operations:</strong> Managed Controlled Changes (MCM), ServiceNow, QA/QC, operational technology.</p><p><strong>Automation &amp; Cloud:</strong> Python, Go, Bash, AWS (EC2, S3), Prometheus.</p></div></section>
+<section class="resume-section" id="skills"><h2>Skills</h2><div class="skills"><p><strong>Operations Technology Support (OTS):</strong> MDF/IDF/Demarcation infrastructure, LAN/WAN infrastructure, hardware lifecycle, infrastructure deployment.</p><p><strong>Cloud Computing — Active, Live-Running Projects:</strong> AI-assisted Hysteria2 proxy gateway utilizing AWS, Cloudflare, and Claude, with Prometheus telemetry for network-wide transparency, centralized control, and no-bypass routing.</p></div></section>
 <section class="resume-section" id="experience"><h2>Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
 <li>Provided primary IT support for TUS2 and neighboring facilities, as well as on-site support for new Amazon site builds, including infrastructure deployment, validation, troubleshooting, and operational readiness.</li>
 <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
