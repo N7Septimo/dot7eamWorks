@@ -35,7 +35,9 @@ test("serves the lean infrastructure resume", async () => {
   assert.ok(body.includes("cellular-to-Wi-Fi transition analysis"));
 
   assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("18-month deployment supporting Operation Iraqi Freedom"));
+  assert.ok(body.includes("18-month deployment in support of Operation Iraqi Freedom"));
+  assert.ok(body.includes("convoy security, escort, route-clearance, and personnel-security operations"));
+  assert.ok(body.includes("community-engagement missions to rebuild local trust"));
   assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
   assert.ok(body.includes("Combined Anti-Armor Team section"));
   assert.ok(body.includes("more than 6,800 military personnel"));
@@ -81,7 +83,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.15.1",
+    release: "2026.09.15.2",
   });
 });
 
