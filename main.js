@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.09.15.1";
+const RELEASE = "2026.09.15.2";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -444,7 +444,7 @@ const HTML = `<!doctype html>
           </div>
           <ul class="resume-list">
             <li>Diagnosed and repaired AH-64D Apache avionics, fire-control, and armament systems using technical publications, electrical troubleshooting, and fault-isolation procedures.</li>
-            <li>Conducted route-clearance and personnel-security operations during an 18-month deployment supporting Operation Iraqi Freedom while maintaining accountability for mission-critical equipment.</li>
+            <li>Conducted convoy security, escort, route-clearance, and personnel-security operations during an 18-month deployment in support of Operation Iraqi Freedom, including protection of troops conducting community-engagement missions to rebuild local trust.</li>
           </ul>
         </article>
 
