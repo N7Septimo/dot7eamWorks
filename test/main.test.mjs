@@ -9,7 +9,7 @@ async function request(path = "/", init = {}) {
   );
 }
 
-test("serves the current resume", async () => {
+test("serves the lean infrastructure resume", async () => {
   const response = await request();
   const body = await response.text();
 
@@ -21,106 +21,48 @@ test("serves the current resume", async () => {
   );
 
   assert.ok(body.includes("Rodolfo I. Bustamante"));
+  assert.ok(body.includes("Infrastructure Operations"));
+  assert.ok(body.includes("4+ years of mission-critical hardware and network support"));
+  assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
   assert.ok(body.includes("Jan 2021 – Aug 2025"));
+  assert.ok(body.includes("20+ ServiceNow incidents per four-shift block"));
+  assert.ok(body.includes("Boston and New Orleans"));
+
+  assert.ok(body.includes("Independent Cloud &amp; Network Lab"));
+  assert.ok(body.includes("Envoy ADS/xDS control plane"));
+  assert.ok(body.includes("Cloudflare Worker bridge"));
+  assert.ok(body.includes("Hysteria2"));
+  assert.ok(body.includes("cellular-to-Wi-Fi transition analysis"));
+
   assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("2006 – 2019"));
-  assert.ok(body.includes("1995 – 2003"));
+  assert.ok(body.includes("18-month deployment supporting Operation Iraqi Freedom"));
+  assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
+  assert.ok(body.includes("Combined Anti-Armor Team section"));
+  assert.ok(body.includes("more than 6,800 military personnel"));
+
+  assert.ok(body.includes("Bachelor of Science in Information Technology (Network Architecture)"));
   assert.ok(body.includes("Bronze Star Medal"));
-  assert.ok(body.includes("30 months of overseas operational experience"));
-  assert.ok(body.includes("an 18-month Army deployment in the Middle East supporting personnel movement and convoy security"));
-  assert.ok(body.includes("Conducted route, personnel, and convoy security operations during an 18-month deployment in the Middle East in support of Operation Iraqi Freedom."));
-  assert.ok(!body.includes("Completed 18 months of Army assignments in the Middle East"));
-  assert.ok(body.includes("Completed WESTPAC deployments"));
-  assert.ok(body.includes("mobile security, personnel movement, combined-arms operations"));
-  assert.ok(!body.includes("plus 12 months across Marine Corps WESTPAC deployments"));
+  assert.ok(body.includes("Team Rubicon – Active Volunteer / Disaster Response"));
 
-  assert.ok(body.includes("Sergeant (E-5) – 0331 Machine Gunner"));
-  assert.ok(
-    body.includes(
-      '3rd Battalion, 1st Marines ("Thundering Third"), Weapons Company, Combined Anti-Armor Team (CAAT) Platoon',
-    ),
-  );
-  assert.ok(body.includes("crew-served weapons and equipment"));
-  assert.ok(
-    body.includes("machine-gun teams during mounted and dismounted training"),
-  );
-  assert.ok(
-    body.includes(
-      "nine-month temporary assignment at Camp Margarita Rifle Range",
-    ),
-  );
-  assert.ok(
-    body.includes("Instructed Marines on the M16A2, 9mm pistol, and M203"),
-  );
-  assert.ok(
-    body.includes("weapons-qualification training to over 6,800 personnel"),
-  );
+  assert.ok(!body.includes("30 months of overseas operational experience"));
+  assert.ok(!body.includes("Led Marines in a Combined Anti-Armor Team platoon"));
+  assert.ok(!body.includes("AI-Assisted Envoy Control Plane"));
+  assert.ok(!body.includes("Infrastructure &amp; End-User Support"));
+  assert.ok(!/CRAC|critical-facilities|rack-and-stack/i.test(body));
+});
 
-  assert.ok(!body.includes("Infantry NCO and Marksmanship Instructor"));
+test("keeps the site navigation aligned to lean resume sections", async () => {
+  const response = await request();
+  const body = await response.text();
 
-  assert.ok(body.includes("Network Architecture and Security"));
-  assert.ok(body.includes("AI-Assisted Envoy Control Plane"));
-  assert.ok(body.includes("Managed Mobile Network"));
-  assert.ok(body.includes("Infrastructure &amp; End-User Support"));
-  assert.ok(body.includes("Allocated, maintained, and troubleshot IT equipment across Amazon Operations"));
-  assert.ok(body.includes("following established support procedures across the network"));
-  assert.ok(body.includes("Supported customers across multiple buildings and remote locations"));
-  assert.ok(body.includes("trained new hires"));
-  assert.ok(body.includes("provided local and regional IT support as needed"));
-  assert.ok(body.includes("Managed local technical projects from planning through implementation"));
-  assert.ok(body.includes("managing controlled changes"));
-  assert.ok(body.includes("Provided hands-on IT support for new facility builds in Boston and New Orleans"));
-  assert.ok(body.includes("site-readiness activities"));
-  assert.ok(body.includes("IT Service &amp; User Support"));
-  assert.ok(body.includes("Network &amp; Infrastructure Support"));
-  assert.ok(body.includes("Project &amp; Technical Leadership"));
-  assert.ok(body.includes("Cloud, Automation &amp; Observability"));
-  assert.ok(body.includes("Independent Technical Projects"));
-  assert.ok(body.includes("Team Rubicon"));
-  assert.ok(body.includes('id="military"'));
-  assert.ok(body.includes('href="#military"'));
-  assert.ok(!body.includes("Deployment Scheduled Aug 2026"));
+  for (const section of ["summary", "skills", "experience", "projects", "military", "education"]) {
+    assert.ok(body.includes(`id="${section}"`));
+    assert.ok(body.includes(`href="#${section}"`));
+  }
+
   assert.ok(body.includes("Download / Print PDF"));
   assert.ok(body.includes("resume-document"));
   assert.ok(body.includes("resume.dot7eamworks.io"));
-
-  assert.ok(!body.includes("MTTR"));
-  assert.ok(!/server installation|rack-and-stack/i.test(body));
-});
-
-
-test("keeps primary resume roles structurally uniform", async () => {
-  const response = await request();
-  const body = await response.text();
-  const roles = [...body.matchAll(/<article class="position primary-role">([\s\S]*?)<\/article>/g)];
-
-  assert.equal(roles.length, 3);
-
-  for (const [, role] of roles) {
-    const bullets = [...role.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((match) =>
-      match[1].replace(/<[^>]+>/g, "").trim(),
-    );
-
-    assert.equal(bullets.length, 4);
-
-    for (const bullet of bullets) {
-      assert.ok(bullet.endsWith("."));
-      const wordCount = bullet.match(/\b[\w/-]+\b/g)?.length ?? 0;
-      assert.ok(
-        wordCount >= 18 && wordCount <= 28,
-        `Expected 18-28 words, got ${wordCount}: ${bullet}`,
-      );
-    }
-  }
-
-  const projectBlock = body.match(/<ul class="project-list">([\s\S]*?)<\/ul>/)?.[1] ?? "";
-  assert.equal((projectBlock.match(/<li>/g) ?? []).length, 2);
-  assert.equal((body.match(/<p><strong>[^<]+:<\/strong>/g) ?? []).length, 4);
-  assert.equal((body.match(/class="education-line"/g) ?? []).length, 2);
-  assert.equal((body.match(/class="role-summary"/g) ?? []).length, 1);
-  assert.ok(!body.includes("Jan 2021 - Aug 2025"));
-  assert.ok(!body.includes("2006 - 2019"));
-  assert.ok(!body.includes("1995 - 2003"));
 });
 
 test("supports HEAD without a body", async () => {
@@ -139,7 +81,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.09.8",
+    release: "2026.09.15.1",
   });
 });
 
@@ -151,12 +93,10 @@ test("publishes crawler metadata", async () => {
 
   assert.equal(robots.status, 200);
   assert.equal(sitemap.status, 200);
-
   assert.match(
     await robots.text(),
     /Sitemap: https:\/\/resume\.dot7eamworks\.io\/sitemap\.xml/,
   );
-
   assert.match(
     await sitemap.text(),
     /<loc>https:\/\/resume\.dot7eamworks\.io\/<\/loc>/,
@@ -172,9 +112,7 @@ test("rejects unsupported methods", async () => {
 
 test("redirects workers.dev traffic to the canonical host", async () => {
   const response = await worker.fetch(
-    new Request(
-      "https://resume.example.workers.dev/projects?source=test",
-    ),
+    new Request("https://resume.example.workers.dev/projects?source=test"),
   );
 
   assert.equal(response.status, 308);
