@@ -518,8 +518,37 @@ export default {
       });
     }
 
-    if (url.pathname !== "/" && url.pathname !== "/index.html") {
-      return new Response("Not Found\n", {
+    if (url.pathname === "/robots.txt") {
+      const body =
+        `User-agent: *\n` +
+        `Allow: /\n` +
+        `Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`;
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "text/plain;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname === "/sitemap.xml") {
+      const body =
+        `<?xml version="1.0" encoding="UTF-8"?>\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `  <url><loc>${CANONICAL_ORIGIN}/</loc></url>\n` +
+        `</urlset>\n`;
+      return new Response(method === "HEAD" ? null : body, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/xml;charset=UTF-8",
+          ...SECURITY_HEADERS,
+        },
+      });
+    }
+
+    if (url.pathname !== "/") {
+      return new Response(method === "HEAD" ? null : "Not Found\n", {
         status: 404,
         headers: {
           "Content-Type": "text/plain;charset=UTF-8",
@@ -532,7 +561,6 @@ export default {
       status: 200,
       headers: {
         "Content-Type": "text/html;charset=UTF-8",
-        "Cache-Control": "public, max-age=300",
         ...SECURITY_HEADERS,
       },
     });
