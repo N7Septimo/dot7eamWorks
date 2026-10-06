@@ -35,7 +35,7 @@ test("serves the lean infrastructure resume", async () => {
   assert.ok(body.includes("GitHub-managed configuration"));
 
   assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("18-month deployment in support of Operation Iraqi Freedom"));
+  assert.ok(body.includes("18 months boots-on-ground in Iraq with the U.S. Army"));
   assert.ok(body.includes("convoy security, escort, route-clearance, and personnel-security operations"));
   assert.ok(body.includes("community-engagement missions"));
   assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
