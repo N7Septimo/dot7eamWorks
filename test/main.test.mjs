@@ -26,25 +26,26 @@ test("serves the lean infrastructure resume", async () => {
   assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
   assert.ok(body.includes("Jan 2021 – Aug 2025"));
   assert.ok(body.includes("ServiceNow incidents"));
-  assert.ok(body.includes("vendor-coordinated remediation"));
+  assert.ok(body.includes("vendor remediation"));
 
   assert.ok(body.includes("Independent Cloud &amp; Network Project"));
   assert.ok(body.includes("Envoy"));
   assert.ok(body.includes("Cloudflare ingress"));
   assert.ok(body.includes("Hysteria2"));
-  assert.ok(body.includes("verify changes through CI before deployment"));
+  assert.ok(body.includes("used Prometheus and CI to review service behavior"));
 
   assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("18 months boots-on-ground in Iraq with the U.S. Army"));
+  assert.ok(body.includes("18 months boots-on-ground in Iraq conducting convoy security"));
   assert.ok(body.includes("convoy security, escort, route-clearance, and personnel-security operations"));
-  assert.ok(body.includes("community-engagement missions"));
+  assert.ok(body.includes("vehicle-load and convoy procedures"));
   assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
   assert.ok(body.includes("Combined Anti-Armor Team section"));
-  assert.ok(body.includes("more than 6,800 military personnel"));
+  assert.ok(body.includes("more than 6,800 personnel"));
   assert.ok(body.includes("Master of Science coursework in Information Technology Project Management"));
-  assert.ok(body.includes("across more than 200 operational connections"));
+  assert.ok(body.includes("200+ operational connections"));
   assert.ok(body.includes("Reprogrammed 150 facility keypads"));
-  assert.ok(body.includes("Fluke tone-and-trace functions"));
+  assert.ok(body.includes("Fluke tone-and-trace tools"));
+  assert.ok(body.includes("Checked VLAN membership, IP addressing and TCP/IP reachability, DNS/DHCP"));
 
   assert.ok(body.includes("Bachelor of Science in Information Technology (Network Architecture)"));
   assert.ok(body.includes("Bronze Star Medal"));
