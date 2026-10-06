@@ -15,8 +15,7 @@ test("serves the PDF-based resume while preserving the Amazon section", async ()
   assert.match(response.headers.get("content-type"), /^text\/html/);
   assert.match(response.headers.get("content-security-policy"), /frame-ancestors 'none'/);
 
-  assert.ok(body.includes("Former U.S. Marine and current M.S. IT student"));
-  assert.ok(body.includes("electrical theory and rotary-wing aircraft avionics"));
+  assert.ok(body.includes("IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience."));
   assert.ok(body.includes("US_MARINES911@hotmail.com"));
   assert.ok(body.includes("1422 Calle Tordo, Rio Rico, Arizona"));
 
