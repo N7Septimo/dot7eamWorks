@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.10.06.01";
+const RELEASE = "2026.10.06.04";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -20,13 +20,13 @@ const HTML = `<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef1f4">
-  <meta name="description" content="Rodolfo I. Bustamante - infrastructure operations professional with Amazon OTS experience across Cisco switching, MDF/IDF work, Layer 1/2 troubleshooting, operational technology, AWS, Envoy, Prometheus, and network automation.">
+  <meta name="description" content="Résumé of Rodolfo I. Bustamante: IT support, aircraft avionics maintenance, military service, community volunteering, education, and awards.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>Rodolfo I. Bustamante | Infrastructure Operations</title>
+  <title>Rodolfo I. Bustamante | Résumé</title>
   <link rel="canonical" href="https://resume.dot7eamworks.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rodolfo I. Bustamante | Infrastructure Operations">
-  <meta property="og:description" content="Amazon infrastructure operations, Layer 1/2 networking, operational technology, cloud-hosted control planes, observability, and automation.">
+  <meta property="og:title" content="Rodolfo I. Bustamante | Résumé">
+  <meta property="og:description" content="Résumé of IT support, aircraft avionics maintenance, military service, community volunteering, education, and awards.">
   <meta property="og:url" content="https://resume.dot7eamworks.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -37,16 +37,16 @@ const HTML = `<!doctype html>
       "alternateName": "Rudy Bustamante",
       "jobTitle": "Infrastructure Operations",
       "url": "https://resume.dot7eamworks.io/",
-      "email": "mailto:rudybustamante01@icloud.com",
+      "email": "mailto:US_MARINES911@hotmail.com",
       "telephone": "+1-520-841-3456",
       "address": {
         "@type": "PostalAddress",
-        "addressRegion": "AZ",
+        "streetAddress": "1422 Calle Tordo",
+        "addressLocality": "Rio Rico",
+        "addressRegion": "Arizona",
         "addressCountry": "US"
       },
-      "sameAs": ["https://github.com/N7Septimo"],
       "award": "Bronze Star Medal",
-      "knowsLanguage": ["English", "Spanish"],
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "American Military University"
@@ -76,21 +76,48 @@ const HTML = `<!doctype html>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to résumé</a>
-<header class="site-bar" aria-label="Résumé controls"><div class="site-bar-inner"><a class="site-brand" href="#main">Rodolfo I. Bustamante</a><nav class="site-nav" aria-label="Résumé sections"><a href="#summary">Summary</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#military">Military</a><a href="#education">Education</a></nav><div class="site-actions"><a class="action" href="mailto:rudybustamante01@icloud.com">Email</a><button class="action primary" id="print-resume" type="button">Download / Print PDF</button></div></div></header>
-<main class="page-shell" id="main"><article class="resume-document" aria-label="Rodolfo I. Bustamante professional résumé">
-<header class="resume-header"><h1>Rodolfo I. Bustamante</h1><p class="resume-title">Infrastructure Operations</p><ul class="contact-line" aria-label="Contact information"><li>Southern Arizona</li><li><a href="tel:+15208413456">520-841-3456</a></li><li><a href="mailto:rudybustamante01@icloud.com">rudybustamante01@icloud.com</a></li><li><a href="https://github.com/N7Septimo" rel="noreferrer">github.com/N7Septimo</a></li></ul></header>
-<section class="resume-section" id="summary"><h2>Summary</h2><p>IT support professional with 4+ years in Amazon Operations Technology Support. Work includes site IT, network and endpoint troubleshooting, infrastructure projects, and technician training. Background also includes AH-64D avionics maintenance, Army and Marine Corps service, and an independent AWS/Cloudflare network project.</p></section>
-<section class="resume-section" id="skills"><h2>Technical Skills</h2><div class="skills"><p><strong>Systems &amp; Access:</strong> Windows, Linux, macOS, Active Directory, account permissions, Group Policy.</p><p><strong>Networking &amp; Infrastructure:</strong> Cisco switching and wireless, TCP/IP, DNS/DHCP, VLANs, LAN/WAN, MDF/IDF and demarcation infrastructure, Cat6/fiber patching, Fluke cable tracing.</p><p><strong>Operations &amp; Project Coordination:</strong> ServiceNow incident management, hardware lifecycle, infrastructure deployment, equipment requirements, Managed Change Management (MCM), vendor coordination, technical documentation, and team training.</p><p><strong>Independent Cloud Project:</strong> AWS EC2, Cloudflare, Hysteria2, Envoy, Prometheus, GitHub configuration management, centralized routing and policy enforcement, Claude integration.</p></div></section>
-<section class="resume-section" id="projects"><h2>Projects</h2><article class="position"><div class="position-heading"><p><span class="position-title">Independent Cloud &amp; Network Project</span></p><p class="dates">Aug 2025 – Present</p></div><ul class="resume-list"><li>Built a self-hosted AWS EC2 network integrating Hysteria2 transport, Envoy proxying, Cloudflare ingress, and Prometheus telemetry. Configured Linux services, TLS, and routing across the client and gateway path.</li><li>Validated TCP forwarding through Envoy and developed deterministic admission logic to route through Envoy or reject traffic. Managed configuration in GitHub and used Prometheus and CI to review service behavior and verify changes.</li></ul></article></section>
-<section class="resume-section" id="experience"><h2>Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
+<header class="site-bar" aria-label="Résumé controls"><div class="site-bar-inner"><a class="site-brand" href="#main">Rodolfo I. Bustamante</a><nav class="site-nav" aria-label="Résumé sections"><a href="#summary">Summary</a><a href="#experience">Experience</a><a href="#community">Community</a><a href="#education">Education</a><a href="#awards">Honors &amp; Awards</a></nav><div class="site-actions"><a class="action" href="mailto:rudybustamante01@icloud.com">Email</a><button class="action primary" id="print-resume" type="button">Download / Print PDF</button></div></div></header>
+<main class="page-shell" id="main"><article class="resume-document" aria-label="Rodolfo I. Bustamante résumé">
+<header class="resume-header"><h1>Rodolfo I. Bustamante</h1><ul class="contact-line" aria-label="Contact information"><li>Greater Tucson and Phoenix Area</li><li>1422 Calle Tordo, Rio Rico, Arizona</li><li><a href="mailto:US_MARINES911@hotmail.com">US_MARINES911@hotmail.com</a></li><li><a href="tel:+15208413456">(520) 841-3456</a></li></ul></header>
+<section class="resume-section" id="summary"><h2>Summary</h2><p>Former U.S. Marine and current M.S. IT student with technical experience in electrical theory and rotary-wing aircraft avionics. Background includes warehouse operations, military service, and community volunteering.</p></section>
+<section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
             <li>Provided primary on-site IT support for TUS2 and neighboring Amazon facilities, triaging and prioritizing cross-site incidents based on severity and operational impact.</li>
             <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
             <li>Reintroduced the Demarcation Power Remediation Project to improve network redundancy and replace aging infrastructure, subsequently adopted into Amazon’s project portfolio for legacy facilities.</li>
-            <li>Traveled to new Amazon site builds to support IT infrastructure deployment, installation, validation, troubleshooting, and operational readiness during facility launches and transition to operations.</li>
-          </ul>
-/article></section>
-<section class="resume-section" id="military"><h2>Military</h2><article class="position"><div class="position-heading"><p><span class="position-title">Staff Sergeant (E-6) – 15Y Avionics Repairer / 11B Infantryman</span> <span class="organization">| Arizona Army National Guard</span></p><p class="dates">2006 – 2019</p></div><ul class="resume-list"><li>Led scheduled and unscheduled maintenance on AH-64D Apache avionics, fire-control, and armament systems. Used technical publications, electrical troubleshooting, and fault isolation to diagnose discrepancies and complete repairs.</li><li>Trained incoming technicians in electronic troubleshooting and ULLS-A(E) procedures through classroom instruction and hands-on practice. Maintained hangar safety records and applied OSHA requirements for inspections.</li><li>Completed 18 months boots-on-ground in Iraq conducting convoy security, escort, route-clearance, and personnel-security operations. Developed vehicle-load and convoy procedures, briefed leaders on routes, and trained incoming units.</li></ul></article><article class="position"><div class="position-heading"><p><span class="position-title">UH-60 Crew Chief / Small Unmanned Aircraft System Operator</span> <span class="organization">| Western Army National Guard Aviation Training Site</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list"><li>Handled UH-60 maintenance, troubleshooting, and parts requisitions while teaching short technical courses to fellow crew members.</li><li>Maintained SUAS inventories, operator flight currency, and progression qualifications. Kept equipment accountable and the program within budget, helping sustain the state training program.</li></ul></article><article class="position"><div class="position-heading"><p><span class="position-title">Sergeant (E-5) – 0331 Machine Gunner, CAAT Platoon</span> <span class="organization">| U.S. Marine Corps – 3rd Battalion, 1st Marines</span></p><p class="dates">1995 – 2003</p></div><ul class="resume-list"><li>Led a Marine Combined Anti-Armor Team section during WESTPAC deployments. Assigned small-unit responsibilities and maintained vehicle and communications readiness for security, reconnaissance, and raid-training operations.</li><li>Instructed more than 6,800 personnel in rifle and pistol marksmanship during a nine-month Camp Margarita assignment, covering sight adjustment, data recording, firing positions, weapons safety, and day/night qualifications.</li></ul></article></section>
-<section class="resume-section" id="education"><h2>Education, Awards &amp; Service</h2><ul class="education-list"><li>Bachelor of Science in Information Technology (Network Architecture) – American Military University</li><li>Master of Science coursework in Information Technology Project Management – American Military University (in progress)</li><li>Bronze Star Medal – Operation Iraqi Freedom</li><li>Team Rubicon – Active Volunteer / Disaster Response; maintained readiness to assist communities during disasters and humanitarian crises.</li></ul></section>
+            <li>Traveled to new Amazon site builds to support IT infrastructure deployment, installation, validation, troubleshooting, and operational readiness during facility launches and transition to operations.</li></ul></article>
+<article class="position"><div class="position-heading"><p><span class="position-title">Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
+<li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
+<li>Carried out scheduled and unscheduled work on electronic equipment, including AH-64D avionics.</li>
+<li>Instructed new technicians in electronic troubleshooting with ULLS-A(E), pairing technical guidance with hands-on practice.</li>
+<li>Kept technical currency and followed OSHA requirements, documenting hangar safety practices that supported successful inspections and safe operations.</li>
+</ul></article>
+<article class="position"><div class="position-heading"><p><span class="position-title">Crew Chief – 15T3F UH-60 Helicopter / UAV SUAS Operator</span> <span class="organization">| Arizona Army National Guard, Western Aviation Training Site | Red Rock, AZ</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list">
+<li>Contributed to UH-60 crew projects by handling requisitions, completing repairs, diagnosing faults, and teaching short technical courses.</li>
+<li>Kept operator currency and progression qualifications for the Unmanned Aircraft Aircrew Training Program, meeting required flight-hour standards.</li>
+<li>Tracked and serviced Small Unmanned Aircraft System (SUAS) equipment, keeping inventory within budget and helping prevent the state program from becoming obsolete.</li>
+</ul></article>
+<article class="position"><div class="position-heading"><p><span class="position-title">U.S. Soldier – Enlisted</span> <span class="organization">| United States Army | Overseas Duty</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
+<li>Established and applied standard operating procedures for combat vehicle loads and convoy tactics; these standards resulted in 100% mission success.</li>
+<li>Advised leaders on adapting to changing combat conditions, providing route-specific guidance for routes linking each forward operating base (FOB) and supporting mission effectiveness.</li>
+<li>Stayed in country to train and lead units along new routes, filling operational roles as needed during combat missions.</li>
+</ul></article>
+<article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
+<li>Served as a designated marksman and machine gunner in an amphibious assault unit, supporting security, light-vehicle reconnaissance, and raid-training operations.</li>
+<li>Prepared classes and helped train foreign military and security forces in counterinsurgency, population engagement, and counterterrorism.</li>
+<li>Coached Marines in rifle and pistol marksmanship for qualifications and matches, teaching sight adjustment, data logging, and firing positions for day and night courses.</li>
+</ul></article></section>
+<section class="resume-section" id="community"><h2>Community Services</h2><article class="position"><div class="position-heading"><p><span class="position-title">Volunteer – Disaster Humanitarian Aid</span> <span class="organization">| Team Rubicon | Tucson, AZ</span></p><p class="dates">Jan 2020 – Present</p></div><ul class="resume-list">
+<li>Team Rubicon mobilizes veterans to help communities prepare for, respond to, and recover from disasters and humanitarian crises.</li>
+<li>Remain active with the organization and ready to assist communities through its disaster-response work.</li>
+</ul></article></section>
+<section class="resume-section" id="education"><h2>Education</h2><ul class="education-list">
+<li>American Military University – Bachelor of Science in Information Technology (2014 graduate), Charles Town, West Virginia.</li>
+<li>American Military University – Current student in M.S. Information Technology Project Management; Certificates in Network Security. Charles Town, West Virginia.</li>
+</ul></section>
+<section class="resume-section" id="awards"><h2>Honors &amp; Awards</h2><ul class="education-list">
+<li>Bronze Star Medal – United States Armed Forces award.</li>
+<li>Recognized for exceptionally meritorious service and contributions to duty during wartime combat operations.</li>
+</ul></section>
 <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer></article></main>
 <script>document.getElementById("print-resume").addEventListener("click", () => window.print());</script>
 </body></html>`;
