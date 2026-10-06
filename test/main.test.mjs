@@ -22,22 +22,22 @@ test("serves the lean infrastructure resume", async () => {
 
   assert.ok(body.includes("Rodolfo I. Bustamante"));
   assert.ok(body.includes("Infrastructure Operations"));
-  assert.ok(body.includes("4+ years of mission-critical hardware and network support"));
+  assert.ok(body.includes("4+ years of Amazon OTS experience"));
   assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
   assert.ok(body.includes("Jan 2021 – Aug 2025"));
-  assert.ok(body.includes("20+ ServiceNow incidents per four-shift block"));
-  assert.ok(body.includes("Boston and New Orleans"));
+  assert.ok(body.includes("ServiceNow incidents"));
+  assert.ok(body.includes("new Amazon site builds"));
 
-  assert.ok(body.includes("Independent Cloud &amp; Network Lab"));
-  assert.ok(body.includes("Envoy ADS/xDS control plane"));
-  assert.ok(body.includes("Cloudflare Worker bridge"));
+  assert.ok(body.includes("Independent Cloud &amp; Network Project"));
+  assert.ok(body.includes("Envoy"));
+  assert.ok(body.includes("Cloudflare services"));
   assert.ok(body.includes("Hysteria2"));
-  assert.ok(body.includes("cellular-to-Wi-Fi transition analysis"));
+  assert.ok(body.includes("GitHub-managed configuration"));
 
   assert.ok(body.includes("Arizona Army National Guard"));
   assert.ok(body.includes("18-month deployment in support of Operation Iraqi Freedom"));
   assert.ok(body.includes("convoy security, escort, route-clearance, and personnel-security operations"));
-  assert.ok(body.includes("community-engagement missions to rebuild local trust"));
+  assert.ok(body.includes("community-engagement missions"));
   assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
   assert.ok(body.includes("Combined Anti-Armor Team section"));
   assert.ok(body.includes("more than 6,800 military personnel"));
@@ -83,7 +83,7 @@ test("reports health without caching", async () => {
   assert.deepEqual(payload, {
     status: "ok",
     service: "resume",
-    release: "2026.09.15.2",
+    release: "2026.09.15.12",
   });
 });
 
