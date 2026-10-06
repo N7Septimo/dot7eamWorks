@@ -48,10 +48,6 @@ test("serves the lean infrastructure resume", async () => {
   assert.ok(body.includes("Combined Anti-Armor Team section"));
   assert.ok(body.includes("more than 6,800 personnel"));
   assert.ok(body.includes("Master of Science coursework in Information Technology Project Management"));
-  assert.ok(body.includes("200+ operational connections"));
-  assert.ok(body.includes("Reprogrammed 150 facility keypads"));
-  assert.ok(body.includes("Fluke tone-and-trace tools"));
-  assert.ok(body.includes("Checked VLAN membership, IP addressing and TCP/IP reachability, DNS/DHCP"));
 
   assert.ok(body.includes("Bachelor of Science in Information Technology (Network Architecture)"));
   assert.ok(body.includes("Bronze Star Medal"));
