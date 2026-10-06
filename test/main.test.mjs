@@ -25,8 +25,14 @@ test("serves the lean infrastructure resume", async () => {
   assert.ok(body.includes("4+ years in Amazon OTS"));
   assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
   assert.ok(body.includes("Jan 2021 – Aug 2025"));
-  assert.ok(body.includes("ServiceNow incidents"));
-  assert.ok(body.includes("vendor remediation"));
+  assert.ok(body.includes("triaging and prioritizing cross-site incidents"));
+  assert.ok(body.includes("weekly virtual training and mentoring"));
+  assert.ok(body.includes("Demarcation Power Remediation Project"));
+  assert.ok(body.includes("new Amazon site builds"));
+  assert.ok(!body.includes("TUS5"));
+  assert.ok(!body.includes("200+ operational connections"));
+  assert.ok(!body.includes("Reprogrammed 150 facility keypads"));
+  assert.ok(!body.includes("Fluke tone-and-trace tools"));
 
   assert.ok(body.includes("Independent Cloud &amp; Network Project"));
   assert.ok(body.includes("Envoy"));
