@@ -22,7 +22,7 @@ test("serves the lean infrastructure resume", async () => {
 
   assert.ok(body.includes("Rodolfo I. Bustamante"));
   assert.ok(body.includes("Infrastructure Operations"));
-  assert.ok(body.includes("4+ years in Amazon OTS"));
+  assert.ok(body.includes("4+ years in Amazon Operations Technology Support"));
   assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
   assert.ok(body.includes("Jan 2021 – Aug 2025"));
   assert.ok(body.includes("triaging and prioritizing cross-site incidents"));
