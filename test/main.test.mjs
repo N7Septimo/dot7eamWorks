@@ -4,67 +4,56 @@ import test from "node:test";
 import worker from "../main.js";
 
 async function request(path = "/", init = {}) {
-  return worker.fetch(
-    new Request(`https://resume.dot7eamworks.io${path}`, init),
-  );
+  return worker.fetch(new Request(`https://resume.dot7eamworks.io${path}`, init));
 }
 
-test("serves the lean infrastructure resume", async () => {
+test("serves the PDF-based resume while preserving the Amazon section", async () => {
   const response = await request();
   const body = await response.text();
 
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type"), /^text\/html/);
-  assert.match(
-    response.headers.get("content-security-policy"),
-    /frame-ancestors 'none'/,
-  );
+  assert.match(response.headers.get("content-security-policy"), /frame-ancestors 'none'/);
 
-  assert.ok(body.includes("Rodolfo I. Bustamante"));
-  assert.ok(body.includes("Infrastructure Operations"));
-  assert.ok(body.includes("4+ years in Amazon Operations Technology Support"));
-  assert.ok(body.includes("Amazon Operations Technology Support (OTS)"));
-  assert.ok(body.includes("Jan 2021 – Aug 2025"));
-  assert.ok(body.includes("triaging and prioritizing cross-site incidents"));
-  assert.ok(body.includes("weekly virtual training and mentoring"));
-  assert.ok(body.includes("Demarcation Power Remediation Project"));
-  assert.ok(body.includes("new Amazon site builds"));
+  assert.ok(body.includes("Former U.S. Marine and current M.S. IT student"));
+  assert.ok(body.includes("electrical theory and rotary-wing aircraft avionics"));
+  assert.ok(body.includes("US_MARINES911@hotmail.com"));
+  assert.ok(body.includes("1422 Calle Tordo, Rio Rico, Arizona"));
+
+  assert.ok(body.includes("IT Support Associate II"));
+  assert.ok(body.includes("Provided primary on-site IT support for TUS2"));
+  assert.ok(body.includes("Reintroduced the Demarcation Power Remediation Project"));
+  assert.ok(body.includes("Traveled to new Amazon site builds"));
   assert.ok(!body.includes("TUS5"));
-  assert.ok(!body.includes("200+ operational connections"));
-  assert.ok(!body.includes("Reprogrammed 150 facility keypads"));
-  assert.ok(!body.includes("Fluke tone-and-trace tools"));
 
-  assert.ok(body.includes("Independent Cloud &amp; Network Project"));
-  assert.ok(body.includes("Envoy"));
-  assert.ok(body.includes("Cloudflare ingress"));
-  assert.ok(body.includes("Hysteria2"));
-  assert.ok(body.includes("used Prometheus and CI to review service behavior"));
+  assert.ok(body.includes("Armament Aircraft Maintenance Technician"));
+  assert.ok(body.includes("AH-64D avionics"));
+  assert.ok(body.includes("ULLS-A(E)"));
+  assert.ok(body.includes("Crew Chief – 15T3F UH-60 Helicopter"));
+  assert.ok(body.includes("Unmanned Aircraft Aircrew Training Program"));
+  assert.ok(body.includes("U.S. Soldier – Enlisted"));
+  assert.ok(body.includes("100% mission success"));
+  assert.ok(body.includes("U.S. Marine – Enlisted"));
+  assert.ok(body.includes("foreign military and security forces"));
+  assert.ok(body.includes("qualifications and matches"));
 
-  assert.ok(body.includes("Arizona Army National Guard"));
-  assert.ok(body.includes("18 months boots-on-ground in Iraq conducting convoy security"));
-  assert.ok(body.includes("convoy security, escort, route-clearance, and personnel-security operations"));
-  assert.ok(body.includes("vehicle-load and convoy procedures"));
-  assert.ok(body.includes("U.S. Marine Corps – 3rd Battalion, 1st Marines"));
-  assert.ok(body.includes("Combined Anti-Armor Team section"));
-  assert.ok(body.includes("more than 6,800 personnel"));
-  assert.ok(body.includes("Master of Science coursework in Information Technology Project Management"));
-
-  assert.ok(body.includes("Bachelor of Science in Information Technology (Network Architecture)"));
+  assert.ok(body.includes("Volunteer – Disaster Humanitarian Aid"));
+  assert.ok(body.includes("Team Rubicon mobilizes veterans"));
+  assert.ok(body.includes("Bachelor of Science in Information Technology (2014 graduate)"));
+  assert.ok(body.includes("Current student in M.S. Information Technology Project Management"));
+  assert.ok(body.includes("Certificates in Network Security"));
   assert.ok(body.includes("Bronze Star Medal"));
-  assert.ok(body.includes("Team Rubicon – Active Volunteer / Disaster Response"));
+  assert.ok(body.includes("wartime combat operations"));
 
-  assert.ok(!body.includes("30 months of overseas operational experience"));
-  assert.ok(!body.includes("Led Marines in a Combined Anti-Armor Team platoon"));
-  assert.ok(!body.includes("AI-Assisted Envoy Control Plane"));
-  assert.ok(!body.includes("Infrastructure &amp; End-User Support"));
-  assert.ok(!/CRAC|critical-facilities|rack-and-stack/i.test(body));
+  assert.ok(!body.includes("Independent Cloud &amp; Network Project"));
+  assert.ok(!body.includes("Technical Skills"));
 });
 
-test("keeps the site navigation aligned to lean resume sections", async () => {
+test("keeps navigation aligned with the resume sections", async () => {
   const response = await request();
   const body = await response.text();
 
-  for (const section of ["summary", "skills", "experience", "projects", "military", "education"]) {
+  for (const section of ["summary", "experience", "community", "education", "awards"]) {
     assert.ok(body.includes(`id="${section}"`));
     assert.ok(body.includes(`href="#${section}"`));
   }
@@ -76,7 +65,6 @@ test("keeps the site navigation aligned to lean resume sections", async () => {
 
 test("supports HEAD without a body", async () => {
   const response = await request("/", { method: "HEAD" });
-
   assert.equal(response.status, 200);
   assert.equal(await response.text(), "");
 });
@@ -87,53 +75,32 @@ test("reports health without caching", async () => {
 
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("cache-control"), "no-store");
-  assert.deepEqual(payload, {
-    status: "ok",
-    service: "resume",
-    release: "2026.10.06.01",
-  });
+  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.10.06.04" });
 });
 
 test("publishes crawler metadata", async () => {
-  const [robots, sitemap] = await Promise.all([
-    request("/robots.txt"),
-    request("/sitemap.xml"),
-  ]);
+  const [robots, sitemap] = await Promise.all([request("/robots.txt"), request("/sitemap.xml")]);
 
   assert.equal(robots.status, 200);
   assert.equal(sitemap.status, 200);
-  assert.match(
-    await robots.text(),
-    /Sitemap: https:\/\/resume\.dot7eamworks\.io\/sitemap\.xml/,
-  );
-  assert.match(
-    await sitemap.text(),
-    /<loc>https:\/\/resume\.dot7eamworks\.io\/<\/loc>/,
-  );
+  assert.match(await robots.text(), /Sitemap: https:\/\/resume\.dot7eamworks\.io\/sitemap\.xml/);
+  assert.match(await sitemap.text(), /<loc>https:\/\/resume\.dot7eamworks\.io\/<\/loc>/);
 });
 
 test("rejects unsupported methods", async () => {
   const response = await request("/", { method: "POST" });
-
   assert.equal(response.status, 405);
   assert.equal(response.headers.get("allow"), "GET, HEAD");
 });
 
 test("redirects workers.dev traffic to the canonical host", async () => {
-  const response = await worker.fetch(
-    new Request("https://resume.example.workers.dev/projects?source=test"),
-  );
-
+  const response = await worker.fetch(new Request("https://resume.example.workers.dev/projects?source=test"));
   assert.equal(response.status, 308);
-  assert.equal(
-    response.headers.get("location"),
-    "https://resume.dot7eamworks.io/projects?source=test",
-  );
+  assert.equal(response.headers.get("location"), "https://resume.dot7eamworks.io/projects?source=test");
 });
 
 test("returns a controlled 404", async () => {
   const response = await request("/missing");
-
   assert.equal(response.status, 404);
   assert.equal(await response.text(), "Not Found\n");
 });
