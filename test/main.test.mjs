@@ -17,17 +17,17 @@ test("serves the PDF-based resume while preserving the Amazon section", async ()
 
   assert.ok(body.includes("IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience."));
   assert.ok(body.includes("Role Alignment"));
-  assert.ok(body.includes("Site-Level Operational Leadership"));
-  assert.ok(body.includes("Demand Intake &amp; Requirements Analysis"));
-  assert.ok(body.includes("Operational Oversight &amp; Issue Management"));
-  assert.ok(body.includes("Governance &amp; Reporting"));
+  assert.ok(body.includes("Site Operations"));
+  assert.ok(body.includes("Request Intake &amp; Requirements"));
+  assert.ok(body.includes("Incident Management"));
+  assert.ok(body.includes("Reporting &amp; Accountability"));
   assert.ok(body.includes("US_MARINES911@hotmail.com"));
   assert.ok(body.includes("1422 Calle Tordo, Rio Rico, Arizona"));
 
   assert.ok(body.includes("IT Support Associate II"));
-  assert.ok(body.includes("Provided primary on-site IT support for TUS2"));
-  assert.ok(body.includes("Reintroduced the Demarcation Power Remediation Project"));
-  assert.ok(body.includes("Traveled to new Amazon site builds"));
+  assert.ok(body.includes("On-site IT support for Amazon fulfilment sites"));
+  assert.ok(body.includes("Contribute in leading or partaking on projects requiring L5-7 stage development features."));
+  assert.ok(body.includes("MDF/IDF environment validation"));
   assert.ok(!body.includes("TUS5"));
 
   assert.ok(body.includes("Armament Aircraft Maintenance Technician"));

@@ -81,11 +81,12 @@ const HTML = `<!doctype html>
 <header class="resume-header"><h1>Rodolfo I. Bustamante</h1><ul class="contact-line" aria-label="Contact information"><li>Greater Tucson and Phoenix Area</li><li>1422 Calle Tordo, Rio Rico, Arizona</li><li><a href="mailto:US_MARINES911@hotmail.com">US_MARINES911@hotmail.com</a></li><li><a href="tel:+15208413456">(520) 841-3456</a></li></ul></header>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience.</p></section>
 <section class="resume-section" id="alignment"><h2>Role Alignment</h2><div class="skills">
-<p><strong>Site-Level Operational Leadership:</strong> Supported enterprise site technology operations by prioritizing business-impacting issues and maintaining clear communication between IT and operations stakeholders.</p>
-<p><strong>Demand Intake &amp; Requirements Analysis:</strong> Triaged infrastructure requests, documented operational context, identified affected systems or areas, and helped determine priority based on site impact and urgency.</p>
-<p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across site-readiness needs.</p>
-<p><strong>Lifecycle &amp; Resiliency Support:</strong> Contributed to hardware lifecycle, MDF/IDF support, network readiness, UPS, power, data, and infrastructure reliability efforts in large enterprise facility environments.</p>
-<p><strong>Governance &amp; Reporting:</strong> Provided structured updates on ticket status, project progress, technical blockers, recurring pain points, and site-level operational risks.</p>
+<p><strong>Site Operations:</strong> Prioritized IT issues by business impact and kept operations leaders informed of service disruptions and recovery progress.</p>
+<p><strong>Request Intake &amp; Requirements:</strong> Assessed infrastructure requests, identified affected systems, and documented scope, urgency, and operational needs.</p>
+<p><strong>Execution &amp; Coordination:</strong> Coordinated IT teams, vendors, and operations staff to complete infrastructure work and prepare sites for operation.</p>
+<p><strong>Incident Management:</strong> Tracked service issues through resolution, escalated technical blockers, and flagged recurring problems for follow-up.</p>
+<p><strong>Infrastructure Reliability:</strong> Performed MDF/IDF readiness checks and contributed to hardware replacement, UPS, power, and network resiliency projects.</p>
+<p><strong>Reporting &amp; Accountability:</strong> Reported ticket status, project milestones, outstanding issues, and operational risks to keep stakeholders informed.</p>
 </div></section>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
             <li>On-site IT support for Amazon fulfilment sites coverage extending according to high demands often opened opportunities to take part contributing to new site builds.</li>
