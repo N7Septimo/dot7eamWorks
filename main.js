@@ -81,17 +81,16 @@ const HTML = `<!doctype html>
 <header class="resume-header"><h1>Rodolfo I. Bustamante</h1><ul class="contact-line" aria-label="Contact information"><li>Greater Tucson and Phoenix Area</li><li>1422 Calle Tordo, Rio Rico, Arizona</li><li><a href="mailto:US_MARINES911@hotmail.com">US_MARINES911@hotmail.com</a></li><li><a href="tel:+15208413456">(520) 841-3456</a></li></ul></header>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience.</p></section>
 <section class="resume-section" id="alignment"><h2>Role Alignment</h2><div class="skills">
-<p><strong>Site Operations:</strong> Prioritized IT issues by business impact and kept operations leaders informed of service disruptions and recovery progress.</p>
-<p><strong>Request Intake &amp; Requirements:</strong> Assessed infrastructure requests, identified affected systems, and documented scope, urgency, and operational needs.</p>
-<p><strong>Execution &amp; Coordination:</strong> Coordinated IT teams, vendors, and operations staff to complete infrastructure work and prepare sites for operation.</p>
-<p><strong>Incident Management:</strong> Tracked service issues through resolution, escalated technical blockers, and flagged recurring problems for follow-up.</p>
-<p><strong>Infrastructure Reliability:</strong> Performed MDF/IDF readiness checks and contributed to hardware replacement, UPS, power, and network resiliency projects.</p>
-<p><strong>Reporting &amp; Accountability:</strong> Reported ticket status, project milestones, outstanding issues, and operational risks to keep stakeholders informed.</p>
+<p><strong>Site-Level Operational Leadership:</strong> Supported enterprise site technology operations by prioritizing business-impacting issues and maintaining clear communication between IT and operations stakeholders.</p>
+<p><strong>Demand Intake &amp; Requirements Analysis:</strong> Triaged infrastructure requests, documented operational context, identified affected systems or areas, and helped determine priority based on site impact and urgency.</p>
+<p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across site-readiness needs.</p>
+<p><strong>Lifecycle &amp; Resiliency Support:</strong> Contributed to hardware lifecycle, MDF/IDF support, network readiness, UPS, power, data, and infrastructure reliability efforts in large enterprise facility environments.</p>
+<p><strong>Governance &amp; Reporting:</strong> Provided structured updates on ticket status, project progress, technical blockers, recurring pain points, and site-level operational risks.</p>
 </div></section>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
             <li>On-site IT support for Amazon fulfilment sites coverage extending according to high demands often opened opportunities to take part contributing to new site builds.</li>
             <li>Advocate training for new hires through virtual remote classrooms followed by a continuous mentoring program.</li>
-            <li>Contribute in leading or partaking on projects requiring L5-7 stage development features.</li>
+            <li>Contribute by leading technical projects within scope Layers 1-4 with engineer collaboration when tasks permissions where strictly set for specific groups and escalated accordingly or deep research when development features where required.</li>
             <li>Oversee, coordinate and perfomed site readiness tasks such as MDF/IDF environment validation, site access vendor coordination and engagement.</li></ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
