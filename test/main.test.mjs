@@ -16,6 +16,11 @@ test("serves the PDF-based resume while preserving the Amazon section", async ()
   assert.match(response.headers.get("content-security-policy"), /frame-ancestors 'none'/);
 
   assert.ok(body.includes("IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience."));
+  assert.ok(body.includes("Role Alignment"));
+  assert.ok(body.includes("Site-Level Operational Leadership"));
+  assert.ok(body.includes("Demand Intake &amp; Requirements Analysis"));
+  assert.ok(body.includes("Operational Oversight &amp; Issue Management"));
+  assert.ok(body.includes("Governance &amp; Reporting"));
   assert.ok(body.includes("US_MARINES911@hotmail.com"));
   assert.ok(body.includes("1422 Calle Tordo, Rio Rico, Arizona"));
 
@@ -52,7 +57,7 @@ test("keeps navigation aligned with the resume sections", async () => {
   const response = await request();
   const body = await response.text();
 
-  for (const section of ["summary", "experience", "community", "education", "awards"]) {
+  for (const section of ["summary", "alignment", "experience", "community", "education", "awards"]) {
     assert.ok(body.includes(`id="${section}"`));
     assert.ok(body.includes(`href="#${section}"`));
   }
@@ -74,7 +79,7 @@ test("reports health without caching", async () => {
 
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("cache-control"), "no-store");
-  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.10.06.04" });
+  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.10.10.01" });
 });
 
 test("publishes crawler metadata", async () => {
