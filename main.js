@@ -80,7 +80,7 @@ const HTML = `<!doctype html>
 <main class="page-shell" id="main"><article class="resume-document" aria-label="Rodolfo I. Bustamante résumé">
 <header class="resume-header"><h1>Rodolfo I. Bustamante</h1><ul class="contact-line" aria-label="Contact information"><li>Greater Tucson and Phoenix Area</li><li>1422 Calle Tordo, Rio Rico, Arizona</li><li><a href="mailto:US_MARINES911@hotmail.com">US_MARINES911@hotmail.com</a></li><li><a href="tel:+15208413456">(520) 841-3456</a></li></ul></header>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience.</p></section>
-<section class="resume-section" id="alignment"><h2>Role Alignment</h2><div class="skills">
+<section class="resume-section" id="alignment"><h2>Skills</h2><div class="skills">
 <p><strong>Site-Level Operational Leadership:</strong> Supported enterprise site technology operations by prioritizing business-impacting issues and maintaining clear communication between IT and operations stakeholders.</p>
 <p><strong>Demand Intake &amp; Requirements Analysis:</strong> Triaged infrastructure requests, documented operational context, identified affected systems or areas, and helped determine priority based on site impact and urgency.</p>
 <p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across site-readiness needs.</p>
