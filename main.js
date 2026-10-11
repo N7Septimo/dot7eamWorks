@@ -1,5 +1,5 @@
 const CANONICAL_ORIGIN = "https://resume.dot7eamworks.io";
-const RELEASE = "2026.10.06.04";
+const RELEASE = "2026.10.10.01";
 
 const SECURITY_HEADERS = Object.freeze({
   "Content-Security-Policy":
@@ -76,10 +76,18 @@ const HTML = `<!doctype html>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to résumé</a>
-<header class="site-bar" aria-label="Résumé controls"><div class="site-bar-inner"><a class="site-brand" href="#main">Rodolfo I. Bustamante</a><nav class="site-nav" aria-label="Résumé sections"><a href="#summary">Summary</a><a href="#experience">Experience</a><a href="#community">Community</a><a href="#education">Education</a><a href="#awards">Honors &amp; Awards</a></nav><div class="site-actions"><a class="action" href="mailto:rudybustamante01@icloud.com">Email</a><button class="action primary" id="print-resume" type="button">Download / Print PDF</button></div></div></header>
+<header class="site-bar" aria-label="Résumé controls"><div class="site-bar-inner"><a class="site-brand" href="#main">Rodolfo I. Bustamante</a><nav class="site-nav" aria-label="Résumé sections"><a href="#summary">Summary</a><a href="#alignment">Alignment</a><a href="#experience">Experience</a><a href="#community">Community</a><a href="#education">Education</a><a href="#awards">Honors &amp; Awards</a></nav><div class="site-actions"><a class="action" href="mailto:rudybustamante01@icloud.com">Email</a><button class="action primary" id="print-resume" type="button">Download / Print PDF</button></div></div></header>
 <main class="page-shell" id="main"><article class="resume-document" aria-label="Rodolfo I. Bustamante résumé">
 <header class="resume-header"><h1>Rodolfo I. Bustamante</h1><ul class="contact-line" aria-label="Contact information"><li>Greater Tucson and Phoenix Area</li><li>1422 Calle Tordo, Rio Rico, Arizona</li><li><a href="mailto:US_MARINES911@hotmail.com">US_MARINES911@hotmail.com</a></li><li><a href="tel:+15208413456">(520) 841-3456</a></li></ul></header>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience.</p></section>
+<section class="resume-section" id="alignment"><h2>Role Alignment</h2><div class="skills">
+<p><strong>Site-Level Operational Leadership:</strong> Supported enterprise site technology operations by prioritizing business-impacting issues and maintaining clear communication between IT and operations stakeholders.</p>
+<p><strong>Demand Intake &amp; Requirements Analysis:</strong> Triaged infrastructure requests, documented operational context, identified affected systems or areas, and helped determine priority based on site impact and urgency.</p>
+<p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across network, endpoint, printer, wireless, cabling, and site-readiness needs.</p>
+<p><strong>Operational Oversight &amp; Issue Management:</strong> Tracked service-impacting issues through follow-up, escalated recurring or high-risk problems, and supported resolution aligned with operational expectations.</p>
+<p><strong>Lifecycle &amp; Resiliency Support:</strong> Contributed to hardware lifecycle, MDF/IDF support, network readiness, UPS, power, data, and infrastructure reliability efforts in large enterprise facility environments.</p>
+<p><strong>Governance &amp; Reporting:</strong> Provided structured updates on ticket status, project progress, technical blockers, recurring pain points, and site-level operational risks.</p>
+</div></section>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
             <li>Provided primary on-site IT support for TUS2 and neighboring Amazon facilities, triaging and prioritizing cross-site incidents based on severity and operational impact.</li>
             <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
