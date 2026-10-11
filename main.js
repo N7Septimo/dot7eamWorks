@@ -83,8 +83,8 @@ const HTML = `<!doctype html>
 <section class="resume-section" id="alignment"><h2>Role Alignment</h2><div class="skills">
 <p><strong>Site-Level Operational Leadership:</strong> Supported enterprise site technology operations by prioritizing business-impacting issues and maintaining clear communication between IT and operations stakeholders.</p>
 <p><strong>Demand Intake &amp; Requirements Analysis:</strong> Triaged infrastructure requests, documented operational context, identified affected systems or areas, and helped determine priority based on site impact and urgency.</p>
-<p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across network, endpoint, printer, wireless, cabling, and site-readiness needs.</p>
-<p><strong>Operational Oversight &amp; Issue Management:</strong> Tracked service-impacting issues through follow-up, escalated recurring or high-risk problems, and supported resolution aligned with operational expectations.</p>
+<p><strong>Execution Coordination &amp; Stakeholder Engagement:</strong> Coordinated with internal IT teams, operations leaders, vendors, and support groups across site-readiness needs.</p>
+<p><strong>Operational Oversight &amp; Issue Management:</strong> resolve incidents aligned with SLAs and escalate issues outlining policy directives.</p>
 <p><strong>Lifecycle &amp; Resiliency Support:</strong> Contributed to hardware lifecycle, MDF/IDF support, network readiness, UPS, power, data, and infrastructure reliability efforts in large enterprise facility environments.</p>
 <p><strong>Governance &amp; Reporting:</strong> Provided structured updates on ticket status, project progress, technical blockers, recurring pain points, and site-level operational risks.</p>
 </div></section>
