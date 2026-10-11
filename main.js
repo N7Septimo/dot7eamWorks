@@ -88,10 +88,10 @@ const HTML = `<!doctype html>
 <p><strong>Governance &amp; Reporting:</strong> Provided structured updates on ticket status, project progress, technical blockers, recurring pain points, and site-level operational risks.</p>
 </div></section>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
-            <li>Provided primary on-site IT support for TUS2 and neighboring Amazon facilities, triaging and prioritizing cross-site incidents based on severity and operational impact.</li>
-            <li>Conducted weekly virtual training and mentoring for newly hired OTS personnel nationwide, covering role responsibilities, internal IT tools, equipment, resources, and organizational policies.</li>
-            <li>Reintroduced the Demarcation Power Remediation Project to improve network redundancy and replace aging infrastructure, subsequently contributing to list of local projects for OTS tracked regional.</li>
-            <li>Traveled to new Amazon site builds to support IT infrastructure deployment, installation, validation, troubleshooting, and operational readiness during facility launches and transition to operations.</li></ul></article>
+            <li>On-site IT support for Amazon fulfilment sites coverage extending to facilities sustaining coverage demands that opened opportunities to contribute.</li>
+            <li>Supported new hires with virtual classrooms remote environment followed by a continuous mentoring program utilized as source for reference.</li>
+            <li>Contributed to a list of OTS local projects negotiating scope which often exceeded role expectations.</li>
+            <li>Assisted in Amazon new site builds contributing in mass provisioning and playbook tasks assignments.</li></ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
 <li>Carried out scheduled and unscheduled work on electronic equipment, including AH-64D avionics.</li>
