@@ -103,7 +103,7 @@ const HTML = `<!doctype html>
 <li>Kept operator currency and progression qualifications for the Unmanned Aircraft Aircrew Training Program, meeting required flight-hour standards.</li>
 <li>Tracked and serviced Small Unmanned Aircraft System (SUAS) equipment, keeping inventory within budget and helping prevent the state program from becoming obsolete.</li>
 </ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">OCONUS U.S. SMOS 11B Infantry </span> <span class="organization">| United States Army | Active Orders - Overseas Duty</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">SMOS 11B Infantry </span> <span class="organization">| United States Army | OCONUS - Overseas Duty</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
 <li>Established and applied standard operating procedures for combat vehicle loads and convoy tactics; these standards resulted in 100% mission success.</li>
 <li>Advised leaders on adapting to changing combat conditions, providing route-specific guidance for routes linking each forward operating base (FOB) and supporting mission effectiveness.</li>
 <li>Led units on combat missions outside the wire throughout Iraq, developing route familiarity and achieving 100% mission success.</li>
