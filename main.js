@@ -109,9 +109,9 @@ const HTML = `<!doctype html>
 <li>Led units on combat missions outside the wire throughout Iraq, developing route familiarity and achieving 100% mission success.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
-<li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle reconnaissance, and raid-training operations.</li>
-<li>Prepared classes and helped train foreign military and security forces in counterinsurgency, population engagement, and counterterrorism.</li>
-<li>Coached Marines in rifle and pistol marksmanship for qualifications and matches, teaching sight adjustment, data logging, and firing positions for day and night courses.</li>
+<li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle patrols, and raid-training operations.</li>
+<li>Set high standards and led by example, strengthening team performance and overall mission readiness.</li>
+<li>Intructed and coached rifle and pistol marksmanship fundamentals through qualifications and matches, teaching day and night time firing operations.</li>
 </ul></article></section>
 <section class="resume-section" id="community"><h2>Community Services</h2><article class="position"><div class="position-heading"><p><span class="position-title">Volunteer – Disaster Humanitarian Aid</span> <span class="organization">| Team Rubicon | Tucson, AZ</span></p><p class="dates">Jan 2020 – Present</p></div><ul class="resume-list">
 <li>Team Rubicon mobilizes veterans to help communities prepare for, respond to, and recover from disasters and humanitarian crises.</li>
