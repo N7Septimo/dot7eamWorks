@@ -92,21 +92,21 @@ const HTML = `<!doctype html>
             <li>Advocate training for new hires through virtual remote classrooms followed by a continuous mentoring program.</li>
             <li>Contribute by leading technical projects within scope Layers 1-4 with engineer collaboration when tasks permissions where strictly set for specific groups and escalated accordingly or deep research when development features where required.</li>
             <li>Oversee, coordinate and perfomed site readiness tasks such as MDF/IDF environment validation, site access vendor coordination and engagement.</li></ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
 <li>Carried out scheduled and unscheduled work on electronic equipment, including AH-64D avionics.</li>
 <li>Instructed new technicians in electronic troubleshooting with ULLS-A(E), pairing technical guidance with hands-on practice.</li>
 <li>Kept technical currency and followed OSHA requirements, documenting hangar safety practices that supported successful inspections and safe operations.</li>
 </ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">Crew Chief – 15T3F UH-60 Helicopter / UAV SUAS Operator</span> <span class="organization">| Arizona Army National Guard, Western Aviation Training Site | Red Rock, AZ</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">SMOS Crew Chief – 15T3F UH-60 Helicopter / UAV SUAS Operator</span> <span class="organization">| Arizona Army National Guard, Western Aviation Training Site | Red Rock, AZ</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list">
 <li>Contributed to UH-60 crew projects by handling requisitions, completing repairs, diagnosing faults, and teaching short technical courses.</li>
 <li>Kept operator currency and progression qualifications for the Unmanned Aircraft Aircrew Training Program, meeting required flight-hour standards.</li>
 <li>Tracked and serviced Small Unmanned Aircraft System (SUAS) equipment, keeping inventory within budget and helping prevent the state program from becoming obsolete.</li>
 </ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">U.S. Soldier – Enlisted</span> <span class="organization">| United States Army | Overseas Duty</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">OCONUS U.S. SMOS 11B Infantry </span> <span class="organization">| United States Army | Active Orders - Overseas Duty</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
 <li>Established and applied standard operating procedures for combat vehicle loads and convoy tactics; these standards resulted in 100% mission success.</li>
 <li>Advised leaders on adapting to changing combat conditions, providing route-specific guidance for routes linking each forward operating base (FOB) and supporting mission effectiveness.</li>
-<li>Stayed in country to train and lead units along new routes, filling operational roles as needed during combat missions.</li>
+<li>Led units on combat missions outside the wire throughout Iraq, developing route familiarity and achieving 100% mission success.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
 <li>Served as a designated marksman and machine gunner in an amphibious assault unit, supporting security, light-vehicle reconnaissance, and raid-training operations.</li>
