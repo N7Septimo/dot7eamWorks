@@ -109,7 +109,7 @@ const HTML = `<!doctype html>
 <li>Led units on combat missions outside the wire throughout Iraq, developing route familiarity and achieving 100% mission success.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| United States Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
-<li>Served as a designated marksman and machine gunner in an amphibious assault unit, supporting security, light-vehicle reconnaissance, and raid-training operations.</li>
+<li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle reconnaissance, and raid-training operations.</li>
 <li>Prepared classes and helped train foreign military and security forces in counterinsurgency, population engagement, and counterterrorism.</li>
 <li>Coached Marines in rifle and pistol marksmanship for qualifications and matches, teaching sight adjustment, data logging, and firing positions for day and night courses.</li>
 </ul></article></section>
