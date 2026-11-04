@@ -122,8 +122,8 @@ const HTML = `<!doctype html>
 <li>American Military University – 15 Credit hours - M.S. Information Technology Project Management; Certificates in Network Security. Charles Town, West Virginia.</li>
 </ul></section>
 <section class="resume-section" id="awards"><h2>Honors &amp; Awards</h2><ul class="education-list">
-<li>Bronze Star Medal – United States Armed Forces award.</li>
-<li>Recognized for exceptionally meritorious service and contributions to duty during wartime combat operations.</li>
+<li>Bronze Star Medal.</li>
+
 </ul></section>
 <footer class="resume-footer">Rodolfo I. Bustamante | Résumé | Release ${RELEASE}</footer></article></main>
 <script>document.getElementById("print-resume").addEventListener("click", () => window.print());</script>
