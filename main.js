@@ -119,7 +119,7 @@ const HTML = `<!doctype html>
 </ul></article></section>
 <section class="resume-section" id="education"><h2>Education</h2><ul class="education-list">
 <li>American Military University – Bachelor of Science in Information Technology (2014 graduate), Charles Town, West Virginia.</li>
-<li>American Military University – Current student in M.S. Information Technology Project Management; Certificates in Network Security. Charles Town, West Virginia.</li>
+<li>American Military University – 15 Credit hours - M.S. Information Technology Project Management; Certificates in Network Security. Charles Town, West Virginia.</li>
 </ul></section>
 <section class="resume-section" id="awards"><h2>Honors &amp; Awards</h2><ul class="education-list">
 <li>Bronze Star Medal – United States Armed Forces award.</li>
