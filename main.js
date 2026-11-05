@@ -84,7 +84,7 @@ const HTML = `<!doctype html>
 <li>Provided on-site IT support across Amazon fulfillment sites and new site builds, prioritizing incidents and infrastructure requests by operational impact.</li>
 <li>Consistently merged in projects Layers 1–4, conducting each task as a possible period of instruction to the team.</li>
 <li>Coordinated hardware lifecycle activities assuring to maintain 100% uptime in a high-volume, 24/7 operations.</li>
-<li>Trained new Amazon OTS team members using virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
+<li><li>Trained new Amazon OTS team members in virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li></li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
