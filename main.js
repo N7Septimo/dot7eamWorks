@@ -83,8 +83,8 @@ const HTML = `<!doctype html>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
 <li>Provided on-site IT support across Amazon fulfillment sites and new site builds, prioritizing incidents and infrastructure requests by operational impact.</li>
 <li>Consistently merged in projects Layers 1–4, conducting each task as a possible period of instruction to the team.</li>
-<li>Coordinated and performed hardware lifecycle activities to maintain uptime in high-volume, 24/7 operations.</li>
-<li>Trained new hires using virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
+<li>Coordinated hardware lifecycle activities to maintain uptime in high-volume, 24/7 operations.</li>
+<li>Trained new Amazon OTS team members using virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| Arizona Air National Guard (AZANG), 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
