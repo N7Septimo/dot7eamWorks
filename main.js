@@ -100,7 +100,7 @@ const HTML = `<!doctype html>
 <article class="position"><div class="position-heading"><p><span class="position-title">SMOS 11B Infantry </span> <span class="organization">| US ARMY (OK,TX, SC) NGB | OCONUS - IRAQ</span></p><p class="dates">May 2008 – Jan 2010</p></div><ul class="resume-list">
 <li>Established and applied standard operating procedures for combat vehicle loads and convoy tactics; these standards resulted in 100% mission success.</li>
 <li>Advised leaders on adapting to changing combat conditions, providing route-specific guidance for routes linking each forward operating base (FOB) and supporting mission effectiveness.</li>
-<li>Led units on combat missions outside the wire throughout Iraq, developing route familiarity and control over tge battlefield.</li>
+<li>Led units on combat missions outside the wire throughout Iraq, building route familiarity and maintaining situational awareness across the area of operations.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| US Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
 <li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle patrols, and raid-training operations.</li>
