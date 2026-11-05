@@ -86,13 +86,13 @@ const HTML = `<!doctype html>
 <li>Coordinated hardware lifecycle activities assuring to maintain 100% uptime in a high-volume, 24/7 operations.</li>
 <li>Trained new Amazon OTS team members in virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
 </ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| ARMY Arizona NGB, 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| US ARMY Arizona NGB, 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
 <li>Carried out scheduled and unscheduled work on electronic equipment, including AH-64D avionics.</li>
 <li>Instructed new technicians in electronic troubleshooting with ULLS-A(E), pairing technical guidance with hands-on practice.</li>
 <li>Kept technical currency and followed OSHA requirements, documenting hangar safety practices that supported successful inspections and safe operations.</li>
 </ul></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">SMOS Crew Chief – 15T3F UH-60 Helicopter / UAV SUAS Operator</span> <span class="organization">| ARMY Arizona NGB, Western Aviation Training Site | Red Rock, AZ</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">SMOS Crew Chief – 15T3F UH-60 Helicopter / UAV SUAS Operator</span> <span class="organization">| US ARMY Arizona NGB, Western Aviation Training Site | Red Rock, AZ</span></p><p class="dates">Jan 2014 – Jan 2017</p></div><ul class="resume-list">
 <li>Contributed to UH-60 crew projects by handling requisitions, completing repairs, diagnosing faults, and teaching short technical courses.</li>
 <li>Kept operator currency and progression qualifications for the Unmanned Aircraft Aircrew Training Program, meeting required flight-hour standards.</li>
 <li>Tracked and serviced Small Unmanned Aircraft System (SUAS) equipment, keeping inventory within budget and helping prevent the state program from becoming obsolete.</li>
