@@ -41,8 +41,6 @@ const HTML = `<!doctype html>
       "telephone": "+1-520-841-3456",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1422 Calle Tordo",
-        "addressLocality": "Rio Rico",
         "addressRegion": "Arizona",
         "addressCountry": "US"
       },
