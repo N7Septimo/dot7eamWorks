@@ -16,38 +16,20 @@ test("serves the PDF-based resume while preserving the Amazon section", async ()
   assert.match(response.headers.get("content-security-policy"), /frame-ancestors 'none'/);
 
   assert.ok(body.includes("IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience."));
-  assert.ok(body.includes("Role Alignment"));
-  assert.ok(body.includes("Site Operations"));
-  assert.ok(body.includes("Request Intake &amp; Requirements"));
-  assert.ok(body.includes("Incident Management"));
-  assert.ok(body.includes("Reporting &amp; Accountability"));
-  assert.ok(body.includes("US_MARINES911@hotmail.com"));
-  assert.ok(body.includes("1422 Calle Tordo, Rio Rico, Arizona"));
-
-  assert.ok(body.includes("IT Support Associate II"));
-  assert.ok(body.includes("On-site IT support for Amazon fulfilment sites"));
-  assert.ok(body.includes("Contribute in leading or partaking on projects requiring L5-7 stage development features."));
-  assert.ok(body.includes("MDF/IDF environment validation"));
-  assert.ok(!body.includes("TUS5"));
-
-  assert.ok(body.includes("Armament Aircraft Maintenance Technician"));
-  assert.ok(body.includes("AH-64D avionics"));
-  assert.ok(body.includes("ULLS-A(E)"));
-  assert.ok(body.includes("Crew Chief – 15T3F UH-60 Helicopter"));
-  assert.ok(body.includes("Unmanned Aircraft Aircrew Training Program"));
-  assert.ok(body.includes("U.S. Soldier – Enlisted"));
-  assert.ok(body.includes("100% mission success"));
-  assert.ok(body.includes("U.S. Marine – Enlisted"));
-  assert.ok(body.includes("foreign military and security forces"));
-  assert.ok(body.includes("qualifications and matches"));
-
-  assert.ok(body.includes("Volunteer – Disaster Humanitarian Aid"));
-  assert.ok(body.includes("Team Rubicon mobilizes veterans"));
-  assert.ok(body.includes("Bachelor of Science in Information Technology (2014 graduate)"));
-  assert.ok(body.includes("Current student in M.S. Information Technology Project Management"));
-  assert.ok(body.includes("Certificates in Network Security"));
-  assert.ok(body.includes("Bronze Star Medal"));
-  assert.ok(body.includes("wartime combat operations"));
+  const email = "rudybustamante01@icloud.com";
+  assert.equal(body.split("mailto:" + email).length - 1, 3);
+  assert.ok(body.includes(">" + email + "</a>"));
+  assert.ok(!body.includes("hotmail.com"));
+  for (const detail of [
+    "IT Support Associate II", "new site builds", "OSI Layers 1–4",
+    "identified root causes", "OTS mentoring program", "PMOS 15Y30",
+    "Arizona Army National Guard, 1/285", "SMOS 15T3F",
+    "Arizona Army National Guard, Western Aviation Training Site",
+    "SMOS 11B", "U.S. Marine Corps", "Team Rubicon", "15 credit hours",
+    "Bachelor of Science in Information Technology", "Bronze Star Medal",
+  ]) {
+    assert.ok(body.includes(detail), detail);
+  }
 
   assert.ok(!body.includes("Independent Cloud &amp; Network Project"));
   assert.ok(!body.includes("Technical Skills"));
@@ -57,7 +39,7 @@ test("keeps navigation aligned with the resume sections", async () => {
   const response = await request();
   const body = await response.text();
 
-  for (const section of ["summary", "alignment", "experience", "community", "education", "awards"]) {
+  for (const section of ["summary", "experience", "community", "education", "awards"]) {
     assert.ok(body.includes(`id="${section}"`));
     assert.ok(body.includes(`href="#${section}"`));
   }
@@ -79,7 +61,7 @@ test("reports health without caching", async () => {
 
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("cache-control"), "no-store");
-  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.10.10.01" });
+  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.11.07.01" });
 });
 
 test("publishes crawler metadata", async () => {
