@@ -82,8 +82,8 @@ const HTML = `<!doctype html>
 <section class="resume-section" id="summary"><h2>Summary</h2><p>IT infrastructure professional with 4+ years supporting large enterprise environments, focused on operational continuity, network reliability, and technical problem-solving. Combines hands-on infrastructure experience with modern cloud, networking, and observability practices, backed by formal IT education and military leadership experience.</p></section>
 <section class="resume-section" id="experience"><h2>Professional Experience</h2><article class="position"><div class="position-heading"><p><span class="position-title">IT Support Associate II</span> <span class="organization">| Amazon Operations Technology Support (OTS) | Tucson, AZ</span></p><p class="dates">Jan 2021 – Aug 2025</p></div><ul class="resume-list">
 <li>Provided on-site IT support across Amazon fulfillment sites and new site builds.</li>
-<li>Contributed to projects spanning OSI Layers 1–4, using each task as an opportunity to provide hands-on team instruction.</li>
-<li>Coordinated hardware lifecycle activities assuring to maintain 100% uptime in a high-volume, 24/7 operations.</li>
+<li>Managed technical projects spanning OSI Layers 1–4, using each task as an opportunity to provide hands-on team instruction.</li>
+<li>Analyzed operational failures, identified root causes, and implemented policy-aligned remediation plans.</li>
 <li>Trained new Amazon OTS team members in virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">PMOS Armament Aircraft Maintenance Technician – 15Y30, AH-64D Attack Helicopter</span> <span class="organization">| US ARMY Arizona NGB, 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
@@ -105,7 +105,7 @@ const HTML = `<!doctype html>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| US Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
 <li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle patrols, and raid-training operations.</li>
 <li>Set high standards and led by example, strengthening team performance and overall mission readiness.</li>
-<li>Intructed and coached rifle and pistol marksmanship fundamentals through qualifications and matches, teaching day and night time firing operations.</li>
+<li>Instructed and coached rifle and pistol marksmanship fundamentals through qualifications and matches, teaching day and night time firing operations.</li>
 </ul></article></section>
 <section class="resume-section" id="community"><h2>Community Services</h2><article class="position"><div class="position-heading"><p><span class="position-title">Volunteer – Disaster Humanitarian Aid</span> <span class="organization">| Team Rubicon | Tucson, AZ</span></p><p class="dates">Jan 2020 – Present</p></div><ul class="resume-list">
 <li>Team Rubicon mobilizes veterans to help communities prepare for, respond to, and recover from disasters and humanitarian crises.</li>
