@@ -85,7 +85,7 @@ const HTML = `<!doctype html>
 <li>Provided on-site IT support across Amazon fulfillment sites and new site builds.</li>
 <li>Managed technical projects spanning OSI Layers 1–4, using each task as an opportunity to provide hands-on team instruction.</li>
 <li>Analyzed operational failures, identified root causes, and implemented policy-aligned remediation plans.</li>
-<li>Trained new Amazon OTS team members in virtual classrooms and provided ongoing technical guidance through the OTS mentoring program.</li>
+<li>Trained new Amazon OTS team members in virtual classrooms and provided ongoing technical guidance through our mentoring program.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">Armament Aircraft Maintenance Technician, AH-64D (PMOS 15Y30)</span> <span class="organization">| Arizona Army National Guard, 1/285 Aviation Battalion | Red Rock, AZ</span></p><p class="dates">Nov 2006 – Nov 2019</p></div><ul class="resume-list">
 <li>Executed maintenance orders and directed a team of technicians in repairing AH-64D weapon systems.</li>
