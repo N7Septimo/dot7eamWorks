@@ -104,9 +104,9 @@ const HTML = `<!doctype html>
 <li>Led units on combat missions outside the wire throughout Iraq, building route familiarity and maintaining situational awareness across the area of operations.</li>
 </ul></article>
 <article class="position"><div class="position-heading"><p><span class="position-title">U.S. Marine – Enlisted</span> <span class="organization">| U.S. Marine Corps | Camp Pendleton, CA</span></p><p class="dates">Oct 1995 – Oct 2003</p></div><ul class="resume-list">
-<li>Served as machine gunner in an amphibious assault unit, supporting security, light-vehicle patrols, and raid-training operations.</li>
-<li>Set high standards and led by example, strengthening team performance and overall mission readiness.</li>
-<li>Instructed and coached rifle and pistol marksmanship fundamentals through qualifications and matches, teaching day and night time firing operations.</li>
+<li>Served as a machine gunner during multiple Western Pacific (WESTPAC) deployments with an amphibious assault unit, supporting security operations, light-vehicle patrols, and beach raids.</li>
+<li>Meritoriously promoted to Sergeant in the infantry ranks within three years of service for leading by example and upholding performance standards that supported team effectiveness and mission readiness.</li>
+<li>Instructed and coached personnel in rifle and pistol marksmanship during qualifications and matches, including day and night firing.</li>
 </ul></article></section>
 <section class="resume-section" id="community"><h2>Community Services</h2><article class="position"><div class="position-heading"><p><span class="position-title">Volunteer – Disaster Humanitarian Aid</span> <span class="organization">| Team Rubicon | Tucson, AZ</span></p><p class="dates">Jan 2020 – Present</p></div><ul class="resume-list">
 <li>Team Rubicon mobilizes veterans to help communities prepare for, respond to, and recover from disasters and humanitarian crises.</li>
