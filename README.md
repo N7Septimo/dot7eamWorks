@@ -24,14 +24,14 @@ The source for [resume.dot7eamworks.io](https://resume.dot7eamworks.io/), Rodolf
 | Requirement | Implementation |
 | --- | --- |
 | Written in English | English résumé text throughout. |
-| Two pages or fewer | Two-page Letter print layout, captured in the [review PDF](review/resume-draft.pdf). |
+| Two pages or fewer | Two-page Letter print layout, captured in the [résumé PDF](review/Rodolfo-Ivan-Bustamante-Resume.pdf). |
 | Full legal name | Rodolfo Ivan Bustamante, verified against the supplied military records. |
 | Phone number | (520) 841-3456. |
-| Complete work history with job titles | All currently supplied employment and military assignments are included; any additional employment still needs confirmation. |
+| Complete work history with job titles | Includes the supplied Amazon and military work history, with the Guard assignments and their job titles listed under the verified service period. |
 | Detailed duties and tasks | Existing duties plus ServiceNow workflow and hardware lifecycle details supported by prior supplied résumé text. |
-| MM/DD/YY - MM/DD/YY dates | Verified military dates entered; highlighted employment/assignment dates still need exact-day confirmation. |
+| MM/DD/YY - MM/DD/YY dates | Amazon: 01/03/21 - 07/30/25; Guard service: 11/17/06 - 11/16/19; USMC active duty: 10/31/95 - 10/30/99. |
 
-This branch remains a draft until the missing dates and completeness of the work history are confirmed. See the [verified decisions and open items](review/resume-open-items.md). The review PDF is generated from the same Worker HTML and is not a separate résumé format.
+The PDF is generated from the same Worker HTML and is not a separate résumé format. See the [source-verification notes](review/resume-verification.md). The military records establish overall service periods; the Guard specialties are identified as assignments held during that service, with no claim that each lasted the entire period.
 
 ## Local development
 
