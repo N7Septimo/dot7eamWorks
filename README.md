@@ -19,6 +19,10 @@ The source for [resume.dot7eamworks.io](https://resume.dot7eamworks.io/), Rodolf
 | `wrangler.jsonc` | Cloudflare Worker configuration and observability |
 | `test/main.test.mjs` | Request, routing, metadata, and security tests |
 
+## Federal application draft
+
+The USA Staffing application copy is available as a [two-page draft PDF](drafts/usa-staffing-resume.pdf) and [self-contained HTML](drafts/usa-staffing-resume.html). Review the [verified decisions and open items](drafts/usa-staffing-open-items.md) before using it. Highlighted fields require confirmation; the draft is not ready for application upload.
+
 ## Local development
 
 ```bash
