@@ -61,7 +61,7 @@ test("reports health without caching", async () => {
 
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("cache-control"), "no-store");
-  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.11.07.01" });
+  assert.deepEqual(payload, { status: "ok", service: "resume", release: "2026.11.13.01" });
 });
 
 test("publishes crawler metadata", async () => {
