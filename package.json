@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "wrangler dev",
     "test": "node --test",
-    "check": "node --check main.js && npm test && wrangler deploy --dry-run",
+    "check": "node --check main.js && npm test",
     "deploy:dry": "wrangler deploy --dry-run",
     "deploy": "wrangler deploy"
   },
