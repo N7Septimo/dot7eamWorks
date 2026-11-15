@@ -136,7 +136,7 @@ const HTML = `<!DOCTYPE html>
 <li>Advised leaders on adapting to changing combat conditions, providing route-specific guidance for routes linking each forward operating base (FOB) and supporting mission effectiveness.</li>
 <li>Led units on combat missions outside the wire throughout Iraq, building route familiarity and maintaining situational awareness across the area of operations.</li>
 </ul></section></article>
-<article class="position"><div class="position-heading"><p><span class="position-title">Machine Gunner / Marksmanship Coach</span> <span class="organization">| U.S. Marine Corps | Camp Pendleton, CA</span></p><p class="dates">10/31/95 - 10/30/99 | Active duty</p></div><ul class="resume-list">
+<article class="position"><div class="position-heading"><p><span class="position-title">Machine Gunner / Marksmanship Coach</span> <span class="organization">| U.S. Marine Corps | Camp Pendleton, CA</span></p><p class="dates">10/31/95 - 10/30/03 | Active duty</p></div><ul class="resume-list">
 <li>Served as a machine gunner during multiple Western Pacific (WESTPAC) deployments with an amphibious assault unit, supporting security operations, light-vehicle patrols, and beach raids.</li>
 <li>Meritoriously promoted to Sergeant in the infantry ranks for leading by example and upholding performance standards that supported team effectiveness and mission readiness.</li>
 <li>Instructed and coached personnel in rifle and pistol marksmanship during qualifications and matches, including day and night firing.</li>
